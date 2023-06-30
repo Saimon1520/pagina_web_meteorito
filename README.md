@@ -1,4 +1,4 @@
-##Pagina Web del Meteorito
+# Pagina Web del Meteorito
 
 Se estará desarrollando la pagina para montar la información de los proyectos, los fragmentos del meteorito y la historia de la zona hechos por la comunidad de la UTN para apoyar el pueblo de Aguas Zarcas
 # Getting Started with Create React App
