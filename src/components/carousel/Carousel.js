@@ -28,7 +28,7 @@ const CarouselComponent = (props) => {
         
 
 
-    }, []);
+    }, [props.TC, props.dataCard.length]);
 
 
     return (

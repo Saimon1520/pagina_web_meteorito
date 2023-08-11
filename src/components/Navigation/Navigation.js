@@ -25,16 +25,16 @@ const Navigation = () => {
                                     <Link to="/">Inicio</Link>
                                 </li>
                                 <li>
-                                    <Link to="">Meteoritos</Link>
+                                    <Link to="/Meteoritos">Meteoritos</Link>
                                 </li>
                                 <li>
-                                    <Link to="">Comunidad</Link>
+                                    <Link to="/Comunidad">Comunidad</Link>
                                 </li>
                                 <li>
-                                    <Link to="">Museo</Link>
+                                    <Link to="/Museo">Museo</Link>
                                 </li>
                                 <li>
-                                    <Link to="">Acerca de</Link>
+                                    <Link to="/Acerca-de">Acerca de</Link>
                                 </li>
                             </ul>
                         </div>
@@ -52,7 +52,7 @@ const Navigation = () => {
                         <Link to="">Meteoritos</Link>
                     </li>
                     <li onClick={openHandler}>
-                        <Link to="">Comunidad</Link>
+                        <Link to="/Comunidad">Comunidad</Link>
                     </li>
                     <li onClick={openHandler}>
                         <Link to="">Museo</Link>
