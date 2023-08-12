@@ -1,6 +1,7 @@
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ShowPeople from './components/show-people-component/ShowPeople';
 
 function App() {
   return (
@@ -13,6 +14,15 @@ function App() {
           </Routes>
         </Router>
       </div>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        
+
+        <ShowPeople></ShowPeople>
+      </header>
     </div>
   );
 }
