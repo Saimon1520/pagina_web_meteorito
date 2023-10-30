@@ -1,0 +1,247 @@
+:root {
+  --primary-color: #003167;
+  --Color_letras_Logo: #00307f;
+  --Azul_Oscuro: #024574;
+  --Celeste: #5fcfdd;
+  --Azul: #01a8e0;
+  --Amarillo: #eddb01;
+  --Verde_Claro: #7eba01;
+  --Cafe: #7b401b;
+}
+
+
+/* Estilos base del menú */
+.navigation {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  color: #fff;
+  width: 100%;
+}
+
+.body {
+  height: 2000px;
+}
+
+.navigation_nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 25%;
+  height: 2rem;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.menu-box {
+  margin-inline: 26%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.menu li {
+  margin-right: 10px;
+  height: 3rem;
+  width: 6.5rem;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li:hover {
+  background-color: hsl(210, 100%, 24%);
+}
+
+.menu li:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.burbar {
+  display: none;
+  background-color: var(--primary-color);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+
+}
+
+.menu-burbar {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-burbar li {
+  display: flex;
+
+  height: 5vh;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.menu-burbar li:active {
+  background-color: hsl(210, 100%, 24%);
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.menu-burbar a {
+  display: flex;
+  height: 5vh;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+/* Estilos del menú para escritorio pequeño */
+@media (max-width: 1280px) {
+  .logo {
+    height: 1.8rem;
+  }
+
+  .menu-box {
+    margin-inline: 20%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Estilos del menú para tablets */
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+
+
+  .active {
+    display: block;
+  }
+
+  .logo {
+    height: 35px;
+  }
+
+  .navigation {
+    justify-content: space-between;
+    padding-right: 0;
+    padding-left: 0;
+
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  .menu-burbar a {
+
+    color: white;
+    text-decoration: none;
+    font-size: small;
+  }
+
+  .burbar {
+    display: block;
+  }
+}
+
+/* Estilos del menú para dispositivos móviles */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+
+  .active {
+    display: block;
+    color: darkslategray;
+  }
+
+  .logo {
+    margin-top: 10px;
+    height: 30px;
+  }
+
+  .navigation {
+    justify-content: space-between;
+    padding-right: 0;
+    padding-left: 0;
+
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  .menu-burbar a {
+
+    color: white;
+    text-decoration: none;
+    font-size: smaller;
+  }
+
+  .burbar {
+    display: block;
+    padding-right: 0;
+    padding-left: 0;
+
+  }
+}
+
+.collapsed {
+  display: none;
+}
