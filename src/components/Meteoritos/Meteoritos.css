@@ -7,3 +7,235 @@
     --Verde_Claro: #7eba01;
     --Cafe: #7b401b;
 }
+
+.Meteoritos {
+    /* Add any styles you need for the outer container */
+}
+
+.definition_and_image_container {
+    display: flex;
+    /* Make the containers flex to control their positioning */
+    align-items: center;
+    /* Align the items vertically in the middle */
+    border: 2px solid black;
+    /* Add a black border around the container */
+    padding: 10px;
+    /* Add some padding to create space between the content and the border */
+    margin: 1%;
+    /* Add padding to all sides of the container */
+    border-radius: 20px;
+    position: relative;
+    z-index: 4;
+}
+
+
+.definition_container {
+    flex: 1;
+    /* Take up the available space within the flex container */
+    /* Add any styles you need for the definition container */
+    display: flex;
+    flex-direction: column;
+    /* Stack the text_container and source_container vertically */
+    align-items: center;
+}
+
+.image_container {
+    margin-right: 20px;
+    /* Add margin to create space between the image and definition containers */
+    /* Add any styles you need for the image container */
+    z-index: 2;
+}
+
+.image_container img {
+    width: auto;
+    /* Adjust the width to your desired size */
+    height: 300px;
+    /* Maintain aspect ratio */
+    border-radius: 20px;
+    /* Adjust the value to control the level of rounding */
+    z-index: 1;
+}
+
+.text_container {
+    background-color: var(--Azul);
+    /* Set the text color to red (you can use any valid color value) */
+    border-radius: 20px;
+    /* Adjust the value to control the level of rounding */
+    width: auto;
+    /* Adjust the width to your desired size */
+    height: auto;
+    padding: 20px;
+    z-index: -1;
+}
+
+
+.info_AZ_container {
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    padding: 10px;
+    /* Optional padding to add some spacing around the content */
+    /* Other styles as needed */
+    border-radius: 20px;
+    background-color: var(--Azul);
+    margin: 1%;
+    /* Add padding to all sides of the container */
+    position: relative;
+
+}
+
+.title_container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    text-align: center; /* Horizontally center the text */
+  }
+
+.triangles {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 0;
+    /* Adjust the size as needed */
+    border-color: var(--Celeste) transparent transparent transparent;
+    /* Change the color as needed */
+    position: absolute;
+
+    border-radius: 20px;
+    /* Adjust the radius for rounded corners */
+    z-index: -1;
+}
+.triangle1{
+    top: 5px;
+    /* Adjust the position to keep the triangle inside the container */
+    right: 10%;
+    /* Center the triangle horizontally */
+    transform: rotate(10deg);
+    border-color: var(--Azul_Oscuro) transparent transparent transparent;
+}
+.triangle2{
+    bottom: 20px;
+    /* Adjust the position to keep the triangle inside the container */
+    left: 30%;
+    /* Center the triangle horizontally */
+    transform: rotate(-37deg);
+    border-color: var(--Color_letras_Logo) transparent transparent transparent;
+}
+
+.triangle3{
+    top: 5%;
+    /* Adjust the position to keep the triangle inside the container */
+    left: 41%;
+    /* Center the triangle horizontally */
+    transform: rotate(-10deg);
+    border-color: var(--Verde_Claro) transparent transparent transparent;
+}
+
+.triangle4{
+    bottom: 5%;
+    /* Adjust the position to keep the triangle inside the container */
+    right: 5px;
+    /* Center the triangle horizontally */
+    transform: rotate(-30deg);
+}
+
+.triangle5{
+    top: 5px;
+    /* Adjust the position to keep the triangle inside the container */
+    right: 5px;
+    /* Center the triangle horizontally */
+    z-index: 2;
+    transform: rotate(-15deg);
+    border-color: var(--Verde_Claro) transparent transparent transparent;
+}
+.triangle6{
+    bottom: 5px;
+    /* Adjust the position to keep the triangle inside the container */
+    left: 5px;
+    /* Center the triangle horizontally */
+    z-index: 2;
+    transform: rotate(30deg);
+    border-color: var(--Azul_Oscuro) transparent transparent transparent;
+}
+
+.triangle7{
+    top: 5px;
+    /* Adjust the position to keep the triangle inside the container */
+    left: 5px;
+    /* Center the triangle horizontally */
+    z-index: 2;
+    transform: rotate(-42deg);
+}
+
+.title_container{
+    z-index: 3;
+}
+.text_info_container{
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .definition_and_image_container {
+        flex-direction: column;
+        /* Stack the containers vertically on smaller screens */
+    }
+
+    .definition_container {
+        align-items: flex-start;
+        /* Align text to the left on smaller screens */
+        width: 100%;
+        /* Make the image container take up the available width */
+        height: auto;
+    }
+
+    .image_container {
+        margin-right: 0;
+        /* Remove margin on smaller screens */
+        width: 100%;
+        /* Make the image container take up the available width */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin-bottom: 2%;
+    }
+
+    .image_container img {
+        width: 100%;
+        /* Make the image container take up the available width */
+        height: auto;
+        /* Maintain aspect ratio */
+        border-radius: 20px;
+        /* Adjust the value to control the level of rounding */
+    }
+
+    .triangle1{
+        top: 5px;
+        /* Adjust the position to keep the triangle inside the container */
+        right: 5px;
+        /* Center the triangle horizontally */
+    }
+    .triangle2{
+        bottom: 5px;
+        /* Adjust the position to keep the triangle inside the container */
+        left: 5px;
+        /* Center the triangle horizontally */
+    }
+    
+    .triangle3{
+        top: 5px;
+        /* Adjust the position to keep the triangle inside the container */
+        left: 5px;
+        /* Center the triangle horizontally */
+    }
+    
+    .triangle4{
+        bottom: 5px;
+        /* Adjust the position to keep the triangle inside the container */
+        right: 5px;
+        /* Center the triangle horizontally */
+    }
+}
