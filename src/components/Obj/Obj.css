@@ -1,0 +1,7 @@
+.OBJ {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 33.33%;
+    height: 50vh;
+  }

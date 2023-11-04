@@ -3,7 +3,6 @@
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    width: 100%;
   }
   
   .footer-content {
@@ -35,18 +34,3 @@
     text-decoration: underline;
   }
   
-  @media (max-width: 768px) {
-    .footer-content {
-        display: flex; /* Use flexbox to arrange children side by side */
-        align-items: center; /* Center vertically within the footer container */
-        flex-direction: row;
-      }
-    .copy_content{
-        width: 50%;
-        height: auto;
-    }
-    .social_content{
-        width: 50%;
-        height: auto;
-    }
-  }
