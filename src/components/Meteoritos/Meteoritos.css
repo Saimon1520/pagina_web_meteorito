@@ -160,7 +160,6 @@
     /* Center the triangle horizontally */
     z-index: 2;
     transform: rotate(30deg);
-    border-color: var(--Azul_Oscuro) transparent transparent transparent;
 }
 
 .triangle7{
@@ -179,7 +178,12 @@
     z-index: 3;
 }
 
+
 @media (max-width: 768px) {
+    .info_P,.source_container spam ,.title_container h2{
+        font-size: 25px;
+    }
+
     .definition_and_image_container {
         flex-direction: column;
         /* Stack the containers vertically on smaller screens */
@@ -217,12 +221,14 @@
         /* Adjust the position to keep the triangle inside the container */
         right: 5px;
         /* Center the triangle horizontally */
+        display: none;
     }
     .triangle2{
         bottom: 5px;
         /* Adjust the position to keep the triangle inside the container */
         left: 5px;
         /* Center the triangle horizontally */
+        display: none;
     }
     
     .triangle3{
@@ -230,6 +236,8 @@
         /* Adjust the position to keep the triangle inside the container */
         left: 5px;
         /* Center the triangle horizontally */
+        display: none;
+
     }
     
     .triangle4{
