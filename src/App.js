@@ -5,6 +5,7 @@ import Meteoritos from './components/Meteoritos/Meteoritos';
 import Comunidad from './components/Comunidad/Comunidad';
 import Museo from './components/Museo/Museo';
 import AcercaDe from './components/Acerca_de/Acerca_de';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
             <Route path="/Museo" element={<Museo></Museo>} />
             <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
           </Routes>
+          
         </Router>
       </div>
+      <footer>
+            <Footer></Footer>
+      </footer>
     </div>
   );
 }
