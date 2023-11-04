@@ -20,7 +20,7 @@ const La_Palmera = () => {
                         <h1 className='mt-5 Title1 mb-5'>La Palmera</h1>
                         <h2 className='mt-5'>Virtual Reality Comunity</h2>
                     </div>
-                    <div className="col-sm">
+                    <div className="col-sm lj">
                         <img className='img-fluid my-3 mt-5 mb-5 firstImage' src='/img/img1.png' alt='fgfg'></img>
                     </div>
                 </div>

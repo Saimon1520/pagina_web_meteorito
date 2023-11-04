@@ -10,7 +10,8 @@
 
 .firstContainer {
     background-color: var(--first-color);
-    height: 1000px;
+    height: 100%;
+    padding-bottom: 190px;
 }
 
 .secondContainer {
@@ -21,8 +22,12 @@
     text-align: center;
     align-items: center;
 
-}
+    height: 1200px;
 
+}
+.lj{
+    background-image: url('/public/img/fondo1.png');
+}
 .communityTitle {
     color: black;
     font-family: Bungee Inline;
@@ -35,14 +40,14 @@ h2 {
 }
 
 .firstImage {
-    width: calc(90% - 50px);
+    width: calc(95% - 100px);
     border-radius: 250px;
     transform: rotate(5deg);
     box-shadow: 13px 55px 1px rgba(0, 0, 0, 0.5);
 }
 
 .firstImage:hover {
-    width: 90%;
+    width: 95%;
 }
 
 .Title1 {
@@ -73,7 +78,8 @@ h2 {
 
 .thirdContainer {
     background-color: var(--first-color);
-    height: 1500px;
+    height: 1200px;
+    background-image: url('/public/img/fondo1.png');
 }
 
 .Title2 {
@@ -83,8 +89,8 @@ h2 {
 
 .thirdImage {
     border-radius: 60px;
-    width: 80%;
-    max-height: 55%;
+    width: 70%;
+    max-height: 60%;
     box-shadow: 0 50px 26px rgba(0, 0, 0, 0.5);
 }
 
