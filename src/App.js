@@ -2,6 +2,7 @@ import './App.css';
 import Navigation from './components/Navigation/Navigation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ShowPeople from './components/show-people-component/ShowPeople';
+import La_Palmera from './pages/La_Palmera';
 
 function App() {
   return (
@@ -11,18 +12,10 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/" element="" />
+            <Route path="/La_Palmera" element={<La_Palmera/>} />
           </Routes>
         </Router>
       </div>
-      <header className="App-header">
-        <img src="" className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
-
-        <ShowPeople></ShowPeople>
-      </header>
     </div>
   );
 }

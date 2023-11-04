@@ -25,7 +25,7 @@ const Navigation = () => {
                                     <Link to="/">Inicio</Link>
                                 </li>
                                 <li>
-                                    <Link to="">Meteoritos</Link>
+                                    <Link to="/La_Palmera">La Palmera</Link>
                                 </li>
                                 <li>
                                     <Link to="">Comunidad</Link>
@@ -46,10 +46,10 @@ const Navigation = () => {
             <div className={`burbar ${!isOpen ? "collapsed" : ""}`}>
                 <ul className='menu-burbar'>
                     <li onClick={openHandler}>
-                        <Link to="/">Inicio</Link>
+                        <Link to="">Inicio</Link>
                     </li>
                     <li onClick={openHandler}>
-                        <Link to="">Meteoritos</Link>
+                        <Link to="/La_Palmera">La Palmera</Link>
                     </li>
                     <li onClick={openHandler}>
                         <Link to="">Comunidad</Link>
