@@ -49,7 +49,7 @@ const Navigation = () => {
                         <Link to="/">Inicio</Link>
                     </li>
                     <li onClick={openHandler}>
-                        <Link to="">Meteoritos</Link>
+                        <Link to="/Meteoritos">Meteoritos</Link>
                     </li>
                     <li onClick={openHandler}>
                         <Link to="/Comunidad">Comunidad</Link>
