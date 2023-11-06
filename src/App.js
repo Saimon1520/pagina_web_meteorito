@@ -15,7 +15,7 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/" element="" />
-            <Route path="/Meteoritos" element={<Meteoritos></Meteoritos>} />
+            <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
             <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
             <Route path="/Museo" element={<Museo></Museo>} />
             <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />

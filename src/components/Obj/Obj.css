@@ -1,3 +1,26 @@
+:root {
+  --Color_letras_Logo: #00307f;
+  --Azul_Oscuro: #024574;
+  --Celeste: #5fcfdd;
+  --Azul: #01a8e0;
+  --Amarillo: #eddb01;
+  --Verde_Claro: #7eba01;
+  --Cafe: #7b401b;
+  --Color_fondo_titulo_obj:#f5f5f5;
+  --Color_borde_titulo_obj: #ccc;
+  --Color_sombra_titulo_obj: rgba(0, 0, 0, 0.2);
+  --Color_titulo_obj: #333;
+  --Fuente_primera_titulo_obj: 'Courier New';
+  --Fuente_segunda_titulo_obj: monospace;
+  --Fondo_popup: rgba(0, 0, 0, 0.7);
+  --Fondo_popup_content: #fff;
+  --Sombra_popup: rgba(0, 0, 0, 0.2);
+  --Negrita_popup_title: bold;
+  --Color_poup_title: #333;
+  --Color_popup_button: #333;
+  --Color_popup_button: #fff;
+}
+
 canvas{
   width: 100%;
 }
@@ -11,17 +34,17 @@ canvas{
 }
 
 .titulo_obj {
-  background-color: #f5f5f5; /* Color de fondo gris claro */
-  border: 1px solid #ccc; /* Borde gris claro */
+  background-color: var(--Color_fondo_titulo_obj); /* Color de fondo gris claro */
+  border: 1px solid var(--Color_borde_titulo_obj); /* Borde gris claro */
   padding: 10px; /* Espaciado interior para el contenido */
-  font-family: 'Courier New', monospace; /* Fuente con aspecto clásico */
+  font-family: var(--Fuente_primera_titulo_obj), var(--Fuente_segunda_titulo_obj); /* Fuente con aspecto clásico */
   font-size: 24px; /* Tamaño de fuente más grande para el título */
   text-align: center; /* Alineación del texto al centro */
   width: 80%; /* Ancho del cuadro de texto */
   margin: 0 auto; /* Centrar el cuadro de texto horizontalmente */
   border-radius: 5px; /* Bordes redondeados */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-  color: #333; /* Color de texto gris oscuro */
+  box-shadow: 2px 2px 5px var(--Color_sombra_titulo_obj); /* Sombra ligera */
+  color: var(--Color_titulo_obj); /* Color de texto gris oscuro */
   margin-top: -15%;
 }
 
@@ -41,7 +64,7 @@ canvas{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para superponer el contenido */
+  background: var(--Fondo_popup); /* Fondo semitransparente para superponer el contenido */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,20 +72,20 @@ canvas{
 }
 
 .popup-content {
-  background: #fff;
+  background: var(--Fondo_popup_content);
   padding: 20px;
   max-width: 80%;
   width: 90%; /* Ancho del pop-up */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--Sombra_popup);
   text-align: center;
 }
 
 .popup-title {
   cursor: pointer; /* Cambia el cursor al pasar sobre el título */
   margin-bottom: 10px;
-  font-weight: bold;
-  color: #333; /* Color de texto */
+  font-weight: var(--Negrita_popup_title);
+  color: var(--Color_poup_title); /* Color de texto */
 }
 
 .descripcion {
@@ -70,27 +93,28 @@ canvas{
 }
 
 .popup button {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--Color_popup_button);
+  color: var(--Color_popup_button);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   margin-top: 10px; /* Espacio entre el párrafo y el botón */
 }
 
+
 @media screen and (min-width: 768px) {
   .titulo_obj {
-    background-color: #f5f5f5; /* Color de fondo gris claro */
-    border: 1px solid #ccc; /* Borde gris claro */
+    background-color: var(--Color_fondo_titulo_obj); /* Color de fondo gris claro */
+    border: 1px solid var(--Color_borde_titulo_obj); /* Borde gris claro */
     padding: 10px; /* Espaciado interior para el contenido */
-    font-family: 'Courier New', monospace; /* Fuente con aspecto clásico */
+    font-family: var(--Fuente_primera_titulo_obj), var(--Fuente_segunda_titulo_obj); /* Fuente con aspecto clásico */
     font-size: 24px; /* Tamaño de fuente más grande para el título */
     text-align: center; /* Alineación del texto al centro */
     width: 80%; /* Ancho del cuadro de texto */
     margin: 0 auto; /* Centrar el cuadro de texto horizontalmente */
     border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-    color: #333; /* Color de texto gris oscuro */
+    box-shadow: 2px 2px 5px var(--Color_sombra_titulo_obj); /* Sombra ligera */
+    color: var(--Color_titulo_obj); /* Color de texto gris oscuro */
     margin-top: -5%;
   }
 }
@@ -109,17 +133,17 @@ canvas{
 }
 
 .titulo_obj {
-  background-color: #f5f5f5; /* Color de fondo gris claro */
-  border: 1px solid #ccc; /* Borde gris claro */
+  background-color: var(--Color_fondo_titulo_obj); /* Color de fondo gris claro */
+  border: 1px solid var(--Color_borde_titulo_obj); /* Borde gris claro */
   padding: 10px; /* Espaciado interior para el contenido */
-  font-family: 'Courier New', monospace; /* Fuente con aspecto clásico */
+  font-family: var(--Fuente_primera_titulo_obj), var(--Fuente_segunda_titulo_obj); /* Fuente con aspecto clásico */
   font-size: 24px; /* Tamaño de fuente más grande para el título */
   text-align: center; /* Alineación del texto al centro */
   width: 80%; /* Ancho del cuadro de texto */
   margin: 0 auto; /* Centrar el cuadro de texto horizontalmente */
   border-radius: 5px; /* Bordes redondeados */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-  color: #333; /* Color de texto gris oscuro */
+  box-shadow: 2px 2px 5px var(--Color_sombra_titulo_obj); /* Sombra ligera */
+  color: var(--Color_titulo_obj); /* Color de texto gris oscuro */
   margin-top: -10%;
 }
 
@@ -139,7 +163,7 @@ canvas{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para superponer el contenido */
+  background: var(--Fondo_popup); /* Fondo semitransparente para superponer el contenido */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,20 +171,20 @@ canvas{
 }
 
 .popup-content {
-  background: #fff;
+  background: var(--Fondo_popup_content);
   padding: 20px;
   max-width: 80%;
   width: 90%; /* Ancho del pop-up */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--Sombra_popup);
   text-align: center;
 }
 
 .popup-title {
   cursor: pointer; /* Cambia el cursor al pasar sobre el título */
   margin-bottom: 10px;
-  font-weight: bold;
-  color: #333; /* Color de texto */
+  font-weight: var(--Negrita_popup_title);
+  color: var(--Color_poup_title); /* Color de texto */
 }
 
 .titulo_obj, p {
@@ -172,8 +196,8 @@ canvas{
 }
 
 .popup button {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--Color_popup_button);
+  color: var(--Fondo_popup_content);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
