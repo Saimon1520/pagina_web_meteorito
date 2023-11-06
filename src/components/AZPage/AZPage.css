@@ -8,3 +8,145 @@
   --Verde_Claro: #7eba01;
   --Cafe: #7b401b;
 }
+.AZInfo {
+  background-color: var(--Verde_Claro);
+  color: black;
+  padding: 5px;
+  border-radius: 6px;
+  max-width: 13rem;
+  border: 2px solid black;
+  position: absolute;
+  z-index: 1;
+}
+.InfoH1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.AZText {
+  text-align: justify;
+  font-size: 0.5rem;
+}
+
+.AZInfo2 {
+  background-color: var(--Celeste);
+  color: black;
+  padding: 5px;
+  border-radius: 6px;
+  max-width: 13rem;
+  border: 2px solid black;
+  position: absolute;
+  z-index: 1;
+}
+.InfoH12 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.AZText2 {
+  text-align: justify;
+  font-size: 0.5rem;
+}
+
+@media (min-width: 320px) {
+  .AZInfo {
+    top: 29%;
+    right: 3.7%;
+  }
+  .AZInfo2 {
+    bottom: -23%;
+    left: 3.7%;
+  }
+}
+
+@media (min-width: 375px) {
+  .AZInfo {
+    top: 31%;
+    right: 3.7%;
+  }
+  .AZInfo2 {
+    bottom: -34%;
+    left: 3.7%;
+  }
+}
+
+@media (min-width: 425px) {
+  .AZInfo {
+    top: 34%;
+    right: 2.7%;
+    max-width: 18rem;
+  }
+  .AZInfo2 {
+    bottom: -43%;
+    left: 2.7%;
+    max-width: 18rem;
+  }
+  .AZText ,.AZText2 {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .AZInfo {
+    top: 52%;
+    right: 1.7%;
+    max-width: 18rem;
+  }
+  .AZInfo2 {
+    bottom: -112%;
+    left: 1.7%;
+    max-width: 18rem;
+  }
+  .AZText ,.AZText2 {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .AZInfo {
+    top: 65%;
+    right: 1.7%;
+    max-width: 18rem;
+  }
+  .AZInfo2 {
+    bottom: -162%;
+    left: 1.7%;
+    max-width: 18rem;
+  }
+  .AZText ,.AZText2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .AZInfo {
+    top: 83%;
+    right: 6%;
+    max-width: 26rem;
+  }
+  .AZInfo2 {
+    bottom: -210.5%;
+    left: 6%;
+    max-width: 26rem;
+  }
+  .AZText ,.AZText2 {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 2560px) {
+  .AZInfo {
+    top: 71%;
+    right: 10.7%;
+    max-width: 36rem;
+  }
+  .AZInfo2 {
+    bottom: -156.5%;
+    left: 6%;
+    max-width: 36rem;
+  }
+  .AZText ,.AZText2 {
+    font-size: 1.6rem;
+  }
+  .InfoH1, .InfoH12 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}

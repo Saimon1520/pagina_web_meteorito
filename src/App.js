@@ -6,6 +6,7 @@ import Comunidad from './components/Comunidad/Comunidad';
 import Museo from './components/Museo/Museo';
 import AcercaDe from './components/Acerca_de/Acerca_de';
 import Footer from './components/Footer/Footer';
+import AZPage from './components/AZPage/AZPage';
 
 function App() {
   return (

@@ -1,20 +1,17 @@
-import "./Navigation.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import './Navigation.css';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const openHandler = () => {
-    setIsOpen(!isOpen);
-  };
+    const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <div>
-      <div className="navigation">
-        <div className="navigation__logo">
-          <img className="logo" src="/img/Page_logo.png" alt="logo" />
-        </div>
+    const openHandler = () => {
+        setIsOpen(!isOpen)
+    }
+
+
+    return (
         <div>
             <div className='navigation'>
                 <div className='navigation__logo'>
@@ -31,7 +28,7 @@ const Navigation = () => {
                                     <Link to="/Fragmentos">Fragmentos</Link>
                                 </li>
                                 <li>
-                                    <Link to="#">Aguas Zarcas</Link>
+                                    <Link to="/AZPage">Aguas Zarcas</Link>
                                 </li>
                                 <li>
                                     <Link to="#">La Palmera</Link>
@@ -42,9 +39,6 @@ const Navigation = () => {
                                 <li>
                                     <Link to="/Museo">Museo</Link>
                                 </li>
-                                <li>
-                                     <Link to="/AZPage">Aguas Zarcas</Link>
-                               </li>
                                 <li>
                                     <Link to="/Acerca-de">Acerca de</Link>
                                 </li>
@@ -63,8 +57,8 @@ const Navigation = () => {
                         <li onClick={openHandler}>
                             <Link to="/Fragmentos">Fragmentos</Link>
                         </li>
-                        <li>
-                            <Link to="#">Aguas Zarcas</Link>
+                        <li onClick={openHandler}>
+                            <Link to="/AZPage">Aguas Zarcas</Link>
                         </li>
                         <li>
                             <Link to="#">La Palmera</Link>
@@ -82,34 +76,10 @@ const Navigation = () => {
                 </div>
             </nav>
             <div className='bodyf'>
+
             </div>
-          </nav>
         </div>
-      </div>
-      <nav>
-        <div className={`burbar ${!isOpen ? "collapsed" : ""}`}>
-          <ul className="menu-burbar">
-            <li onClick={openHandler}>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li onClick={openHandler}>
-              <Link to="">Meteoritos</Link>
-            </li>
-            <li onClick={openHandler}>
-              <Link to="/Comunidad">Comunidad</Link>
-            </li>
-            <li onClick={openHandler}>
-              <Link to="">Museo</Link>
-            </li>
-            <li onClick={openHandler}>
-              <Link to="">Acerca de</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div className="bodyf"></div>
-    </div>
-  );
-};
+    )
+}
 
 export default Navigation;
