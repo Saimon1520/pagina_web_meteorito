@@ -1,11 +1,11 @@
-import "./App.css";
-import AZPage from "./components/AZPage/AZPage";
-import Navigation from "./components/Navigation/Navigation";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Meteoritos from "./components/Meteoritos/Meteoritos";
-import Comunidad from "./components/Comunidad/Comunidad";
-import Museo from "./components/Museo/Museo";
-import AcercaDe from "./components/Acerca_de/Acerca_de";
+import './App.css';
+import Navigation from './components/Navigation/Navigation';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Meteoritos from './components/Meteoritos/Meteoritos';
+import Comunidad from './components/Comunidad/Comunidad';
+import Museo from './components/Museo/Museo';
+import AcercaDe from './components/Acerca_de/Acerca_de';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -15,14 +15,18 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/" element="" />
-            <Route path="/Meteoritos" element={<Meteoritos></Meteoritos>} />
+            <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
             <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
             <Route path="/Museo" element={<Museo></Museo>} />
             <Route path="/AZPage" element={<AZPage></AZPage>} />
             <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
           </Routes>
+          
         </Router>
       </div>
+      <footer>
+            <Footer></Footer>
+      </footer>
     </div>
   );
 }
