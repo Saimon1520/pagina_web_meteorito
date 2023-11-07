@@ -25,10 +25,16 @@ const Navigation = () => {
                                     <Link to="/">Inicio</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Meteoritos">Meteoritos</Link>
+                                    <Link to="/Fragmentos">Fragmentos</Link>
                                 </li>
                                 <li>
-                                    <Link to="/Comunidad">Comunidad</Link>
+                                    <Link to="/AZPage">Aguas Zarcas</Link>
+                                </li>
+                                <li>
+                                    <Link to="#">La Palmera</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Comunidad">CODE-IN</Link>
                                 </li>
                                 <li>
                                     <Link to="/Museo">Museo</Link>
@@ -43,25 +49,31 @@ const Navigation = () => {
                 </div>
             </div>
             <nav>
-            <div className={`burbar ${!isOpen ? "collapsed" : ""}`}>
-                <ul className='menu-burbar'>
-                    <li onClick={openHandler}>
-                        <Link to="/">Inicio</Link>
-                    </li>
-                    <li onClick={openHandler}>
-                        <Link to="">Meteoritos</Link>
-                    </li>
-                    <li onClick={openHandler}>
-                        <Link to="/Comunidad">Comunidad</Link>
-                    </li>
-                    <li onClick={openHandler}>
-                        <Link to="">Museo</Link>
-                    </li>
-                    <li onClick={openHandler}>
-                        <Link to="">Acerca de</Link>
-                    </li>
-                </ul>
-            </div>
+                <div className={`burbar ${!isOpen ? "collapsed" : ""}`}>
+                    <ul className='menu-burbar'>
+                        <li onClick={openHandler}>
+                            <Link to="/">Inicio</Link>
+                        </li>
+                        <li onClick={openHandler}>
+                            <Link to="/Fragmentos">Fragmentos</Link>
+                        </li>
+                        <li onClick={openHandler}>
+                            <Link to="/AZPage">Aguas Zarcas</Link>
+                        </li>
+                        <li>
+                            <Link to="#">La Palmera</Link>
+                        </li>
+                        <li onClick={openHandler}>
+                            <Link to="/Comunidad">CODE-IN</Link>
+                        </li>
+                        <li onClick={openHandler}>
+                            <Link to="">Museo</Link>
+                        </li>
+                        <li onClick={openHandler}>
+                            <Link to="">Acerca de</Link>
+                        </li>
+                    </ul>
+                </div>
             </nav>
             <div className='bodyf'>
 
