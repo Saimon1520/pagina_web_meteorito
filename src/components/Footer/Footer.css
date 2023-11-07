@@ -34,3 +34,13 @@
     text-decoration: underline;
   }
   
+
+  @media (max-width: 768px) {
+    .footer-content{
+      flex-direction: row;
+    }
+    .footer-content div{
+      width: 50%;
+      height: auto;
+    }
+  }
