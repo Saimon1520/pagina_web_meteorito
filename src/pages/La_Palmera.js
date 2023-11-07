@@ -27,7 +27,7 @@ const La_Palmera = () => {
             </div>
             <div className="container-fluid secondContainer text-center">
                 <div className='informatioContainer'>
-                    <h1 className='Title3'>La Palmera</h1>
+                    <h1 className=' mt-5 Title3'>La Palmera</h1>
                     <div class="row">
                         <div className="col-sm">
                             <br />
@@ -49,7 +49,7 @@ const La_Palmera = () => {
 
 
             </div>
-            <div className="container-fluid thirdContainer text-center">
+            <div className="container-fluid thirdContainer text-center pb-4">
                 <br></br>
                 <div class="row">
                     <div className="col-sm">

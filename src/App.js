@@ -1,8 +1,8 @@
 import './App.css';
-import Navigation from './components/Navigation/Navigation';
+import Navigation from './components/Navigation/Navigation.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ShowPeople from './components/show-people-component/ShowPeople';
-import La_Palmera from './pages/La_Palmera';
+import La_Palmera from './pages/La_Palmera.js';
 
 function App() {
   return (
