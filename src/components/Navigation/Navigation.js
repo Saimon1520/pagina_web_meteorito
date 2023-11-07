@@ -28,7 +28,7 @@ const Navigation = () => {
                                     <Link to="/Fragmentos">Fragmentos</Link>
                                 </li>
                                 <li>
-                                    <Link to="#">Aguas Zarcas</Link>
+                                    <Link to="/AZPage">Aguas Zarcas</Link>
                                 </li>
                                 <li>
                                     <Link to="#">La Palmera</Link>
@@ -57,8 +57,8 @@ const Navigation = () => {
                         <li onClick={openHandler}>
                             <Link to="/Fragmentos">Fragmentos</Link>
                         </li>
-                        <li>
-                            <Link to="#">Aguas Zarcas</Link>
+                        <li onClick={openHandler}>
+                            <Link to="/AZPage">Aguas Zarcas</Link>
                         </li>
                         <li>
                             <Link to="#">La Palmera</Link>
