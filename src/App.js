@@ -5,6 +5,7 @@ import Meteoritos from './components/Meteoritos/Meteoritos';
 import Comunidad from './components/Comunidad/Comunidad';
 import Museo from './components/Museo/Museo';
 import AcercaDe from './components/Acerca_de/Acerca_de';
+import Body_home from './components/Body_home/retorno';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div>
         <Router>
           <Navigation />
+          <Body_home/>
           <Routes>
             <Route path="/" element="" />
             <Route path="/Meteoritos" element={<Meteoritos></Meteoritos>} />
