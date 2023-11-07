@@ -5,6 +5,7 @@ import Meteoritos from './components/Meteoritos/Meteoritos';
 import Comunidad from './components/Comunidad/Comunidad';
 import Museo from './components/Museo/Museo';
 import AcercaDe from './components/Acerca_de/Acerca_de';
+import Body_home from './components/Body_home/retorno';
 import Footer from './components/Footer/Footer';
 import AZPage from './components/AZPage/AZPage';
 
@@ -15,14 +16,13 @@ function App() {
         <Router>
           <Navigation />
           <Routes>
-            <Route path="/" element="" />
+            <Route path="/" element={<Body_home></Body_home>} />
             <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
             <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
             <Route path="/Museo" element={<Museo></Museo>} />
             <Route path="/AZPage" element={<AZPage></AZPage>} />
             <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
-          </Routes>
-          
+          </Routes>     
         </Router>
       </div>
       <footer>
