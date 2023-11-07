@@ -1,4 +1,5 @@
 import './Meteoritos.css';
+import Barra_Meteoritos from '../Barra_Obj/Barra_Obj'
 const Meteoritos = () => {
     return (
         <div className='Meteoritos'>
@@ -44,6 +45,7 @@ const Meteoritos = () => {
                     </p>
                 </div>
             </div>
+            <Barra_Meteoritos></Barra_Meteoritos>
         </div>
     )
 }
