@@ -18,22 +18,19 @@ function App() {
         <Router>
           <Navigation />
           <Routes>
-            <Route path="/" element="" />
-            <Route path="/La_Palmera" element={<La_Palmera/>} />
-          </Routes>
-        </Router>
-      </div>
+            <Route path="/" element={<Body_home></Body_home>} />
+            <Route path="/La_Palmera" element={<La_Palmera />} />
             <Route path="/" element={<Body_home></Body_home>} />
             <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
             <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
             <Route path="/Museo" element={<Museo></Museo>} />
             <Route path="/AZPage" element={<AZPage></AZPage>} />
             <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
-          </Routes>     
+          </Routes>
         </Router>
       </div>
       <footer>
-            <Footer></Footer>
+        <Footer></Footer>
       </footer>
     </div>
   );

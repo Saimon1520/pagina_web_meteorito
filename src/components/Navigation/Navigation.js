@@ -25,14 +25,13 @@ const Navigation = () => {
                                     <Link to="/">Inicio</Link>
                                 </li>
                                 <li>
-                                    <Link to="/La_Palmera">La Palmera</Link>
                                     <Link to="/Fragmentos">Fragmentos</Link>
                                 </li>
                                 <li>
                                     <Link to="/AZPage">Aguas Zarcas</Link>
                                 </li>
                                 <li>
-                                    <Link to="#">La Palmera</Link>
+                                    <Link to="La_Palmera">La Palmera</Link>
                                 </li>
                                 <li>
                                     <Link to="/Comunidad">CODE-IN</Link>
@@ -50,25 +49,6 @@ const Navigation = () => {
                 </div>
             </div>
             <nav>
-            <div className={`burbar ${!isOpen ? "collapsed" : ""}`}>
-                <ul className='menu-burbar'>
-                    <li onClick={openHandler}>
-                        <Link to="">Inicio</Link>
-                    </li>
-                    <li onClick={openHandler}>
-                        <Link to="/La_Palmera">La Palmera</Link>
-                    </li>
-                    <li onClick={openHandler}>
-                        <Link to="">Comunidad</Link>
-                    </li>
-                    <li onClick={openHandler}>
-                        <Link to="">Museo</Link>
-                    </li>
-                    <li onClick={openHandler}>
-                        <Link to="">Acerca de</Link>
-                    </li>
-                </ul>
-            </div>
                 <div className={`burbar ${!isOpen ? "collapsed" : ""}`}>
                     <ul className='menu-burbar'>
                         <li onClick={openHandler}>
@@ -81,7 +61,7 @@ const Navigation = () => {
                             <Link to="/AZPage">Aguas Zarcas</Link>
                         </li>
                         <li>
-                            <Link to="#">La Palmera</Link>
+                            <Link to="La_Palmera">La Palmera</Link>
                         </li>
                         <li onClick={openHandler}>
                             <Link to="/Comunidad">CODE-IN</Link>
