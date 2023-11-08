@@ -1,6 +1,8 @@
 import './App.css';
-import Navigation from './components/Navigation/Navigation';
+import Navigation from './components/Navigation/Navigation.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ShowPeople from './components/show-people-component/ShowPeople';
+import La_Palmera from './pages/La_Palmera.js';
 import Meteoritos from './components/Meteoritos/Meteoritos';
 import Comunidad from './components/Comunidad/Comunidad';
 import Museo from './components/Museo/Museo';
@@ -16,6 +18,11 @@ function App() {
         <Router>
           <Navigation />
           <Routes>
+            <Route path="/" element="" />
+            <Route path="/La_Palmera" element={<La_Palmera/>} />
+          </Routes>
+        </Router>
+      </div>
             <Route path="/" element={<Body_home></Body_home>} />
             <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
             <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
