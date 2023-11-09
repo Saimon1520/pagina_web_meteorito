@@ -10,6 +10,7 @@
 
 # production
 /build
+.gltf
 
 # misc
 .DS_Store

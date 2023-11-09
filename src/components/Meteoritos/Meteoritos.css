@@ -12,7 +12,13 @@
     /* Add any styles you need for the outer container */
 }
 
-.definition_and_image_container {
+
+@font-face {
+    font-family: 'Bungee Inline';
+    src: url(https://fonts.gstatic.com/s/bungeeinline/v2/Tb-1914q4rFpjT-F66PLCTxObtw73-qQgbr7Be51v5c.woff2) format('woff2');
+}
+
+.definition_and_image_container , .info_AZ_container{
     display: flex;
     /* Make the containers flex to control their positioning */
     align-items: center;
@@ -28,7 +34,14 @@
     z-index: 4;
 }
 
+.info_AZ_container{
+    flex-direction: column;
+}
 
+.text_info_container{
+    display: flex;
+    flex-direction: column;
+}
 .definition_container {
     flex: 1;
     /* Take up the available space within the flex container */
@@ -67,6 +80,25 @@
     padding: 20px;
     z-index: -1;
 }
+
+
+.text_info_container_in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--Azul);
+    margin: 1%;
+    position: relative;
+    z-index: -1;
+}
+
+.title_container h2{
+    font-family: Bungee Inline;
+}
+
 
 .title_container {
     display: flex;
@@ -155,33 +187,19 @@
     z-index: 3;
 }
 .text_info_container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    z-index: 3;
 }
 
-.box{
-    display: flex;
-    background-color: var(--Azul);
-    border-radius: 15px;
-    margin: 5%;
-    width: 20%;
-    height: 50%;
-    padding: 20px;
-    text-align: justify;
-    align-items: center;
-    justify-content: center;
+.source_container spam{
+    font-weight: bold;
 }
-
 
 @media (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    .info_P,.source_container spam ,.title_container h2{
-        text-align: justify;
-        font-size: 15px;
+
+    .text_definition, .source_container spam, .title_container h2, .p_info{
+        font-size: 25px;
     }
+    
 
     .definition_and_image_container {
         flex-direction: column;
@@ -215,34 +233,7 @@
         /* Adjust the value to control the level of rounding */
     }
 
-    .triangle1{
-        top: 5px;
-        /* Adjust the position to keep the triangle inside the container */
-        right: 5px;
-        /* Center the triangle horizontally */
+    .triangle1,.triangle2,.triangle3,.triangle4,.triangle6{
         display: none;
-    }
-    .triangle2{
-        bottom: 5px;
-        /* Adjust the position to keep the triangle inside the container */
-        left: 5px;
-        /* Center the triangle horizontally */
-        display: none;
-    }
-    
-    .triangle3{
-        top: 5px;
-        /* Adjust the position to keep the triangle inside the container */
-        left: 5px;
-        /* Center the triangle horizontally */
-        display: none;
-
-    }
-    
-    .triangle4{
-        bottom: 5px;
-        /* Adjust the position to keep the triangle inside the container */
-        right: 5px;
-        /* Center the triangle horizontally */
     }
 }
