@@ -1,12 +1,12 @@
 import './App.css';
-import Navigation from './components/Navigation/Navigation';
+import Navigation from './components/Navigation/Navigation.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Meteoritos from './components/Meteoritos/Meteoritos';
-import Comunidad from './components/Comunidad/Comunidad';
-import Museo from './components/Museo/Museo';
-import AcercaDe from './components/Acerca_de/Acerca_de';
-import Footer from './components/Footer/Footer';
-import AZPage from './components/AZPage/AZPage';
+import Meteoritos from './components/Meteoritos/Meteoritos.js';
+import Comunidad from './components/Comunidad/Comunidad.js';
+import Museo from './components/Museo/Museo.js';
+import AcercaDe from './components/Acerca_de/Acerca_de.js';
+import Footer from './components/Footer/Footer.js';
+import AZPage from './components/AZPage/AZPage.js';
 
 function App() {
   return (
