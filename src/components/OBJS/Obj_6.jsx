@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Obj_6(props) {
-  const { nodes, materials } = useGLTF('/obj_6.gltf')
+  const { nodes, materials } = useGLTF('objects/obj_6.gltf')
   return (
     <group {...props} dispose={null} position={[0,-0.5,0]}>
       <mesh geometry={nodes.Cylinder.geometry} material={materials['Material.001']} position={[0.01, 0.294, -0.009]} scale={[0.604, 0.058, 0.604]} />
@@ -11,4 +11,4 @@ export default function Obj_6(props) {
   )
 }
 
-useGLTF.preload('/obj_6.gltf')
+useGLTF.preload('objects/obj_6.gltf')

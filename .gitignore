@@ -22,7 +22,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.gitignore
 public/objects/DAA01_reduce.gltf
 public/objects/ABR02_reduce.gltf
 public/objects/ERB02_reduce.gltf
