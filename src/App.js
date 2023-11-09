@@ -8,6 +8,8 @@ import AcercaDe from './components/Acerca_de/Acerca_de.js';
 import Body_home from './components/Body_home/retorno.js';
 import Footer from './components/Footer/Footer.js';
 import AZPage from './components/AZPage/AZPage.js';
+import La_Palmera from './pages/La_Palmera.js';
+import Navigation from './components/Navigation/Navigation.js';
 
 function App() {
   return (
