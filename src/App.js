@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer.js';
 import AZPage from './components/AZPage/AZPage.js';
 import La_Palmera from './pages/La_Palmera.js';
 import Navigation from './components/Navigation/Navigation.js';
+import GLog from './components/GLog/GLog.js';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Router>
           <Navigation />
           <Routes>
+            <Route path="/Login" element={<GLog></GLog>} />
             <Route path="/" element={<Body_home></Body_home>} />
             <Route path="/La_Palmera" element={<La_Palmera />} />
             <Route path="/" element={<Body_home></Body_home>} />
