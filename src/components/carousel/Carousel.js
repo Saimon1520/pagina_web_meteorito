@@ -1,85 +1,166 @@
-import React, { useEffect } from "react";
-import './Carousel.css';
+import React, { useEffect, useRef, useState } from "react";
+import jQuery from "jquery"; // Import jQuery as $
+import * as bootstrap from 'bootstrap';
 
+import './Carousel.css';
 const CarouselComponent = (props) => {
 
-    //Clone the items into a slide to show them all
-    useEffect(() => {
-        let item = '#featureContainer' + props.TC;
-        //select the carousel
-        const myCarousel = document.querySelectorAll(item + ' .carousel .carousel-item');
-        const minPerSlide = 5;
-        console.log(item, myCarousel)
-            if (minPerSlide < props.dataCard.length) {
-                myCarousel.forEach((el) => {
-            
-                    let next = el.nextElementSibling;
-                    for (let i = 1; i < minPerSlide; i++) {
-                        if (!next) {
-                            // wrap carousel by using the first child
-                            next = myCarousel[0];
-                        }
-                        const cloneChild = next.cloneNode(true);
-                        el.appendChild(cloneChild.children[0]);
-                        next = next.nextElementSibling;
-                    }
-                });
-            }
-        
+  const [auxSP, setAuxSP] = useState(0);
+  const autoRef = useRef(true); // Use a ref for auto
+  const [cardWidthAX, setCardWith] = useState(jQuery(".carousel-item").width())
+
+  // Define the event handler for the "carousel-control-next" button
+  const handleNextClick = () => {
+    var carouselWidth = jQuery(".carousel-inner")[0].scrollWidth;
+    var cardWidth = jQuery(".carousel-item").width();
+    var scrollPosition = 0;
+
+    handleAutoSlide()
+
+    setAuxSP((aux) => {
+      if (aux < carouselWidth - cardWidth) {
+        scrollPosition = aux + (cardWidth);
+      } else {
+        scrollPosition = 0;
+      }
+      jQuery("#carouselExampleControls .carousel-inner").animate(
+        { scrollLeft: scrollPosition },
+        600
+      );
+      return scrollPosition;
+    });
+  };
+
+  // Define the event handler for the "carousel-control-prev" button
+  const handlePrevClick = () => {
+
+    var carouselWidth = jQuery(".carousel-inner")[0].scrollWidth;
+    var cardWidth = jQuery(".carousel-item").width();
+    var scrollPosition = 0;
+
+    handleAutoSlide()
+
+    setAuxSP((aux) => {
+
+      if (aux > 0) {
+        scrollPosition = aux - cardWidth;
+      } else {
+        scrollPosition = carouselWidth - (cardWidth*3);
+      }
+      jQuery("#carouselExampleControls .carousel-inner").animate(
+        { scrollLeft: scrollPosition },
+        600
+      );
+      return scrollPosition;
+    });
+  };
 
 
-    }, [props.TC, props.dataCard.length]);
+  useEffect(() => {
+    var multipleCardCarousel = document.querySelector("#carouselExampleControls");
+    var cardWidth = jQuery(".carousel-item").width();
+    setCardWith(cardWidth);
+    if (window.matchMedia("(min-width: 768px)").matches) {
+    
+      var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+        interval: false,
+      });
+
+      // Attach the event handlers to the buttons
+      jQuery("#carouselExampleControls .carousel-control-next").on("click", handleNextClick);
+      jQuery("#carouselExampleControls .carousel-control-prev").on("click", handlePrevClick);
+    } else {
+      jQuery(multipleCardCarousel).addClass("slide");
+    }
+
+    // Clean up event handlers when the component unmounts
+    return () => {
+      jQuery("#carouselExampleControls .carousel-control-next").off("click", handleNextClick);
+      jQuery("#carouselExampleControls .carousel-control-prev").off("click", handlePrevClick);
+    };
+  }, [handleNextClick, handlePrevClick]);
 
 
-    return (
-        <div className="container my-3 mt-5 featureContainer" id={"featureContainer" + props.TC}>
-        <div className="row mx-auto my-auto justify-content-center">
-          <div id={"featureCarousel" + props.TC} className="carousel slide" data-bs-ride="carousel" >
-            <h2 className="font-weight-light float-start mt-5">{props.Section}</h2>
-            <div className="float-end pe-md-4">
-              <a className="indicator" href="#featureCarousel" role="button" data-bs-slide="prev">
-                <span className="fas fa-chevron-left" aria-hidden="true"></span>
-              </a>
-              &nbsp;&nbsp;
-              <a className="w-aut indicator" href="#featureCarousel" role="button" data-bs-slide="next">
-                <span className="fas fa-chevron-right" aria-hidden="true"></span>
-              </a>
-            </div>
-            <div className="carousel-inner" role="listbox">
-              {
-                props.dataCard ? props.dataCard.map((data, index) => (
-                  <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                    <div className="col-md-3 cc">
-                      <div className="card h-100">
-                        <picture>
-                          <img src={data.Image} className="img-thumbnail rounded-circle  mx-auto d-block  w-100 h-100" alt="..."></img>
-                        </picture>
-                        <div className="card-body">
-                          <h5 className="card-title mx-auto d-bloc">{data.Name}</h5>
-                          <div className="d-flex align-items-center justify-content-center">
-                            <p className="card-text text-center" dangerouslySetInnerHTML={{ __html: data.Role }} />
-                          </div>
-                        </div>
-                      </div>
+  useEffect(() => {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      const interval = setInterval(() => {
+        console.log("joj", autoRef.current, auxSP);
+        if (auxSP !== null && autoRef.current) {
+          var carouselWidth = jQuery(".carousel-inner")[0].scrollWidth;
+          var cardWidth = jQuery(".carousel-item").width();
+          if (auxSP < carouselWidth - cardWidth * 3.5) {
+            setAuxSP((prevAuxSP) => prevAuxSP + cardWidth);
+            var carousel = new bootstrap.Carousel(document.querySelector("#carouselExampleControls"), {
+              interval: false,
+            });
+            carousel.next();
+
+          } else {
+            setAuxSP(0);
+          }
+          jQuery("#carouselExampleControls .carousel-inner").animate(
+            { scrollLeft: auxSP },
+            600
+          );
+        } else {
+          handleAutoSlide()
+        }
+      }, 3500);
+
+      return () => clearInterval(interval);
+    }
+  }, [auxSP])
+
+  const handleAutoSlide = () => {
+    autoRef.current = !autoRef.current;
+  };
+
+  return (
+
+    <div id="carouselExampleControls" className="carousel">
+      <div className="carousel-inner">
+        {props.dataCard &&
+          props.dataCard.map((data, index) => {
+            const isActive = index === auxSP / cardWidthAX; // Check if this card is active
+
+            return (
+              <div
+                className={`carousel-item ${isActive == 0 ? 'active' : ''}`}
+                key={index}
+              >
+                <div className={`card `}>
+                  <div>
+                    <div className="img-wrapper">
+                      <picture>
+                        <img src={data.Image} className="rounded-circle d-block w-100" alt="..." />
+                      </picture>
                     </div>
-                  </div>
-  
-                )) : <></>
-              }
-            </div>
-            <button className="carousel-control-prev" type="button" data-bs-target={'#featureCarousel' + props.TC} data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target={'#featureCarousel' + props.TC} data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-          </div>
-        </div>
-        
-      </div >
-    )
-}
+                    <div className="card-body">
+                      <h5 className="card-title mx-auto d-bloc">{data.Name}</h5>
+                      <p className="card-text text-center" dangerouslySetInnerHTML={{ __html: data.Role }} />
+                    </div>
 
+                  </div>
+                </div>
+
+
+
+
+
+
+              </div>
+            );
+          })}
+      </div>
+      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
+  );
+};
 export default CarouselComponent;

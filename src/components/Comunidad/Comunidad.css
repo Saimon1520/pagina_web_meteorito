@@ -7,3 +7,56 @@
     --Verde_Claro: #7eba01;
     --Cafe: #7b401b;
 }
+
+section {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.contact{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionDiv {
+    display: flex;
+    width: 100%;
+}
+
+.texto {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.imgInfo {
+    width: 30%;
+    display: flexbox;
+
+
+}
+
+.imgInfo div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.halfImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 300px;
+    border-radius: 21px 21px 0 0;
+}
+
+.halfImg img{
+    height: 300px;
+}
