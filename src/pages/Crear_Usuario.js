@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './styles/admin_Page.css'
+import './styles/Crear_Usuario.css'
 
-const Admin_Page = () => {
+const Crear_Usuario = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -16,4 +16,4 @@ const Admin_Page = () => {
     )
 }
 
-export default Admin_Page;
+export default Crear_Usuario;

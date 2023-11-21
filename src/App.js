@@ -11,7 +11,7 @@ import AZPage from './components/AZPage/AZPage.js';
 import La_Palmera from './pages/La_Palmera.js';
 import Navigation from './components/Navigation/Navigation.js';
 import GLog from './components/GLog/GLog.js';
-import Admin from './pages/admin_Page.js';
+import Admin from './pages/Crear_Usuario.js';
 
 function App() {
   return (
