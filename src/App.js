@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ShowPeople from './components/show-people-component/ShowPeople.js';
 import Meteoritos from './components/Meteoritos/Meteoritos.js';
 import Comunidad from './components/Comunidad/Comunidad.js';
 import Museo from './components/Museo/Museo.js';

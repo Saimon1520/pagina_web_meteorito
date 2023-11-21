@@ -1,34 +1,35 @@
 :root {
-    --Color_letras_Logo: #00307f;
-    --Azul_Oscuro: #024574;
-    --Celeste: #5fcfdd;
-    --Azul: #01a8e0;
-    --Amarillo: #eddb01;
-    --Verde_Claro: #7eba01;
-    --Cafe: #7b401b;
+    --Blanco: #ffffff;
+    --Negro: #000000;
+    --Azul: #021D40;
+    --Morado: #6151D6;
+    --Verde: #7AE7EA;
 }
 
 section {
     display: flex;
     justify-content: center;
-    
+
 }
 
 
-.contact{
+.contact {
     display: flex;
     width: 100%;
+    height: 300px;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .sectionDiv {
     display: flex;
     width: 100%;
+    height: 500px;
 }
 
 .texto {
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,27 +37,14 @@ section {
 }
 
 .imgInfo {
-    width: 30%;
-    display: flexbox;
-
-
-}
-
-.imgInfo div{
-    width: 100%;
+    width: 50%;
     display: flex;
-    justify-content: center;
-}
-
-.halfImg {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 300px;
-    border-radius: 21px 21px 0 0;
+    justify-content: center;
+
 }
 
-.halfImg img{
-    height: 300px;
+
+.bg-d {
+    background-color: #021D40;
 }
