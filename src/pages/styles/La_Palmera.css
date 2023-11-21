@@ -8,6 +8,10 @@
     font-family: 'Bungee Inline';
     src: url(https://fonts.gstatic.com/s/bungeeinline/v2/Tb-1914q4rFpjT-F66PLCTxObtw73-qQgbr7Be51v5c.woff2) format('woff2');
 }
+@font-face {
+    font-family: 'Poppins';
+    src: url(https://fonts.gstatic.com/s/poppins/v15/pxiGyp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2) format('woff2');
+}
 
 .firstContainer {
     background-color: var(--first-color);
