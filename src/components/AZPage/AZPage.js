@@ -23,8 +23,7 @@ const AZPage = () => {
           <p className="facts2">
             Sabías que: En el año 2019, cayó un meteorito en Aguas Zarcas, el
             cual fue encontrado por un vecino de la zona, fue la noticia más
-            relevante por varias semanas, siendo inspiracion de ciertos proyecto
-            de CODEIN.
+            relevante por varias semanas, inspirando un proyecto de CODEIN.
           </p>
           <p className="facts3">
             Sabías que: Aguas Zarcas se encuentra rodeado por los volcanes
