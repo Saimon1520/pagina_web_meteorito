@@ -1,156 +1,204 @@
 import "./AZPage.css";
 import React from "react";
-import Modal from "react-modal";
 
-const modalStyle = {
-  overlay: {},
-  content: {
-    textAlign: "justify",
-    width: "50%",
-    height: "69%",
-    margin: "auto",
-  },
-};
-Modal.setAppElement("#root");
 const AZPage = () => {
-  let AZInfo;
-  let AZInfo2;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    AZInfo2.style.color = "#000";
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
   return (
     <div className="maindiv">
-      <img
-        src="img/AZHeader.jpeg"
-        className="img-fluid mx-auto"
-        alt="Plazoleta Aguas Zarcas"
-      ></img>
-      <div className="FImgs">
-        <img src="img/ctp.png" className="img-fluid" alt="Colegio"></img>
-        <img src="img/iglesia.png" className="img-fluid" alt="Iglesia"></img>
-        <img src="img/oasis.png" className="img-fluid" alt="Rio"></img>
-        <img src="img/volcan.png" className="img-fluid" alt="Volcanes"></img>
+      <div className="hcontainer">
+        <h1 className="AZTitle">Aguas Zarcas</h1>
+        <img
+          src="img/iglesia.jpg"
+          className="img-fluid mx-auto rounded"
+          alt="Iglesia Aguas Zarcas"
+        ></img>
+        <div className="AZInfo"></div>
       </div>
-      <div className="BuStopAZ">
-        <div>
-          <button className="mButton" onClick={openModal}>
-            Ver más información
-          </button>
-          <Modal
-            isOpen={modalIsOpen}
-            onAfterOpen={afterOpenModal}
-            onRequestClose={closeModal}
-            contentLabel="Modal"
-            style={modalStyle}
+      <div className="mcontainer">
+        <div className="factscontainerh">
+          <p className="facts1">
+            Sabías que: El nombre de Aguas Zarcas, (aguas de color turquesa)
+            proviene de las aguas termales de manantial. El color turquesa es
+            debido a la cantidad de azufre que contiene el río Aguas Zarcas.
+          </p>
+          <p className="facts2">
+            Sabías que: En el año 2019, cayó un meteorito en Aguas Zarcas, el
+            cual fue encontrado por un vecino de la zona, fue la noticia más
+            relevante por varias semanas, siendo inspiracion de ciertos proyecto
+            de CODEIN.
+          </p>
+          <p className="facts3">
+            Sabías que: Aguas Zarcas se encuentra rodeado por los volcanes
+            Platanar, Porvenir, y Viejo, todos en el Parque nacional Juan Castro
+            Blanco. En el distrito se ubica un campo volcánico.
+          </p>
+        </div>
+        <div className="mmodalcontainer">
+          <button
+            type="button"
+            class="mButton"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            id="hButton"
           >
-            <h1>Aguas Zarcas</h1>
-            <p ref={(_AZInfo) => (AZInfo = _AZInfo)}>
-              {" "}
-              En Aguas Zarcas, la cultura y la naturaleza se entrelazan en una
-              danza armoniosa que te sorprenderá en cada rincón. Pasea por sus
-              calles pintorescas y admira las coloridas casas que reflejan la
-              esencia de la tradición costarricense. Sumérgete en los mercados
-              locales, donde los aromas de frutas tropicales y café recién
-              tostado llenarán tus sentidos. No puedes dejar de probar la
-              deliciosa gastronomía típica, que combina sabores auténticos con
-              ingredientes frescos de la región. Además, Agua Zarcas ofrece
-              oportunidades únicas para los amantes del ecoturismo, con
-              emocionantes actividades como el avistamiento de aves exóticas,
-              emocionantes recorridos en kayak por los ríos serpenteantes y
-              emocionantes excursiones a reservas naturales cercanas. Ya sea que
-              busques una escapada tranquila o una aventura llena de adrenalina,
-              Agua Zarcas te ofrece el escenario perfecto para una experiencia
-              memorable y enriquecedora. Ven a descubrir este paraíso escondido
-              y déjate seducir por la magia de Agua Zarcas, un destino que te
-              conquistará con su encanto incomparable y su espíritu acogedor.
-              ¡La aventura te aguarda en este rincón de Costa Rica que te
-              enamorará desde el primer instante!
-            </p>
-            <button className="mButton" onClick={closeModal}>
-              Close
-            </button>
-          </Modal>
-        </div>
-        <img
-          src="img/centro.jpg"
-          className="img-fluid mx-auto"
-          alt="Centro Aguas Zarcas"
-        ></img>
-      </div>
-      <div className="BImgs">
-        <img
-          src="img/centro-civ.jpg"
-          className="img-fluid mx-auto rounded"
-          alt="Centro Civica"
-        ></img>
-        <img
-          src="img/escuelaAZ.jpg"
-          className="img-fluid mx-auto rounded"
-          alt="Escuela San Jose"
-        ></img>
-        <img
-          src="img/Catarata.jpg"
-          className="img-fluid mx-auto rounded"
-          alt="Catarata La Fortuna"
-        ></img>
-      </div>
-      <div className="LeavingAZ">
-        <div>
-          <button className="mButton" onClick={openModal}>
-            Ver más información
+            Presioná aquí para<br></br>más información!
           </button>
-          <Modal
-            isOpen={modalIsOpen}
-            onAfterOpen={afterOpenModal}
-            onRequestClose={closeModal}
-            contentLabel="Modal"
-            style={modalStyle}
+
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
           >
-            <h1>Aguas Zarcas</h1>
-            <p ref={(_AZInfo2) => (AZInfo2 = _AZInfo2)}>
-              {" "}
-              En Aguas Zarcas, la cultura y la naturaleza se entrelazan en una
-              danza armoniosa que te sorprenderá en cada rincón. Pasea por sus
-              calles pintorescas y admira las coloridas casas que reflejan la
-              esencia de la tradición costarricense. Sumérgete en los mercados
-              locales, donde los aromas de frutas tropicales y café recién
-              tostado llenarán tus sentidos. No puedes dejar de probar la
-              deliciosa gastronomía típica, que combina sabores auténticos con
-              ingredientes frescos de la región. Además, Agua Zarcas ofrece
-              oportunidades únicas para los amantes del ecoturismo, con
-              emocionantes actividades como el avistamiento de aves exóticas,
-              emocionantes recorridos en kayak por los ríos serpenteantes y
-              emocionantes excursiones a reservas naturales cercanas. Ya sea que
-              busques una escapada tranquila o una aventura llena de adrenalina,
-              Agua Zarcas te ofrece el escenario perfecto para una experiencia
-              memorable y enriquecedora. Ven a descubrir este paraíso escondido
-              y déjate seducir por la magia de Agua Zarcas, un destino que te
-              conquistará con su encanto incomparable y su espíritu acogedor.
-              ¡La aventura te aguarda en este rincón de Costa Rica que te
-              enamorará desde el primer instante!
-            </p>
-            <button className="mButton" onClick={closeModal}>
-              Cerrar
-            </button>
-          </Modal>
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    Información sobre Aguas Zarcas
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  En Aguas Zarcas, la cultura y la naturaleza se entrelazan en
+                  una danza armoniosa que te sorprenderá en cada rincón. Pasea
+                  por sus calles pintorescas y admira las coloridas casas que
+                  reflejan la esencia de la tradición costarricense. Sumérgete
+                  en los mercados locales, donde los aromas de frutas tropicales
+                  y café recién tostado llenarán tus sentidos. No puedes dejar
+                  de probar la deliciosa gastronomía típica, que combina sabores
+                  auténticos con ingredientes frescos de la región. Además, Agua
+                  Zarcas ofrece oportunidades únicas para los amantes del
+                  ecoturismo, con emocionantes actividades como el avistamiento
+                  de aves exóticas, emocionantes recorridos en kayak por los
+                  ríos serpenteantes y emocionantes excursiones a reservas
+                  naturales cercanas. Ya sea que busques una escapada tranquila
+                  o una aventura llena de adrenalina, Agua Zarcas te ofrece el
+                  escenario perfecto para una experiencia memorable y
+                  enriquecedora. Ven a descubrir este paraíso escondido y déjate
+                  seducir por la magia de Agua Zarcas, un destino que te
+                  conquistará con su encanto incomparable y su espíritu
+                  acogedor. ¡La aventura te aguarda en este rincón de Costa Rica
+                  que te enamorará desde el primer instante!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="mButton" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="AZFooterImg">
-          <img
-            src="img/leaving.jpg"
-            className="img-fluid mx-auto"
-            alt="Centro Aguas Zarcas"
-          ></img>
+      </div>
+      <div className="fcontainer">
+        <img
+          src="img/plaza.jpg"
+          className="img-fluid mx-auto rounded"
+          alt="Plazoleta Aguas Zarcas"
+        ></img>
+        <div className="factscontainerf">
+          <p className="facts1">
+            Los 15 de Septiembre en Aguas Zarcas suelen ser muy alegre y llenos
+            de un gran ambiente familiar, en el cual las bandas de los centros
+            educativos de la zona, desfilan por las calles de Aguas Zarcas
+            alegremente todo el día!
+          </p>
+          <p className="facts2">
+            Suelen haber desfiles conmemorando el dia de la independencia el
+            colegio mas grande de la zona es el CTP de Aguas Zarcas, el cual
+            trae bandas y grupos de baile folclórico, el desfile inicia desde el
+            colegio hasta el centro de Aguas Zarcas.
+          </p>
         </div>
+        <div className="fmodalcontainer">
+          <button
+            type="button"
+            class="mButton"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            id="fButton"
+          >
+            Presioná aquí para<br></br>más información!
+          </button>
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    Información sobre Aguas Zarcas
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Cerrar"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  En Aguas Zarcas, la cultura y la naturaleza se entrelazan en
+                  una danza armoniosa que te sorprenderá en cada rincón. Pasea
+                  por sus calles pintorescas y admira las coloridas casas que
+                  reflejan la esencia de la tradición costarricense. Sumérgete
+                  en los mercados locales, donde los aromas de frutas tropicales
+                  y café recién tostado llenarán tus sentidos. No puedes dejar
+                  de probar la deliciosa gastronomía típica, que combina sabores
+                  auténticos con ingredientes frescos de la región. Además, Agua
+                  Zarcas ofrece oportunidades únicas para los amantes del
+                  ecoturismo, con emocionantes actividades como el avistamiento
+                  de aves exóticas, emocionantes recorridos en kayak por los
+                  ríos serpenteantes y emocionantes excursiones a reservas
+                  naturales cercanas. Ya sea que busques una escapada tranquila
+                  o una aventura llena de adrenalina, Agua Zarcas te ofrece el
+                  escenario perfecto para una experiencia memorable y
+                  enriquecedora. Ven a descubrir este paraíso escondido y déjate
+                  seducir por la magia de Agua Zarcas, un destino que te
+                  conquistará con su encanto incomparable y su espíritu
+                  acogedor. ¡La aventura te aguarda en este rincón de Costa Rica
+                  que te enamorará desde el primer instante!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="mButton" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="img/celebracion.jpg"
+          className="img-fluid mx-auto rounded"
+          alt="15 de Septiembre Aguas Zarcas"
+        ></img>
+        <div className="factscontainerfj">
+          <p className="facts1">
+            Aguas Zarcas esta a los pies del Parque Nacional Juan Castro Blanco
+            fundado en 1992 con aproximadamente 14.308 hectáreas de extensión,
+            proveyendo abundantes fuentes de agua natural, limpia y potable para
+            toda su población. Ademas de proveer Eco-Turismo a la zona y hermosos
+            paisajes que cautivan a todo el que pasa cerca.
+          </p>
+        </div>
+        <img
+          src="img/juancastro.jpg"
+          className="img-fluid mx-auto rounded"
+          alt="15 de Septiembre Aguas Zarcas"
+        ></img>
       </div>
     </div>
   );
