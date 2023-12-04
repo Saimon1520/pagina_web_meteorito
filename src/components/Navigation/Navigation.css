@@ -20,6 +20,7 @@
   padding-right: 0;
   color: #fff;
   width: 100%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .body {
@@ -29,6 +30,7 @@
 .navigation_nav {
   display: flex;
   align-items: center;
+  
 }
 
 .logo {
@@ -80,6 +82,14 @@
 .menu a {
   color: white;
   text-decoration: none;
+
+  margin-right: 10px;
+  height: 3rem;
+  width: 6.5rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .burbar {

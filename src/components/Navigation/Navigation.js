@@ -31,7 +31,7 @@ const Navigation = () => {
                                     <Link to="/AZPage">Aguas Zarcas</Link>
                                 </li>
                                 <li>
-                                    <Link to="#">La Palmera</Link>
+                                    <Link to="La_Palmera">La Palmera</Link>
                                 </li>
                                 <li>
                                     <Link to="/Comunidad">CODE-IN</Link>
@@ -61,7 +61,7 @@ const Navigation = () => {
                             <Link to="/AZPage">Aguas Zarcas</Link>
                         </li>
                         <li>
-                            <Link to="#">La Palmera</Link>
+                            <Link to="La_Palmera">La Palmera</Link>
                         </li>
                         <li onClick={openHandler}>
                             <Link to="/Comunidad">CODE-IN</Link>
