@@ -55,7 +55,7 @@ const Meteoritos = () => {
 
                 </div>
             </div>
-            {/* <Barra_Meteoritos></Barra_Meteoritos> */}
+            <Barra_Meteoritos></Barra_Meteoritos>
         </div>
     )
 }
