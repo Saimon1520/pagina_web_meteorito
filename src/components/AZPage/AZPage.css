@@ -41,7 +41,7 @@
   align-items: center;
   text-align: center;
   background: var(--primary-color);
-  padding: 0.5rem;
+  padding: 0.2rem;
   color: white;
   border-style: solid;
   border-radius: var(--bs-border-radius);
@@ -55,7 +55,7 @@
   align-items: center;
   text-align: center;
   background: var(--primary-color);
-  padding: 0.5rem;
+  padding: 0.2rem;
   color: white;
   border-style: solid;
   border-radius: var(--bs-border-radius);
@@ -68,7 +68,7 @@
   align-items: center;
   text-align: center;
   background: var(--primary-color);
-  padding: 0.5rem;
+  padding: 0.2rem;
   color: white;
   border-style: solid;
   border-radius: var(--bs-border-radius);
@@ -78,8 +78,9 @@
 .facts1, .facts2, .facts3{
   font-family: "Poppins";
   align-items: center;
+  min-width: 214px;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.2rem;
   background-color: var(--primary-color);
   color: white;
   border-style: solid;
@@ -121,6 +122,36 @@
     font-size: 0.8rem;
     display: grid;
     grid-template-columns: auto;
+    align-items: center;
+    text-align: center;
+    background: #00307f;
+    padding: 0.5rem;
+    color: white;
+    border-style: solid;
+    border-radius: var(--bs-border-radius);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 2560px) {
+  .AZTitle {
+    font-family: "Bungee Inline";
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    border-style: solid;
+    border-radius: var(--bs-border-radius);
+    font-size: 5rem;
+  }
+
+  .mButton{
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  }
+  .factscontainerh, .factscontainerf, .factscontainerfj{
+    font-size: 2rem;
+    display: grid;
     align-items: center;
     text-align: center;
     background: #00307f;
