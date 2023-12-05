@@ -9,7 +9,7 @@ const Meteoritos = () => {
                 <div className='triangles triangle3'></div>
                 <div className='triangles triangle4'></div>
                 <div className='image_container'>
-                    <img src='./././img/met001.jpg' alt="Meteorito Image" />
+                    <img src='imgs/met001.jpg' alt="Meteorito Image" />
                 </div>
                 <div className='definition_container'>
                     <div className='text_container'>

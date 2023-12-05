@@ -7,7 +7,7 @@ const AZPage = () => {
       <div className="hcontainer">
         <h1 className="AZTitle">Aguas Zarcas</h1>
         <img
-          src="img/iglesia.jpg"
+          src="imgs/iglesia.jpg"
           className="img-fluid mx-auto rounded"
           alt="Iglesia Aguas Zarcas"
         ></img>
@@ -34,7 +34,7 @@ const AZPage = () => {
         <div className="mmodalcontainer">
           <button
             type="button"
-            class="mButton"
+            className="mButton"
             data-bs-toggle="modal"
             data-bs-target="#upperModal"
             id="hButton"
@@ -43,26 +43,26 @@ const AZPage = () => {
           </button>
 
           <div
-            class="modal fade"
+            className="modal fade"
             id="upperModal"
-            tabindex="-1"
+            tabIndex="-1"
             aria-labelledby="upperModaLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="upperModaLabel">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h1 className="modal-title fs-5" id="upperModaLabel">
                     Información sobre Aguas Zarcas
                   </h1>
                   <button
                     type="button"
-                    class="btn-close"
+                    className="btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                   En Aguas Zarcas, la cultura y la naturaleza se entrelazan en
                   una danza armoniosa que te sorprenderá en cada rincón. Pasea
                   por sus calles pintorescas y admira las coloridas casas que
@@ -79,7 +79,7 @@ const AZPage = () => {
       </div>
       <div className="fcontainer">
         <img
-          src="img/plaza.jpg"
+          src="imgs/plaza.jpg"
           className="img-fluid mx-auto rounded"
           alt="Plazoleta Aguas Zarcas"
         ></img>
@@ -100,7 +100,7 @@ const AZPage = () => {
         <div className="fmodalcontainer">
           <button
             type="button"
-            class="mButton"
+            className="mButton"
             data-bs-toggle="modal"
             data-bs-target="#lowerModal"
             id="fButton"
@@ -108,26 +108,26 @@ const AZPage = () => {
             Presioná aquí para<br></br>más información!
           </button>
           <div
-            class="modal fade"
+            className="modal fade"
             id="lowerModal"
-            tabindex="-1"
+            tabIndex="-1"
             aria-labelledby="lowerModaLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="lowerModaLabel">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h1 className="modal-title fs-5" id="lowerModaLabel">
                     Información sobre Aguas Zarcas
                   </h1>
                   <button
                     type="button"
-                    class="btn-close"
+                    className="btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                   Aguas Zarcas ofrece oportunidades únicas para los amantes del
                   ecoturismo, con emocionantes actividades como el avistamiento
                   de aves exóticas, emocionantes recorridos en kayak por los
@@ -146,7 +146,7 @@ const AZPage = () => {
           </div>
         </div>
         <img
-          src="img/celebracion.jpg"
+          src="imgs/celebracion.jpg"
           className="img-fluid mx-auto rounded"
           alt="15 de Septiembre Aguas Zarcas"
         ></img>
@@ -160,7 +160,7 @@ const AZPage = () => {
           </p>
         </div>
         <img
-          src="img/juancastro.jpg"
+          src="imgs/juancastro.jpg"
           className="img-fluid mx-auto rounded"
           alt="15 de Septiembre Aguas Zarcas"
         ></img>

@@ -4,11 +4,11 @@ import './Comunidad.css';
 const Comunidad = () => {
 
     const dataAreas = [
-        { Image: 'vr.jpg', Name: 'Realidad Virtual', Role: 'Museo Virtual <br />Diseño 3D <br />Desarrollo de Videojuegos <br/>' },
-        { Image: 'ar.jpg', Name: 'Realidad Aumentada', Role: 'Desarollo Web <br />Desarrollo de Videojuegos<br/>Fotogrametría 3D <br/>' },
-        { Image: 'wd.jpg', Name: 'Diseño Web', Role: 'Desarrollo Web<br />Desarrollo de Videojuegos<br/>Fotogrametría 3D<br/>' },
-        { Image: 'gd.jpg', Name: 'Desarrollo de Videojuegos', Role: 'Desarrollo Web <br />Desarrollo de Videojuegos<br/>' },
-        { Image: 'ml.jpg', Name: 'Machine Learning', Role: 'Realidad Aumentada <br />Desarrollo de Videjuegos<br/><br/>' },
+        { Image: 'vr.jpg', Name: 'Realidad Virtual', Role: 'Museo Virtual | Diseño 3D | Desarrollo de Videojuegos' },
+        { Image: 'ar.jpg', Name: 'Realidad Aumentada', Role: 'Desarollo Web | Desarrollo de Videojuegos | Fotogrametría 3D' },
+        { Image: 'wd.jpg', Name: 'Diseño Web', Role: 'Desarrollo Web | Desarrollo de Videojuegos | Fotogrametría 3D' },
+        { Image: 'gd.jpg', Name: 'Desarrollo de Videojuegos', Role: 'Desarrollo Web | Desarrollo de Videojuegos' },
+        { Image: 'ml.jpg', Name: 'Machine Learning', Role: 'Realidad Aumentada | Desarrollo de Videjuegos' },
 
     ]
 
@@ -17,10 +17,7 @@ const Comunidad = () => {
         <div className='Comunidad'>
             <div>
                 <section>
-
-                    <img src='../logo_codein.png' className='img-fluid'></img>
-
-
+                    <img src='imgs/logo_codein.png' className='img-fluid' alt='Logo'></img>
                 </section>
                 <section>
                     <div className='sectionDiv bg-d'>

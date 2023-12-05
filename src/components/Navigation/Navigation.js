@@ -15,7 +15,7 @@ const Navigation = () => {
         <div>
             <div className='navigation'>
                 <div className='navigation__logo'>
-                    <img className='logo' src='/img/Page_logo.png' alt="logo" />
+                    <img className='logo' src='imgs/Page_logo.png' alt="logo" />
                 </div>
                 <div>
                     <nav className='navigation_nav'>
@@ -76,7 +76,6 @@ const Navigation = () => {
                 </div>
             </nav>
             <div className='bodyf'>
-
             </div>
         </div>
     )
