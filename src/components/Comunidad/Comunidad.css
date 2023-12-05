@@ -1,10 +1,4 @@
-:root {
-    --Blanco: #ffffff;
-    --Negro: #000000;
-    --Azul: #021D40;
-    --Morado: #6151D6;
-    --Verde: #7AE7EA;
-}
+
 
 section {
     display: flex;

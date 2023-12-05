@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: var(--primary-color);    
+    background-color: var(--Azul_updated);    
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -11,9 +11,16 @@
     align-items: center;
   }
   
+  @font-face {
+    font-family: 'Poppins';
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  }
+
   .footer-content p {
     font-size: 14px;
     margin: 0;
+    font-family: 'Poppins';
+
   }
   
   ul {
