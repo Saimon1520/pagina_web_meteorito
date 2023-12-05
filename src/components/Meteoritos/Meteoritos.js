@@ -1,7 +1,6 @@
 import './Meteoritos.css';
 import Accordion from 'react-bootstrap/Accordion';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle'
+
 import React, { useState, useEffect } from 'react';
 
 import Barra_Meteoritos from '../Barra_Obj/Barra_Obj'
