@@ -17,8 +17,8 @@ const AZPage = () => {
         <div className="factscontainerh">
           <p className="facts1">
             Sabías que: El nombre de Aguas Zarcas, proviene de las aguas
-            termales de manantial. El color turquesa es debido a la cantidad de
-            azufre que contiene el río Aguas Zarcas.
+            termales de manantial. El color turquesa es debido a la gran
+            cantidad de azufre que contiene en si el río Aguas Zarcas.
           </p>
           <p className="facts2">
             Sabías que: En el año 2019, cayó un meteorito en la zona, siendo
@@ -87,14 +87,14 @@ const AZPage = () => {
           <p className="facts1">
             Los 15 de Septiembre en Aguas Zarcas suelen ser muy alegre y llenos
             de un gran ambiente familiar, en el cual las bandas de los centros
-            educativos de la zona, desfilando por las calles de Aguas Zarcas
-            alegremente todo el día celebrando!
+            educativos de toda la zona van desfilando por las calles de Aguas
+            Zarcas alegremente todo el día celebrando!
           </p>
           <p className="facts2">
-            Suelen haber desfiles conmemorando el dia de la independencia el
-            colegio mas grande de la zona es el CTP de Aguas Zarcas, el cual
-            trae bandas y grupos de baile folclórico, el desfile inicia desde el
-            colegio hasta el centro de Aguas Zarcas.
+            Suelen haber desfiles conmemorando el dia de la independencia en
+            cual el colegio más grande de la zona es el CTP de Aguas Zarcas, el
+            cual trae bandas y grupos de baile folclórico, el desfile inicia
+            desde el CTP hasta el centro de Aguas Zarcas.
           </p>
         </div>
         <div className="fmodalcontainer">
