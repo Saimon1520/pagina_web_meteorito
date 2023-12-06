@@ -20,7 +20,7 @@
   font-family: "Bungee Inline";
   align-items: center;
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: var(--Azul_updated);
   color: white;
   border-style: solid;
   border-radius: var(--bs-border-radius);
@@ -31,7 +31,7 @@
   grid-template-columns: auto auto auto;
   align-items: center;
   text-align: center;
-  background: var(--primary-color);
+  background: var(--Azul_updated);
   padding: 0.2rem;
   color: white;
   border-style: solid;
@@ -45,7 +45,7 @@
   grid-template-columns: auto auto;
   align-items: center;
   text-align: center;
-  background: var(--primary-color);
+  background: var(--Azul_updated);
   padding: 0.2rem;
   color: white;
   border-style: solid;
@@ -58,7 +58,7 @@
   grid-template-columns: auto;
   align-items: center;
   text-align: center;
-  background: var(--primary-color);
+  background: var(--Azul_updated);
   padding: 0.2rem;
   color: white;
   border-style: solid;
@@ -72,7 +72,7 @@
   min-width: 214px;
   text-align: center;
   padding: 0.2rem;
-  background-color: var(--primary-color);
+  background-color: var(--Azul_updated);
   color: white;
   border-style: solid;
   border-radius: 8px;
@@ -85,11 +85,11 @@
 .mButton {
   font-family: "Bungee Inline";
   padding: 0.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--Azul_updated);
   color: #fff;
   transition-duration: 0.4s;
   border: solid;
-  border-color: var(--primary-color);
+  border-color: var(--Azul_updated);
   border-radius: var(--bs-border-radius);
   cursor: pointer;
   font-size: 1rem;
@@ -129,7 +129,7 @@
     font-family: "Bungee Inline";
     align-items: center;
     text-align: center;
-    background-color: var(--primary-color);
+    background-color: var(--Azul_updated);
     color: white;
     border-style: solid;
     border-radius: var(--bs-border-radius);

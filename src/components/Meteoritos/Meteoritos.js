@@ -36,8 +36,6 @@ const Meteoritos = () => {
     };
     return (
         <div className='Meteoritos'>
-
-
             <div className='definition_and_image_container'>
 
                 <div className='image_container'>
@@ -97,9 +95,6 @@ const Meteoritos = () => {
                     </Accordion.Item>
                 </Accordion>
             </div>
-
-        </div >
-            <Barra_Meteoritos></Barra_Meteoritos>
         </div>
     )
 }
