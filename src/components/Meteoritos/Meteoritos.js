@@ -41,7 +41,7 @@ const Meteoritos = () => {
             <div className='definition_and_image_container'>
 
                 <div className='image_container'>
-                    <img src='./././img/met001.jpg' alt="Meteorito Image" />
+                    <img src='imgs/met001.jpg' alt="Meteorito Image" />
                 </div>
                 <div className='definition_container' onClick={() => toggleText()} >
                     <div className='text_container' >
@@ -99,6 +99,8 @@ const Meteoritos = () => {
             </div>
 
         </div >
+            <Barra_Meteoritos></Barra_Meteoritos>
+        </div>
     )
 }
 export default Meteoritos;

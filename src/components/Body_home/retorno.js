@@ -6,23 +6,23 @@ const Retorno = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     {
-      src: "/Imagenes/foto3.jpg",
+      src: "imgs/foto3.jpg",
       text: "El meteorito Agua Zarcas cuenta con más de 4500 millones de años.",
     },
     {
-      src: "/Imagenes/foto1.png",
+      src: "imgs/foto1.png",
       text: "En una subasta en Estados Unidos, la casa de Roky que fue impactada por un meteorito en San Carlos fue inicialmente ofertada con un precio base de ₡191 millones.",
     },
     {
-      src: "/Imagenes/foto2.jpeg",
+      src: "imgs/foto2.jpeg",
       text: "La universidad técnica nacional de la sede de San Carlos realizó un mapa guia de la caída de meteoritos.",
     },
     {
-      src: "/Imagenes/foto4.jpg",
+      src: "imgs/foto4.jpg",
       text: "El evento del bólido de Aguas Zarcas se refiere a un fenómeno astronómico que tuvo lugar en la noche del 23 de abril de 2019 en la localidad de Aguas Zarcas, en la zona norte de Costa Rica, alrededor de las 9:09 p.m. hora local. Este fenómeno se trata de la observación de un bólido o una gran bola de fuego en el cielo.",
     },
     {
-      src: "/Imagenes/foto5.jpg",
+      src: "imgs/foto5.jpg",
       text: "Este meteorito es notable debido a que impactó en la Tierra y se recuperó rápidamente, antes de que sufriera contaminación por el contacto humano o fuera expuesto a la lluvia, lo que habría provocado la disolución de algunos de sus componentes solubles.",
     },
   ];
@@ -48,7 +48,7 @@ const Retorno = () => {
           <button
             className='boton'
             onClick={nextImage}
-          ><FontAwesomeIcon icon={faChevronLeft} size='xl' /></button >
+          ><FontAwesomeIcon icon={faChevronLeft} size='xl' /></button>
           <div className='borde'>
             <img
               src={images[currentImageIndex].src}

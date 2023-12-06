@@ -4,8 +4,7 @@ const adelantar =  () =>{
     if(numero>10)
         numero=1;
         var noticias = document.getElementsByClassName('noticia1');
-        noticias.src="./Imagenes/foto1.jpg" + numero ".jpg";
+        noticias.src="imgs/foto1.jpg" + numero + ".jpg";
 }
 function atras(){
-    
 }

@@ -10,7 +10,7 @@ const CarouselA = (props) => {
                     props.dataAreas.map((data, index) => {
                         return (
                             <div className={`carousel-item ${index == 0 ? 'active' : ''} `} key={index}>
-                                <img src={`./${data.Image}`} className="img-fluid" alt="..."></img>
+                                <img src={`imgs/${data.Image}`} className="img-fluid" alt="..."></img>
                                 <div className="carousel-caption d-none d-md-block">
                                     <h5>{data.Name}</h5>
                                     <p>{data.Role}</p>
