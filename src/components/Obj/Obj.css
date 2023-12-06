@@ -1,11 +1,5 @@
 :root {
-  --Color_letras_Logo: #00307f;
-  --Azul_Oscuro: #024574;
-  --Celeste: #5fcfdd;
-  --Azul: #01a8e0;
-  --Amarillo: #eddb01;
-  --Verde_Claro: #7eba01;
-  --Cafe: #7b401b;
+
   --Color_fondo_titulo_obj:#f5f5f5;
   --Color_borde_titulo_obj: #ccc;
   --Color_sombra_titulo_obj: rgba(0, 0, 0, 0.2);

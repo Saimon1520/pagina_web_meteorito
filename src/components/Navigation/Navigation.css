@@ -1,20 +1,9 @@
-:root {
-  --primary-color: #003167;
-  --Color_letras_Logo: #00307f;
-  --Azul_Oscuro: #024574;
-  --Celeste: #5fcfdd;
-  --Azul: #01a8e0;
-  --Amarillo: #eddb01;
-  --Verde_Claro: #7eba01;
-  --Cafe: #7b401b;
-}
-
 
 /* Estilos base del menú */
 .navigation {
   display: flex;
   align-items: center;
-  background-color: var(--primary-color);
+  background-color: var(--Azul_updated);
   padding: 10px;
   padding-left: 0;
   padding-right: 0;
@@ -94,7 +83,7 @@
 
 .burbar {
   display: none;
-  background-color: var(--primary-color);
+  background-color: var(--Azul_updated);
   width: 100%;
   justify-content: center;
   align-items: center;

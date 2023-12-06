@@ -10,6 +10,8 @@ import AZPage from './components/AZPage/AZPage.js';
 import LaPalmera from './pages/La_Palmera.js';
 import Navigation from './components/Navigation/Navigation.js';
 import GLog from './components/GLog/GLog.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle'
 
 function App() {
   return (
