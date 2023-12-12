@@ -13,6 +13,7 @@ import Navigation from './components/Navigation/Navigation.js';
 import GLog from './components/GLog/GLog.js';
 
 function App() {
+  localStorage.clear();
   return (
     <div className="App">
       <div>
