@@ -1,3 +1,4 @@
+
 :root {
     --first-color: #021d40;
     --second-color: #6151d6;
@@ -16,6 +17,7 @@
 .nav {
     background: linear-gradient(to right, var(--first-color) , var(--second-color), var(--third-color));
 }
+
 .nav a{
     font-family: Bungee Inline;
     color: white;

@@ -32,7 +32,7 @@
 }
 
 .lj {
-    background-image: url('/public/img/fondo1.png');
+    background-image: url('/public/imgs/fondo1.png');
 }
 
 .communityTitle {
@@ -85,7 +85,7 @@ h2 {
 
 .thirdContainer {
     background-color: var(--first-color);
-    background-image: url('/public/img/fondo1.png');
+    background-image: url('/public/imgs/fondo1.png');
 }
 
 .Title2 {
