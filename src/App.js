@@ -14,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle'
 
 function App() {
+  localStorage.clear();
   return (
     <div className="App">
       <div>

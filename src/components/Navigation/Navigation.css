@@ -1,246 +1,50 @@
 
-/* Estilos base del menú */
-.navigation {
-  display: flex;
-  align-items: center;
-  background-color: var(--Azul_updated);
-  padding: 10px;
-  padding-left: 0;
-  padding-right: 0;
-  color: #fff;
-  width: 100%;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+:root {
+    --first-color: #021d40;
+    --second-color: #6151d6;
+    --third-color: #7ae7ea;
 }
 
-.body {
-  height: 2000px;
+@font-face {
+    font-family: 'Poppins';
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Bungee Inline';
+    src: url(https://fonts.gstatic.com/s/bungeeinline/v2/Tb-1914q4rFpjT-F66PLCTxObtw73-qQgbr7Be51v5c.woff2) format('woff2');
 }
 
-.navigation_nav {
-  display: flex;
-  align-items: center;
-  
+.nav {
+    background: linear-gradient(to right, var(--first-color) , var(--second-color), var(--third-color));
 }
 
-.logo {
-  margin-left: 25%;
-  height: 2rem;
-  font-size: 1.5rem;
-  margin-top: 10px;
-}
-
-.menu-box {
-  margin-inline: 26%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-}
-
-.menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-}
-
-.menu li {
-  margin-right: 10px;
-  height: 3rem;
-  width: 6.5rem;
-  border-radius: 15px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu li:hover {
-  background-color: hsl(210, 100%, 24%);
-}
-
-.menu li:active {
-  transform: scale(0.98);
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-}
-
-.menu li:last-child {
-  margin-right: 0;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-
-  margin-right: 10px;
-  height: 3rem;
-  width: 6.5rem;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.burbar {
-  display: none;
-  background-color: var(--Azul_updated);
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-
-
-}
-
-.menu-burbar {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-burbar li {
-  display: flex;
-
-  height: 5vh;
-  width: 95%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
-
-.menu-burbar li:active {
-  background-color: hsl(210, 100%, 24%);
-  transform: scale(0.98);
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-}
-
-.menu-burbar a {
-  display: flex;
-  height: 5vh;
-  width: 100%;
-  color: white;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-}
-
-.hamburger-menu {
-  display: none;
-}
-
-/* Estilos del menú para escritorio pequeño */
-@media (max-width: 1280px) {
-  .logo {
-    height: 1.8rem;
-  }
-
-  .menu-box {
-    margin-inline: 20%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-  }
-}
-
-/* Estilos del menú para tablets */
-@media (max-width: 1024px) {
-  .menu {
-    display: none;
-  }
-
-  .hamburger-menu {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    margin-right: 40px;
-  }
-
-
-  .active {
-    display: block;
-  }
-
-  .logo {
-    height: 35px;
-  }
-
-  .navigation {
-    justify-content: space-between;
-    padding-right: 0;
-    padding-left: 0;
-
-    border-bottom-color: white;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-  }
-
-  .menu-burbar a {
-
+.nav a{
+    font-family: Bungee Inline;
     color: white;
-    text-decoration: none;
-    font-size: small;
-  }
-
-  .burbar {
-    display: block;
-  }
+    font-size: x-large;
 }
 
-/* Estilos del menú para dispositivos móviles */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-  }
+.nav_bar {
+    justify-content: center;
+}
 
-  .hamburger-menu {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
+.nav_bar a {
+    color: white;
     margin-right: 30px;
-  }
-
-  .active {
-    display: block;
-    color: darkslategray;
-  }
-
-  .logo {
-    margin-top: 10px;
-    height: 30px;
-  }
-
-  .navigation {
-    justify-content: space-between;
-    padding-right: 0;
-    padding-left: 0;
-
-    border-bottom-color: white;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-  }
-
-  .menu-burbar a {
-
-    color: white;
-    text-decoration: none;
-    font-size: smaller;
-  }
-
-  .burbar {
-    display: block;
-    padding-right: 0;
-    padding-left: 0;
-
-  }
+    font-family: Poppins;
+    font-weight:bold;
+    font-size: 90%;
 }
 
-.collapsed {
-  display: none;
+.container_navbar{
+    padding-bottom: 60px;
+}
+
+@media (max-width: 991px) {
+    .nav_bar{
+        border-top: 1px solid black;
+    }
+    .nav{
+        border-bottom: 1px solid black;
+    }
 }
