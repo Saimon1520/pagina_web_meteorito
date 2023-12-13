@@ -9,24 +9,32 @@ const AddUsers = () => {
         setIsOpen(!isOpen)
     }
 
+
+
     return (
         <div>
-            <div class="container-fluid">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <div className="container-sm mainContainer">
+                <h1 className='mb-5'>Agregar Usuarios</h1>
+                <form className='inform'>
+                    <div className="mb-3 mt-4">
+                        <label for="name" className="form-label">Nombre</label>
+                        <input type="text" className="form-control" id="name"></input>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1"></input>
+                    <div className="mb-3">
+                        <label for="lastName" className="form-label">Apellidos</label>
+                        <input type="text" className="form-control" id="lastName"></input>
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <div className="mb-3">
+                        <label for="idenNumber" className="form-label">Cedúla</label>
+                        <input type="number" className="form-control" id="idenNumber"></input>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <label for="role" className="form-label">Rol</label>
+                    <select class="form-select" aria-label="Default select example" id="role">
+                        <option value="1" selected>Uno</option>
+                        <option value="2">Dos</option>
+                        <option value="3">Tres</option>
+                    </select>
+                    <button type="submit" className="btn btn-primary mt-5 mb-5">Agregar</button>
                 </form>
             </div>
         </div>
