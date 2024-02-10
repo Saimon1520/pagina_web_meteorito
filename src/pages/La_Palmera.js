@@ -1,14 +1,6 @@
-import { useState } from 'react';
 import './styles/La_Palmera.css'
 
 const La_Palmera = () => {
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const openHandler = () => {
-        setIsOpen(!isOpen)
-    }
-
 
     return (
         <div>
@@ -21,7 +13,7 @@ const La_Palmera = () => {
                         <h2 className='mt-5'>Virtual Reality Comunity</h2>
                     </div>
                     <div className="col-sm lj">
-                        <img className='img-fluid my-3 mt-5 mb-5 firstImage' src='/img/img1.png' alt='fgfg'></img>
+                        <img className='img-fluid my-3 mt-5 mb-5 firstImage' src='imgs/img1.png' alt='fgfg'></img>
                     </div>
                 </div>
             </div>
@@ -44,7 +36,7 @@ const La_Palmera = () => {
                             </div>
                         </div>
                     </div>
-                    <img className='img-fluid my-3 mt-5 mb-5 secondImage' src='/img/img2.jpg' alt='fgfg'></img>
+                    <img className='img-fluid my-3 mt-5 mb-5 secondImage' src='imgs/img2.jpg' alt='fgfg'></img>
                 </div>
 
 
@@ -60,7 +52,7 @@ const La_Palmera = () => {
                     </div>
                 </div>
                 <br />
-                <img className='img-fluid my-3 mt-5 mb-5 thirdImage' src='/img/img3.png' alt='fgfg'></img>
+                <img className='img-fluid my-3 mt-5 mb-5 thirdImage' src='imgs/img3.png' alt='fgfg'></img>
             </div>
         </div >
     )
