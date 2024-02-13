@@ -5,13 +5,16 @@
 .Primero {
     display: flex;
     background: var(--Azul_principal);
-    height: 300px;
+    height: 310px;
+    margin: 0%;
+    padding: 0%;
 }
 
 .pp {
     text-align: center;
     width: 40%;
     height: 30%;
+    
 }
 
 .foto {
@@ -35,7 +38,6 @@
     justify-content: center;
     align-items: center;
     height: 80%;
-    margin-top: 1%;
 }
 
 .sub3 {
@@ -49,7 +51,6 @@
 }
 
 .div2 {
-    margin-top: 1%;
     text-align: center;
     background-color: rgba(1, 17, 42, 255);
     width: 100%;
@@ -245,7 +246,6 @@ svg {
         justify-content: center;
         align-items: center;
         height: 80%;
-        margin-top: 1%;
     }
 
     .sub3 {
@@ -258,7 +258,6 @@ svg {
     }
 
     .div2 {
-        margin-top: 1%;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
@@ -426,7 +425,7 @@ svg {
     .Primero {
         display: flex;
         background: var(--Azul_principal);
-        height: 300px;
+        height: 480px;
     }
 
     .pp {
@@ -437,12 +436,12 @@ svg {
 
     .foto {
         width: 60%;
-        height: 50%;
+        height: 100%;
     }
 
     .Imagen_perro {
         width: 100%;
-        height: 300px;
+        height: 100%;
     }
 
     .noticia1 {
@@ -456,7 +455,6 @@ svg {
         justify-content: center;
         align-items: center;
         height: 80%;
-        margin-top: 1%;
     }
 
     .sub3 {
@@ -465,11 +463,9 @@ svg {
         justify-content: center;
         align-items: center;
         height: 90%;
-        margin-top: 1%;
     }
 
     .div2 {
-        margin-top: 1%;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
@@ -477,7 +473,6 @@ svg {
     }
 
     .Principal3 {
-        margin-top: 1%;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
@@ -549,10 +544,11 @@ svg {
     }
 
     .titulo1 {
-        margin-top: 10%;
+        margin-top: 40%;
         color: #386db8;
         text-align: center;
-        font-size: 18px;
+        width: 100%;
+        font-size: 25px;
     }
 
     .titulo2 {
@@ -568,10 +564,10 @@ svg {
     }
 
     .parrafo1 {
-        margin-top: 10%;
+        margin-top: 20%;
         color: white;
         text-align: center;
-        font-size: 13px;
+        font-size: 16px;
         margin-bottom: 6%;
         margin-left: 5%;
         margin-right: 5%;
@@ -637,23 +633,27 @@ svg {
     .Primero {
         display: flex;
         background: var(--Azul_principal);
-        height: 600px;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
     }
 
     .pp {
         text-align: center;
         width: 40%;
-        height: 30%;
+        height: 50%;
     }
 
     .foto {
         width: 60%;
-        height: 50%;
+        height: 100%;
     }
 
     .Imagen_perro {
         width: 100%;
-        height: 600px;
+        height: 650px;
+        margin: 0px;
+        padding: 0px;
     }
 
     .noticia1 {
@@ -667,7 +667,6 @@ svg {
         justify-content: center;
         align-items: center;
         height: 80%;
-        margin-top: 1%;
     }
 
     .sub3 {
@@ -676,19 +675,16 @@ svg {
         justify-content: center;
         align-items: center;
         height: 90%;
-        margin-top: 1%;
     }
 
     .div2 {
-        margin-top: 1%;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
-        height: 750px;
+        height: 900px;
     }
 
     .Principal3 {
-        margin-top: 1%;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
@@ -758,7 +754,7 @@ svg {
     }
 
     .titulo1 {
-        margin-top: 20%;
+        margin-top: 40%;
         color: #386db8;
         text-align: center;
         font-size: 35px;
@@ -777,7 +773,7 @@ svg {
     }
 
     .parrafo1 {
-        margin-top: 10%;
+        margin-top: 20%;
         color: white;
         text-align: center;
         font-size: 23px;
