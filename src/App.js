@@ -11,35 +11,43 @@ import LaPalmera from "./pages/La_Palmera.js";
 import Navigation from "./components/Navigation/Navigation.js";
 import GLog from "./components/GLog/GLog.js";
 import AdminPage from "./components/AdminPanel/adminpln.js";
+import Adminroledit from "./components/AdminPanel/adminroledit.js";
+import Adminuseredit from "./components/AdminPanel/adminuseredit.js";
+import { GlobalProvider } from './global';
+import { InitializeGoogleAnalytics } from "./components/GoogleAnalytics/Analytics.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
-import { InitializeGoogleAnalytics } from "./components/GoogleAnalytics/Analytics.jsx";
 
 function App() {
-  localStorage.clear();
+  //localStorage.clear();
+  //localStorage.setItem("isAdmin", "true");
   InitializeGoogleAnalytics();
   return (
-    <div className="App">
-      <div>
-        <Router>
-          <Navigation />
-          <Routes>
-            <Route path="/Login" element={<GLog></GLog>} />
-            <Route path="/" element={<Home></Home>} />
-            <Route path="/La_Palmera" element={<LaPalmera />} />
-            <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
-            <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
-            <Route path="/Museo" element={<Museo></Museo>} />
-            <Route path="/AZPage" element={<AZPage></AZPage>} />
-            <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
-            <Route path="/admin" element={<AdminPage></AdminPage>} />
-          </Routes>
-        </Router>
+    <GlobalProvider>
+      <div className="App">
+        <div>
+          <Router>
+            <Navigation />
+            <Routes>
+              <Route path="/Login" element={<GLog></GLog>} />
+              <Route path="/" element={<Home></Home>} />
+              <Route path="/La_Palmera" element={<LaPalmera />} />
+              <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
+              <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
+              <Route path="/Museo" element={<Museo></Museo>} />
+              <Route path="/AZPage" element={<AZPage></AZPage>} />
+              <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
+              <Route path="/admin" element={<AdminPage></AdminPage>} />
+              <Route path="/admin/roledit" element={<Adminroledit></Adminroledit>} />
+              <Route path="/admin/useredit" element={<Adminuseredit></Adminuseredit>} />
+            </Routes>
+          </Router>
+        </div>
+        <footer>
+          <Footer></Footer>
+        </footer>
       </div>
-      <footer>
-        <Footer></Footer>
-      </footer>
-    </div>
+    </GlobalProvider>
   );
 }
 

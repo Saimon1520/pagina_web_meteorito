@@ -1,0 +1,21 @@
+:root {
+    --first-color: #021d40;
+    --second-color: #6151d6;
+    --third-color: #7ae7ea;
+}
+.maindiv{
+    margin-top :10px;
+}
+.navbar{
+    background: linear-gradient(to right, var(--first-color) , var(--second-color), var(--third-color));
+}
+.offcanvas{
+    background: linear-gradient(to top, var(--first-color) , var(--second-color), var(--third-color));
+}
+.dropdown-menu{
+    background: linear-gradient(to top, var(--first-color), var(--second-color));
+}
+.navbar-toggler{
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
