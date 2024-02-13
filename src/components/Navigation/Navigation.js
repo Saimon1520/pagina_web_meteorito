@@ -1,12 +1,12 @@
 import './Navigation.css';
 import { useState } from 'react';
 
-let sectionNumber=localStorage.getItem('section');
+let sectionNumber = localStorage.getItem('section');
 const Navigation = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-    if(sectionNumber == null){
-        sectionNumber=0
+    if (sectionNumber == null) {
+        sectionNumber = 0
     }
     const openHandler = (direction) => {
         localStorage.setItem('section', direction)
@@ -40,6 +40,8 @@ const Navigation = () => {
                                     onClick={() => openHandler(5)} href="/Museo">Museo</a>
                                 <a className={`nav-link ${(sectionNumber == 6) ? "active" : ""}`}
                                     onClick={() => openHandler(6)} href="/Acerca-de">Acerca de</a>
+                                <a className={`nav-link ${(sectionNumber == 7) ? "active" : ""}`}
+                                    onClick={() => openHandler(7)} href="/Login">Login</a>
                             </div>
                         </div>
                     </div>
