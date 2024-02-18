@@ -1,14 +1,6 @@
-import { useState } from 'react';
 import './styles/La_Palmera.css'
 
 const La_Palmera = () => {
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const openHandler = () => {
-        setIsOpen(!isOpen)
-    }
-
 
     return (
         <div>
