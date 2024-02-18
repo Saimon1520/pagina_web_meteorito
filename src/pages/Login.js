@@ -32,6 +32,8 @@ const Login = () => {
                 userss.forEach(user => {
                     if ((user.userData.email === email) && (user.userData.password === password)) {
                         console.log("si funka")
+                        window.location.href = "/admin";
+                        localStorage.setItem("isAdmin", "true");
                         setMsgError("")
                         findIt = true
                     }
@@ -47,6 +49,8 @@ const Login = () => {
                 users.forEach(user => {
                     if ((user.userData.email === email) && (user.userData.password === password)) {
                         console.log("si funka")
+                        window.location.href = "/admin";
+                        localStorage.setItem("isAdmin", "true");
                         setMsgError("")
                         findIt = true;
                     }

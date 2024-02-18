@@ -11,18 +11,19 @@ import LaPalmera from "./pages/La_Palmera.js";
 import Navigation from "./components/Navigation/Navigation.js";
 import Login from './pages/Login.js';
 import GLog from "./components/GLog/GLog.js";
-import AdminPage from "./components/AdminPanel/adminpln.js";
-import Adminroledit from "./components/AdminPanel/adminroledit.js";
-import Adminuseredit from "./components/AdminPanel/adminuseredit.js";
+import AdminPage from "./components/AdminPanel/adminanaltytics.js";
+import Adminadduser from "./components/AdminPanel/adminadduser.js";
+import Adminusertable from "./components/AdminPanel/adminusertable.js";
+import Adminuseredit from "./components/AdminPanel/adminedituser.js";
 import { GlobalProvider } from './global';
-import { InitializeGoogleAnalytics } from "./components/GoogleAnalytics/Analytics.jsx";
+import { InitializeGoogleAnalytics } from "./components/GoogleAnalytics/Analytics.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 
 function App() {
   //localStorage.clear();
   //localStorage.setItem("isAdmin", "true");
-  InitializeGoogleAnalytics();
+  //InitializeGoogleAnalytics();
   return (
     <GlobalProvider>
       <div className="App">
@@ -37,10 +38,11 @@ function App() {
               <Route path="/Museo" element={<Museo></Museo>} />
               <Route path="/AZPage" element={<AZPage></AZPage>} />
               <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
-              <Route path="/Login" element={<Login></Login>} />                                  
+              <Route path="/Login" element={<Login></Login>} />
               <Route path="/admin" element={<AdminPage></AdminPage>} />
-              <Route path="/admin/roledit" element={<Adminroledit></Adminroledit>} />
-              <Route path="/admin/useredit" element={<Adminuseredit></Adminuseredit>} />
+              <Route path="/admin/useradd" element={<Adminadduser></Adminadduser>} />
+              <Route path="/admin/usertable" element={<Adminusertable></Adminusertable>} />
+              <Route path="/admin/usertable/useredit" element={<Adminuseredit></Adminuseredit>} />
             </Routes>
           </Router>
         </div>

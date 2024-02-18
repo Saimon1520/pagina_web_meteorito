@@ -6,7 +6,7 @@ const AZPage = () => {
     <div className="maindiv">
     <br></br>
       <div className="hcontainer">
-        <h1 className="AZTitle">Aguas Zarcas</h1>
+        <h1 className="MTitle">Aguas Zarcas</h1>
         <img
           src="imgs/iglesia.jpg"
           className="img-fluid mx-auto rounded"
