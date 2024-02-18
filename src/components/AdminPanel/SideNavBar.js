@@ -24,15 +24,15 @@ const SideNavBar = () => {
                                     <a className="nav-link active" aria-current="page" href="/admin">Visualización de Métricas</a>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         Usuarios
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-dark">
-                                        <li><a className="dropdown-item" href="/admin/useredit">Gestor de Usuarios</a></li>
+                                        <li><a className="dropdown-item" href="/admin/useradd">Agregar Usuarios</a></li>
                                         <li>
                                             <hr className="dropdown-divider"></hr>
                                         </li>
-                                        <li><a className="dropdown-item" href="/admin/roledit">Gestor de Roles</a></li>
+                                        <li><a className="dropdown-item" href="/admin/usertable">Gestor de Usuarios</a></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item">
