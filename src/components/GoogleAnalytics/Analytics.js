@@ -35,20 +35,20 @@
 
 // runReport();
 //Buena suerte joven, dios lo bendiga xd
-const { BigQuery } = require('@google-cloud/bigquery');
-const bigquery = new BigQuery({
-    projectId: 'pagina-web-414004',
-    keyFilename: '../../credentials.json',
-});
+// const { BigQuery } = require('@google-cloud/bigquery');
+// const bigquery = new BigQuery({
+//     projectId: 'pagina-web-414004',
+//     keyFilename: '../../credentials.json',
+// });
 
-const query = `
-    SELECT *
-    FROM \`YOUR_PROJECT_ID.dataset.table_name\`;
-`;
-bigquery.query(query)
-    .then(data => {
-        const rows = data[0];
-        rows.forEach(row => console.log(row));
-    })
-    .catch(err => console.error(err));
+// const query = `
+//     SELECT *
+//     FROM \`YOUR_PROJECT_ID.dataset.table_name\`;
+// `;
+// bigquery.query(query)
+//     .then(data => {
+//         const rows = data[0];
+//         rows.forEach(row => console.log(row));
+//     })
+//     .catch(err => console.error(err));
 
