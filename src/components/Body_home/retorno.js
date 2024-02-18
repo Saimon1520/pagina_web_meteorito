@@ -32,11 +32,11 @@ const Retorno = () => {
   };
 
   return (
-    <div>
+    <div className='Div_Principal'>
       <div className='Primero'>
         <div className='pp'>
-          <h1 className='titulo1'>TE DAMOS LA <br />BIENVENIDA A<br />NUESTRO <br />MUSEO<br /> VIRTUAL</h1>
-          <p className='parrafo1'>Un proyecto desarrollado por<br />estudiantes universitarios con el<br />propósito de poder brindar la <br />experiencia deseada por muchos</p>
+          <h1 className='titulo1'>TE DAMOS LA BIENVENIDA A<br />NUESTRO MUSEO VIRTUAL</h1>
+          <p className='parrafo1'>Un proyecto desarrollado porestudiantes universitarios con elpropósito de poder brindar la experiencia deseada por muchos</p>
         </div>
         <div className='foto'>
           <img className='Imagen_perro' src="https://i.blogs.es/b80720/virtual/1024_2000.jpg" alt="Museo Virtual" />
