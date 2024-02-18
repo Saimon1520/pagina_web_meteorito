@@ -19,3 +19,15 @@
     -webkit-filter: invert(1);
     filter: invert(1);
 }
+
+#btnr{
+    background: linear-gradient(to left, var(--first-color) , var(--second-color), var(--third-color));
+    margin-left: 1.1rem;
+}
+
+#btnl{
+    background: linear-gradient(to right, var(--first-color) , var(--second-color), var(--third-color));
+    margin-left: 1.1rem;
+}
+
+/* margin-top: 1.1rem; */

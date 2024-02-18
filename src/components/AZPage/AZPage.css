@@ -22,16 +22,7 @@
 .modal-body{
   font-family: "Poppins";
 }
-.AZTitle {
-  font-family: "elevon";
-  align-items: center;
-  text-align: center;
-  background-color: var(--Azul_updated);
-  color: white;
-  border-style: solid;
-  border-radius: var(--bs-border-radius);
 
-}
 .factscontainerh{
   display: grid;
   grid-template-columns: auto auto auto;
@@ -131,7 +122,7 @@
   }
 }
 @media (min-width: 2560px) {
-  .AZTitle {
+  .MTitle {
     font-family: "Bungee Inline";
     align-items: center;
     text-align: center;
