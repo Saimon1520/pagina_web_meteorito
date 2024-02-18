@@ -1,7 +1,8 @@
 import './styles/Login.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { collection, query, where, getDocs, addDoc, doc, deleteDoc, updateDoc, getDoc } from "firebase/firestore";
 import { db } from '../firebase'
+import { Navigate,useNavigate } from "react-router-dom";
 
 const Login = () => {
 
@@ -10,14 +11,28 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [users, setUsers] = useState(null);
     const [msgError, setMsgError] = useState("");
+    const nav= useNavigate();
+
+    let verification = localStorage.getItem('loginVerification');
+    console.log("Verification : ", verification)
+
+    
 
     const openHandler = (direction) => {
         localStorage.setItem('section', direction)
         setIsOpen(!isOpen)
     }
 
+    useEffect(() => {
+        verification = localStorage.getItem('loginVerification')
+
+    }, [msgError])
+
+
     const checkData = async () => {
         let userss = []
+
+
         try {
 
             if (users === null) {
@@ -31,8 +46,8 @@ const Login = () => {
                 let findIt = false
                 userss.forEach(user => {
                     if ((user.userData.email === email) && (user.userData.password === password)) {
-                        console.log("si funka")
-                        window.location.href = "/admin";
+                        localStorage.setItem('loginVerification', true);
+                        nav("/admin");
                         localStorage.setItem("isAdmin", "true");
                         setMsgError("")
                         findIt = true
@@ -48,8 +63,8 @@ const Login = () => {
                 let findIt = false;
                 users.forEach(user => {
                     if ((user.userData.email === email) && (user.userData.password === password)) {
-                        console.log("si funka")
-                        window.location.href = "/admin";
+                        localStorage.setItem('loginVerification', true);
+                        nav("/admin");
                         localStorage.setItem("isAdmin", "true");
                         setMsgError("")
                         findIt = true;
@@ -67,6 +82,9 @@ const Login = () => {
             console.log("No se encontro el dato", error);
         }
         setPassword("");
+
+
+
     }
 
     const changeData = (data) => {
@@ -74,27 +92,31 @@ const Login = () => {
         setMsgError("");
     }
 
+    if (localStorage.getItem('loginVerification') === "true") {
+        return <Navigate replace to="/admin" />;
+    } else {
 
-    return (
-        <div>
-            <div className='main_container'>
-                <div className='container'>
-                    <div id="emailHelp" className="mt-1 msg_alert">Acceso restringido solo a personal autorizado.</div>
-                    <div className="mb-3 fi-cont">
+        return (
+            <div>
+                <div className='main_container'>
+                    <div className='container'>
+                        <div id="emailHelp" className="mt-1 msg_alert">Acceso restringido solo a personal autorizado.</div>
+                        <div className="mb-3 fi-cont">
 
-                        <label className="form-label text-ti">Correo Electrónico</label>
-                        <input type="email" className="form-control inputs" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => setEmail(e.target.value)} />
+                            <label className="form-label text-ti">Correo Electrónico</label>
+                            <input type="email" className="form-control inputs" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => setEmail(e.target.value)} />
+                        </div>
+                        <div className="mb-5">
+                            <label className="form-label text-ti">Contraseña</label>
+                            <input type="password" className="form-control" id="exampleInputPassword1" value={password} onChange={(e) => changeData(e.target.value)} />
+                            <div id="emailHelp" className=" msg_alert">{msgError}</div>
+                        </div>
+                        <button onClick={() => checkData()} className="btn btn-primary">Ingresar</button>
                     </div>
-                    <div className="mb-5">
-                        <label className="form-label text-ti">Contraseña</label>
-                        <input type="password" className="form-control" id="exampleInputPassword1" value={password} onChange={(e) => changeData(e.target.value)} />
-                        <div id="emailHelp" className=" msg_alert">{msgError}</div>
-                    </div>
-                    <button onClick={() => checkData()} className="btn btn-primary">Ingresar</button>
                 </div>
-            </div>
-        </div >
-    )
+            </div >
+        )
+    }
 }
 
 export default Login;
