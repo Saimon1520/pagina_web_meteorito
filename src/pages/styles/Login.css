@@ -1,0 +1,50 @@
+:root {
+    --first-color: #021d40;
+    --second-color: #6151d6;
+    --third-color: #7ae7ea;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Bungee Inline';
+    src: url(https://fonts.gstatic.com/s/bungeeinline/v2/Tb-1914q4rFpjT-F66PLCTxObtw73-qQgbr7Be51v5c.woff2) format('woff2');
+}
+
+
+.main_container {
+    width: 60%;
+    height: 400px;
+    margin-top: 8%;
+    margin-bottom: 13.5%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+    border: var(--third-color) 3px solid;
+    box-shadow: 0px 0px 61px 30px var(--third-color);
+}
+.msg_alert{
+    color:red;
+}
+.inputs{
+    border: #6151d6 2px solid;
+}
+.text-ti{
+    font-family: Poppins;
+    font-size: x-large;
+}
+.fi-cont{
+    margin-top: 40px;
+}
+
+
+@media (max-width: 1024px) {
+    .main_container{
+        width: 80%;
+        margin-top: 15%;
+        margin-bottom: 20%;
+    }
+}
