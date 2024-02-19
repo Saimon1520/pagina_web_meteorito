@@ -23,8 +23,8 @@
     margin-right: auto;
     margin-left: auto;
     border-radius: 20px;
-    border: var(--third-color) 3px solid;
-    box-shadow: 0px 0px 61px 30px var(--third-color);
+    border: var(--first-color) 3px solid;
+    box-shadow: 0px 0px 61px 30px gray;
 }
 .msg_alert{
     color:red;
