@@ -27,21 +27,28 @@ function App() {
   //InitializeGoogleAnalytics();
   const key = "qwaser1221";
 
-  
+
 
   const desencryptDate = () => {
     const f = new Date();
     const encryptedMessage = localStorage.getItem('Date');
 
-    const decryptedMessage = CryptoJS.AES.decrypt(encryptedMessage, key).toString(CryptoJS.enc.Utf8);
+    try {
+      const decryptedMessage = CryptoJS.AES.decrypt(encryptedMessage, key).toString(CryptoJS.enc.Utf8);
 
-    if (decryptedMessage !== f.toLocaleDateString()) {
+      if (decryptedMessage !== f.toLocaleDateString()) {
+        localStorage.removeItem('Date')
+        localStorage.removeItem('loginVerification')
+      }
+    } catch (error) {
       localStorage.removeItem('Date')
       localStorage.removeItem('loginVerification')
     }
   }
 
-  if(localStorage.getItem('Date') !== null){
+  window.addEventListener("beforeunload", () => localStorage.removeItem('section'));
+
+  if (localStorage.getItem('Date') !== null) {
     desencryptDate();
   }
 
