@@ -9,9 +9,11 @@ const Adminanaltytics = () => {
   //setAdmin(true)
 
   
+
+
   if (localStorage.getItem('loginVerification') !== "true") {
     return <Navigate replace to="/Login" />;
-  }else{
+  } else {
     return (
       <div className="maindiv">
         <SideNavBar />
@@ -22,6 +24,6 @@ const Adminanaltytics = () => {
       </div>
     );
   }
-  
+
 };
 export default Adminanaltytics;

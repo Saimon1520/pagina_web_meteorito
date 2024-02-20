@@ -59,7 +59,7 @@ const Login = () => {
                             console.log(option)
                             //setMsgError("Datos ingresados incorrectos.")
                             if ((option === userss.length) && (findIt === false)) {
-                                alert("Login failed, please try again");
+                                alert("Datos ingresados incorrectos.");
                             }
                             option = option + 1
                         }
@@ -82,7 +82,7 @@ const Login = () => {
                             console.log(option)
                             //setMsgError("Datos ingresados incorrectos.")
                             if ((option === users.length) && (findIt === false)) {
-                                alert("Login failed, please try again");
+                                alert("Datos ingresados incorrectos.");
                             }
                             option = option + 1
                         }
