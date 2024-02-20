@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { collection, query, where, getDocs, addDoc, doc, deleteDoc, updateDoc, getDoc } from "firebase/firestore";
 import { db } from '../firebase'
 import { Navigate, useNavigate } from "react-router-dom";
+import CryptoJS from 'crypto-js';
 
 const Login = () => {
 
@@ -12,11 +13,18 @@ const Login = () => {
     const [users, setUsers] = useState(null);
     const [msgError, setMsgError] = useState("");
     const nav = useNavigate();
+    let date = localStorage.getItem('Date');
 
     let verification = localStorage.getItem('loginVerification');
     console.log("Verification : ", verification)
 
+    const encryptDate = () => {
+        const date = new Date();
+        const encryptedDate = CryptoJS.AES.encrypt(date.toLocaleDateString(), key).toString();
+        localStorage.setItem('Date', encryptedDate)
+    }
 
+    
 
     const openHandler = (direction) => {
         localStorage.setItem('section', direction)
@@ -52,7 +60,8 @@ const Login = () => {
                         localStorage.setItem("isAdmin", "true");
                         //setMsgError("")
                         findIt = true
-                        
+                        encryptDate();
+
                     }
                     else {
                         if (findIt === false) {
@@ -76,6 +85,7 @@ const Login = () => {
                         localStorage.setItem("isAdmin", "true");
                         //setMsgError("")
                         findIt = true;
+                        encryptDate();
                     }
                     else {
                         if (findIt === false) {
@@ -104,6 +114,7 @@ const Login = () => {
         setPassword(data);
         //setMsgError("");
     }
+    const key = "qwaser1221";
 
     if (localStorage.getItem('loginVerification') === "true") {
         return <Navigate replace to="/admin" />;
