@@ -46,6 +46,8 @@ function App() {
     }
   }
 
+  window.addEventListener("beforeunload", () => localStorage.removeItem('section'));
+
   if (localStorage.getItem('Date') !== null) {
     desencryptDate();
   }
