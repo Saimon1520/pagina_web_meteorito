@@ -2,7 +2,8 @@ import './styles/Login.css'
 import { useEffect, useState } from 'react';
 import { collection, query, where, getDocs, addDoc, doc, deleteDoc, updateDoc, getDoc } from "firebase/firestore";
 import { db } from '../firebase'
-import { Navigate,useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+import CryptoJS from 'crypto-js';
 
 const Login = () => {
 
@@ -11,10 +12,17 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [users, setUsers] = useState(null);
     const [msgError, setMsgError] = useState("");
-    const nav= useNavigate();
+    const nav = useNavigate();
+    let date = localStorage.getItem('Date');
 
     let verification = localStorage.getItem('loginVerification');
     console.log("Verification : ", verification)
+
+    const encryptDate = () => {
+        const date = new Date();
+        const encryptedDate = CryptoJS.AES.encrypt(date.toLocaleDateString(), key).toString();
+        localStorage.setItem('Date', encryptedDate)
+    }
 
     
 
@@ -44,34 +52,49 @@ const Login = () => {
                 });
                 setUsers(userss)
                 let findIt = false
+                let option = 1;
                 userss.forEach(user => {
                     if ((user.userData.email === email) && (user.userData.password === password)) {
                         localStorage.setItem('loginVerification', true);
                         nav("/admin");
                         localStorage.setItem("isAdmin", "true");
-                        setMsgError("")
+                        //setMsgError("")
                         findIt = true
+                        encryptDate();
+
                     }
                     else {
                         if (findIt === false) {
-                            setMsgError("Datos ingresados incorrectos.")
+                            console.log(option)
+                            //setMsgError("Datos ingresados incorrectos.")
+                            if ((option === userss.length) && (findIt === false)) {
+                                alert("Datos ingresados incorrectos.");
+                            }
+                            option = option + 1
                         }
                     }
                 });
             }
             else {
                 let findIt = false;
+                let option = 1;
                 users.forEach(user => {
                     if ((user.userData.email === email) && (user.userData.password === password)) {
                         localStorage.setItem('loginVerification', true);
                         nav("/admin");
                         localStorage.setItem("isAdmin", "true");
-                        setMsgError("")
+                        //setMsgError("")
                         findIt = true;
+                        encryptDate();
                     }
                     else {
                         if (findIt === false) {
-                            setMsgError("Datos ingresados incorrectos.")
+                            console.log(option)
+                            //setMsgError("Datos ingresados incorrectos.")
+                            if ((option === users.length) && (findIt === false)) {
+                                alert("Datos ingresados incorrectos.");
+                            }
+                            option = option + 1
                         }
 
                     }
@@ -89,8 +112,9 @@ const Login = () => {
 
     const changeData = (data) => {
         setPassword(data);
-        setMsgError("");
+        //setMsgError("");
     }
+    const key = "qwaser1221";
 
     if (localStorage.getItem('loginVerification') === "true") {
         return <Navigate replace to="/admin" />;
@@ -100,7 +124,7 @@ const Login = () => {
             <div>
                 <div className='main_container'>
                     <div className='container'>
-                        <div id="emailHelp" className="mt-1 msg_alert">Acceso restringido solo a personal autorizado.</div>
+                        <div id="emailHelp" className="mt-1 msg_alert"><h2>Acceso restringido solo a personal autorizado.</h2></div>
                         <div className="mb-3 fi-cont">
 
                             <label className="form-label text-ti">Correo Electrónico</label>

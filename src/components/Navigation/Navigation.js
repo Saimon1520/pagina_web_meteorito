@@ -19,7 +19,7 @@ const Navigation = () => {
                 <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top nav">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/">
-                            <img src="/imgs/Logo.png" alt="logo" width="70" height="44"></img>
+                            <img src="/imgs/Logo_W.png" alt="logo" width="70" height="44"></img>
                         </a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
