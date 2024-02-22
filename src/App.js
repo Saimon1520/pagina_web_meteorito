@@ -27,8 +27,6 @@ function App() {
   //InitializeGoogleAnalytics();
   const key = "qwaser1221";
 
-
-
   const desencryptDate = () => {
     const f = new Date();
     const encryptedMessage = localStorage.getItem('Date');
