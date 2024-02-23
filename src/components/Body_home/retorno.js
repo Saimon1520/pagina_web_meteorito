@@ -27,9 +27,26 @@ const Retorno = () => {
     },
   ];
 
+  const [isComplete, setIsComplete] = useState(true);
+
+  const change_Text = () => {
+      setIsComplete(!isComplete);
+  };
+
   const nextImage = () => {
     setCurrentImageIndex((currentImageIndex + 1) % images.length);
+    isComplete? "": setIsComplete(true);
   };
+
+  const previusImage = () => {
+    if (currentImageIndex == 0){
+      setCurrentImageIndex(4);
+    }else{
+      setCurrentImageIndex(currentImageIndex - 1);
+    }
+    isComplete? "": setIsComplete(true);
+  };
+
 
   return (
     <div className='Div_Principal'>
@@ -47,7 +64,7 @@ const Retorno = () => {
         <div className='noticias_curiosidades'>
           <button
             className='boton'
-            onClick={nextImage}
+            onClick={previusImage}
           ><FontAwesomeIcon icon={faChevronLeft} size='xl' /></button>
           <div className='borde'>
             <img
@@ -55,7 +72,8 @@ const Retorno = () => {
               className={`foto${currentImageIndex + 1} curiosidades`}
               alt={`Imagen ${currentImageIndex + 1}`}
             ></img>
-            <p className='yu'>{images[currentImageIndex].text}</p>
+            <p id='yu' className={isComplete ? 'Complete' : 'Incomplete'}>{images[currentImageIndex].text}</p>
+            <button id='button' onClick={change_Text}>{isComplete? "Ver mas" : "Ver menos"}</button>
           </div>
           <button
             className='boton'
