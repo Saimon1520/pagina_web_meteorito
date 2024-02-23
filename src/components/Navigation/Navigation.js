@@ -21,7 +21,7 @@ const Navigation = () => {
                                 <NavLink className="nav-link" to="/AZPage">Aguas Zarcas</NavLink>
                                 <NavLink className="nav-link" to="/La_Palmera">La Palmera</NavLink>
                                 <NavLink className="nav-link" to="/Comunidad">Comunidad</NavLink>
-                                <NavLink className="nav-link" to="/Museo">Museo</NavLink>
+                                <a className="nav-link" href='aquiVaElLinkDelMuseo.com' target="_blank">Museo</a>
                                 <NavLink className="nav-link" to="/Acerca-de">Acerca de</NavLink>
                                 <NavLink className="nav-link" to="/Login">Login</NavLink>
                             </div>
