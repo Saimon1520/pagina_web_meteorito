@@ -27,6 +27,12 @@ function App() {
   //InitializeGoogleAnalytics();
   const key = "qwaser1221";
 
+  if(localStorage.getItem('loginVerification') === null){
+    localStorage.setItem('loginVerification',"false")
+  }
+
+  
+
   const desencryptDate = () => {
     const f = new Date();
     const encryptedMessage = localStorage.getItem('Date');

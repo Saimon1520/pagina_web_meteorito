@@ -7,6 +7,7 @@ import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import Adminuseredit from "./adminedituser.js";
 import { Navigate, useNavigate } from "react-router-dom";
+import CryptoJS from "crypto-js";
 
 const Adminusertable = () => {
     const [users, setUsers] = useState([]);
@@ -38,7 +39,14 @@ const Adminusertable = () => {
         }
         window.location.reload();
     }
-    if (localStorage.getItem('loginVerification') !== "true") {
+    const getVerification = () => {
+        try {
+            return CryptoJS.AES.decrypt(localStorage.getItem('loginVerification'), "qwaser1221").toString(CryptoJS.enc.Utf8)
+        } catch (error) {
+            return "false"
+        }
+    }
+    if (getVerification() !== "true") {
         return <Navigate replace to="/Login" />;
     } else {
         return (

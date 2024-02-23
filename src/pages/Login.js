@@ -24,7 +24,7 @@ const Login = () => {
         localStorage.setItem('Date', encryptedDate)
     }
 
-    
+
 
     const openHandler = (direction) => {
         localStorage.setItem('section', direction)
@@ -55,7 +55,7 @@ const Login = () => {
                 let option = 1;
                 userss.forEach(user => {
                     if ((user.userData.email === email) && (user.userData.password === password)) {
-                        localStorage.setItem('loginVerification', true);
+                        localStorage.setItem('loginVerification', CryptoJS.AES.encrypt("true", key).toString());
                         nav("/admin");
                         localStorage.setItem("isAdmin", "true");
                         //setMsgError("")
@@ -80,7 +80,7 @@ const Login = () => {
                 let option = 1;
                 users.forEach(user => {
                     if ((user.userData.email === email) && (user.userData.password === password)) {
-                        localStorage.setItem('loginVerification', true);
+                        localStorage.setItem('loginVerification', CryptoJS.AES.encrypt("true", key).toString());
                         nav("/admin");
                         localStorage.setItem("isAdmin", "true");
                         //setMsgError("")
@@ -116,7 +116,18 @@ const Login = () => {
     }
     const key = "qwaser1221";
 
-    if (localStorage.getItem('loginVerification') === "true") {
+    const getVerification = () => {
+        let data = "false";
+        try {
+            data = CryptoJS.AES.decrypt(localStorage.getItem('loginVerification'), key).toString(CryptoJS.enc.Utf8)
+        } catch (error) {
+            data = "false"
+        }
+        return data;
+        
+    }
+
+    if (getVerification() === "true") {
         return <Navigate replace to="/admin" />;
     } else {
 
