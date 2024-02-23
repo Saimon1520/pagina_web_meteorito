@@ -6,6 +6,7 @@ import { db } from "../../firebase.js";
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import Adminuseredit from "./adminedituser.js";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Adminusertable = () => {
     const [users, setUsers] = useState([]);
@@ -37,41 +38,44 @@ const Adminusertable = () => {
         }
         window.location.reload();
     }
-
-    return (
-        <div className="maindiv">
-            <SideNavBar />
-            <h1 className="MTitle" >Usuarios</h1>
-            <div className="adminuseredit">
-                <div className="table-responsive">
-                    <table className="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Correo</th>
-                                <th>Role</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {users.map((user) => (
-                                <tr key={user.id}>
-                                    <td>{user.fname}</td>
-                                    <td>{user.lname}</td>
-                                    <td>{user.email}</td>
-                                    <td>{user.role}</td>
-                                    <td>
-                                        <NavLink id="btnl" type="button" className="btn btn-primary" to="useredit" state={{ user: user }}>Editar</NavLink>
-                                        <button onClick={() => { if (window.confirm('Seguro que desea eliminar al usuario: ' + user.fname + ' ' + user.lname)) delUser(user) }} id="btnr" type="button" className="btn btn-primary">Borrar</button>
-                                    </td>
+    if (localStorage.getItem('loginVerification') !== "true") {
+        return <Navigate replace to="/Login" />;
+    } else {
+        return (
+            <div className="maindiv">
+                <SideNavBar />
+                <h1 className="MTitle" >Usuarios</h1>
+                <div className="adminuseredit">
+                    <div className="table-responsive">
+                        <table className="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Correo</th>
+                                    <th>Role</th>
+                                    <th>Acciones</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {users.map((user) => (
+                                    <tr key={user.id}>
+                                        <td>{user.fname}</td>
+                                        <td>{user.lname}</td>
+                                        <td>{user.email}</td>
+                                        <td>{user.role}</td>
+                                        <td>
+                                            <NavLink id="btnl" type="button" className="btn btn-primary" to="useredit" state={{ user: user }}>Editar</NavLink>
+                                            <button onClick={() => { if (window.confirm('Seguro que desea eliminar al usuario: ' + user.fname + ' ' + user.lname)) delUser(user) }} id="btnr" type="button" className="btn btn-primary">Borrar</button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 export default Adminusertable;
