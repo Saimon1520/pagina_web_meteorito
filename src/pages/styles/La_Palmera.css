@@ -12,7 +12,9 @@
     font-family: 'Poppins';
     src: url(https://fonts.gstatic.com/s/poppins/v15/pxiGyp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2) format('woff2');
 }
-
+.titleVR{
+    color: white;
+}
 .firstContainer {
     background-color: var(--first-color);
     height: 100%;

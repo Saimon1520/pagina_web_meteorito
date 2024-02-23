@@ -5,6 +5,7 @@ import { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from '../../firebase';
 import { Navigate, useNavigate } from "react-router-dom";
+import CryptoJS from "crypto-js";
 
 const Adminroledit = () => {
     const [fname, setFname] = useState("");
@@ -39,7 +40,15 @@ const Adminroledit = () => {
         document.getElementById('INR').value = '';
         document.getElementById('inputPassword6').value = '';
     }
-    if (localStorage.getItem('loginVerification') !== "true") {
+    const getVerification = () => {
+        try {
+            return CryptoJS.AES.decrypt(localStorage.getItem('loginVerification'), "qwaser1221").toString(CryptoJS.enc.Utf8)
+        } catch (error) {
+            return "false"
+        }
+    }
+    
+    if (getVerification() !== "true") {
         return <Navigate replace to="/Login" />;
     } else {
         return (

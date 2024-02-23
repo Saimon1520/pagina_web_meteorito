@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { db } from '../../firebase';
 import { updateDoc, doc } from "firebase/firestore";
 import { Navigate, useNavigate } from "react-router-dom";
+import CryptoJS from "crypto-js";
 
 const Adminuseredit = () => {
     const web = useLocation();
@@ -42,7 +43,15 @@ const Adminuseredit = () => {
         document.getElementById('INR').value = '';
         document.getElementById('inputPassword6').value = '';
     }
-    if (localStorage.getItem('loginVerification') !== "true") {
+    const getVerification = () => {
+        try {
+            return CryptoJS.AES.decrypt(localStorage.getItem('loginVerification'), "qwaser1221").toString(CryptoJS.enc.Utf8)
+        } catch (error) {
+            return "false"
+        }
+    }
+
+    if (getVerification() !== "true") {
         return <Navigate replace to="/Login" />;
     } else {
         return (
