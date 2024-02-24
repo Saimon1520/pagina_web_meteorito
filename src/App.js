@@ -19,11 +19,43 @@ import { GlobalProvider } from './global';
 import { InitializeGoogleAnalytics } from "./components/GoogleAnalytics/Analytics.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
+import CryptoJS from 'crypto-js';
 
 function App() {
   //localStorage.clear();
   //localStorage.setItem("isAdmin", "true");
   //InitializeGoogleAnalytics();
+  const key = "qwaser1221";
+
+  if(localStorage.getItem('loginVerification') === null){
+    localStorage.setItem('loginVerification',"false")
+  }
+
+  
+
+  const desencryptDate = () => {
+    const f = new Date();
+    const encryptedMessage = localStorage.getItem('Date');
+
+    try {
+      const decryptedMessage = CryptoJS.AES.decrypt(encryptedMessage, key).toString(CryptoJS.enc.Utf8);
+
+      if (decryptedMessage !== f.toLocaleDateString()) {
+        localStorage.removeItem('Date')
+        localStorage.removeItem('loginVerification')
+      }
+    } catch (error) {
+      localStorage.removeItem('Date')
+      localStorage.removeItem('loginVerification')
+    }
+  }
+
+  window.addEventListener("beforeunload", () => localStorage.removeItem('section'));
+
+  if (localStorage.getItem('Date') !== null) {
+    desencryptDate();
+  }
+
   return (
     <GlobalProvider>
       <div className="App">
