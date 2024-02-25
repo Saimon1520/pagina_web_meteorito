@@ -2,8 +2,8 @@ import './Meteoritos.css';
 import Accordion from 'react-bootstrap/Accordion';
 
 import React, { useState, useEffect } from 'react';
-
-import Barra_Meteoritos from '../Barra_Obj/Barra_Obj'
+import ABR02_GLB from '../Obj/ABR02';
+import Barra_Meteoritos from '../Barra_Obj/Barra_Obj';
 const Meteoritos = () => {
     const [showFullText, setShowFullText] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
