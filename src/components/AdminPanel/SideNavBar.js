@@ -8,7 +8,7 @@ const SideNavBar = () => {
             <nav className="navbar navbar-dark bg-dark fixed-top">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/admin">
-                        <img src="/imgs/Logo.png" alt="logo" width="70" height="44"></img>
+                        <img src="/imgs/Logo_W.png" alt="logo" width="70" height="44"></img>
                     </a>
                     <button className="navbar-toggler" id="asd" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
