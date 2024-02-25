@@ -2,7 +2,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function ERB03(props) {
-  const { nodes, materials } = useGLTF('objects/ERB03_reduce.gltf')
+  const { nodes, materials } = useGLTF('objects/ERB03.glb')
   return (
     <group {...props} dispose={null} position={[0,-0.5,0]}>
       <mesh geometry={nodes.Cylinder.geometry} material={materials['Material.001']} position={[0, 0.294, 0]} scale={[0.604, 0.058, 0.604]} />
@@ -11,4 +11,4 @@ export default function ERB03(props) {
   )
 }
 
-useGLTF.preload('objects/ERB03_reduce.gltf')
+useGLTF.preload('objects/ERB03.glb')
