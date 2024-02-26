@@ -11,7 +11,7 @@ import LaPalmera from "./pages/La_Palmera.js";
 import Navigation from "./components/Navigation/Navigation.js";
 import Login from './pages/Login.js';
 import GLog from "./components/GLog/GLog.js";
-import AdminPage from "./components/AdminPanel/adminanaltytics.js";
+import AdminPage from "./components/AdminPanel/adminroles.js";
 import Adminadduser from "./components/AdminPanel/adminadduser.js";
 import Adminusertable from "./components/AdminPanel/adminusertable.js";
 import Adminuseredit from "./components/AdminPanel/adminedituser.js";
