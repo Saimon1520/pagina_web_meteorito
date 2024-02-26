@@ -5,9 +5,8 @@ import SideNavBar from "./SideNavBar.js";
 import { Navigate } from "react-router-dom";
 import CryptoJS from "crypto-js";
 
-const Adminanaltytics = () => {
-  const { isAdmin, setAdmin } = useGlobalContext();
-  //setAdmin(true)
+const Adminroles = () => {
+
   const getVerification = () => {
     try {
       return CryptoJS.AES.decrypt(localStorage.getItem('loginVerification'), "qwaser1221").toString(CryptoJS.enc.Utf8)
@@ -22,13 +21,10 @@ const Adminanaltytics = () => {
     return (
       <div className="maindiv">
         <SideNavBar />
-        <h1 className="MTitle">Visualización de Métricas</h1>
-        <GoogleOAuthProvider clientId="798495697820-e3ietj94l0jo5rng7gmvla5eloorsfmo.apps.googleusercontent.com">
-          <GoogleAnalyticsApp />
-        </GoogleOAuthProvider>
+        <h1 className="MTitle">Gestor de Roles</h1>
       </div>
     );
   }
 
 };
-export default Adminanaltytics;
+export default Adminroles;
