@@ -8,6 +8,7 @@ import CryptoJS from "crypto-js";
 import Spinner from "../Spinner/Spinner.js";
 
 const Adminroledit = () => {
+    const [users, setUsers] = useState("");
     const [seldata, setSeldata] = useState("");
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
@@ -28,10 +29,34 @@ const Adminroledit = () => {
         fetchPost();
     }, []);
 
+    useEffect(() => {
+        const fetchPost = async () => {
+            await getDocs(collection(db, "users"))
+                .then((querySnapshot) => {
+
+                    const newData = querySnapshot.docs
+                        .map((doc) => ({ ...doc.data(), id: doc.id }));
+                    setUsers(newData);
+                });
+        };
+        fetchPost();
+    }, []);
+
+    const checkIfEmailExists = () => {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].email === email) {
+                console.log('Email already exists');
+                return true;
+            }
+        }
+        console.log('Email does not exist');
+        return false;
+    }
+
     const addUser = async (e) => {
         e.preventDefault();
 
-        if (fname === '' || lname === '' || email === '' || password === '' || role === '' || role === '0') {
+        if (fname === '' || lname === '' || email === '' || password === '' || role === '' || role === '0' || checkIfEmailExists() === true){
             alert('Favor verificar todos los espacios!')
         }
 

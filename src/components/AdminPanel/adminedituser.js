@@ -10,6 +10,7 @@ import CryptoJS from "crypto-js";
 
 const Adminuseredit = () => {
     const web = useLocation();
+    const [users, setUsers] = useState("");
     const [seldata, setSeldata] = useState("");
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
@@ -31,10 +32,34 @@ const Adminuseredit = () => {
         fetchPost();
     }, []);
 
+    useEffect(() => {
+        const fetchPost = async () => {
+            await getDocs(collection(db, "users"))
+                .then((querySnapshot) => {
+
+                    const newData = querySnapshot.docs
+                        .map((doc) => ({ ...doc.data(), id: doc.id }));
+                    setUsers(newData);
+                });
+        };
+        fetchPost();
+    }, []);
+
+    const checkIfEmailExists = () => {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].email === email) {
+                console.log('Email already exists');
+                return true;
+            }
+        }
+        console.log('Email does not exist');
+        return false;
+    }
+
     const editUser = async (e) => {
         e.preventDefault();
 
-        if (fname === '' || lname === '' || email === '' || password === '' || role === '' || role === '0') {
+        if (fname === '' || lname === '' || email === '' || password === '' || role === '' || role === '0' || checkIfEmailExists() === true) {
             alert('Favor verificar todos los espacios!')
         }
 
