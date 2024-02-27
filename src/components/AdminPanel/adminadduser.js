@@ -90,8 +90,8 @@ const Adminroledit = () => {
     const clearValues = () => {
         document.getElementById('IFN').value = '';
         document.getElementById('ILN').value = '';
-        document.getElementById('INE').value = '0';
-        document.getElementById('INR').value = '';
+        document.getElementById('INR').value = '0';
+        document.getElementById('INE').value = '';
         document.getElementById('inputPassword6').value = '';
     }
     const getVerification = () => {
@@ -122,7 +122,7 @@ const Adminroledit = () => {
                         {seldata === "" ? <Spinner /> :
                             <div className="mb-3">
                                 <label htmlFor="InputRole" className="form-label">Rol</label>
-                                <select id="INE" className="form-select" aria-label="select role" defaultValue={0} onChange={(e) => setRole(e.target.value)}>
+                                <select id="INR" className="form-select" aria-label="select role" defaultValue={0} onChange={(e) => setRole(e.target.value)}>
                                     <option value="0">Selecciona un rol de la lista</option>
                                     {seldata.map((data) => (
                                         <option key={data.id} value={data.name}>{data.name}</option>
@@ -132,7 +132,7 @@ const Adminroledit = () => {
                         }
                         <div className="mb-3">
                             <label htmlFor="InputRole" className="form-label">Correo</label>
-                            <input id="INR" className="form-control" type="email" placeholder="ejemplo@ejemplo.com" aria-label="email input" onChange={(e) => setEmail(e.target.value)}></input>
+                            <input id="INE" className="form-control" type="email" placeholder="ejemplo@ejemplo.com" aria-label="email input" onChange={(e) => setEmail(e.target.value)}></input>
                         </div>
                         <div className="mb-3">
                             <label htmlFor="InputPassword" className="form-label">Contraseña</label>

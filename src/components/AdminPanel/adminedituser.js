@@ -90,13 +90,6 @@ const Adminuseredit = () => {
         return encryptedData
     }
 
-    const clearValues = () => {
-        document.getElementById('IFN').value = '';
-        document.getElementById('ILN').value = '';
-        document.getElementById('INE').value = '0';
-        document.getElementById('INR').value = '';
-        document.getElementById('inputPassword6').value = '';
-    }
     const getVerification = () => {
         try {
             return CryptoJS.AES.decrypt(localStorage.getItem('loginVerification'), "qwaser1221").toString(CryptoJS.enc.Utf8)
