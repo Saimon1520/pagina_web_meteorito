@@ -7,11 +7,21 @@ import { Navigate, useNavigate } from "react-router-dom";
 import CryptoJS from 'crypto-js';
 
 const dataTable = (table) => {
+    const navigate = useNavigate();
     const key = "qwaser1221";
     const [data, setData] = useState([]);
     const [fdata, setFdata] = useState([]);
     const [searchInput, setSearchInput] = useState("")
     const [isSearching, setIsSearching] = useState(false);
+
+    const handleClickEU = (data) => {
+        navigate('/admin/usertable/useredit', { state: { data: data } });
+    }
+
+    const handleClickER = (data) => {
+        navigate('/admin/roleedit', { state: { data: data } });
+    }
+
     const usePathname = () => {
         const location = useLocation();
         return location.pathname;
@@ -111,7 +121,7 @@ const dataTable = (table) => {
                                         <td>{data.email}</td>
                                         <td>{data.role}</td>
                                         <td>
-                                            <NavLink id="btnl" type="button" className="btn btn-primary" to="useredit" state={{ data: data }}>Editar</NavLink>
+                                            <button id="btnl" type="button" className="btn btn-primary" onClick={() => { handleClickEU(data) }}>Editar</button>
                                             <button onClick={() => { if (window.confirm('Confirmar eliminacion de: ' + data.fname + ' ' + data.lname)) delData(data) }} id="btnr" type="button" className="btn btn-primary">Borrar</button>
                                         </td>
                                     </tr>
@@ -119,8 +129,8 @@ const dataTable = (table) => {
                                     <tr key={data.id}>
                                         <td>{data.name}</td>
                                         <td>
-                                            <NavLink id="btnl" type="button" className="btn btn-primary" to="roleedit" state={{ data: data }}>Editar</NavLink>
-                                            <button onClick={() => { if (window.confirm('Confirmar eliminacion de: ' + data.role)) delData(data) }} id="btnr" type="button" className="btn btn-primary">Borrar</button>
+                                            <button id="btnl" type="button" className="btn btn-primary" onClick={() => { handleClickER(data) }}>Editar</button>
+                                            <button onClick={() => { if (window.confirm('Confirmar eliminacion de: ' + data.name)) delData(data) }} id="btnr" type="button" className="btn btn-primary">Borrar</button>
                                         </td>
                                     </tr>
                                 ))}

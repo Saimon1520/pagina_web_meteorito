@@ -1,10 +1,11 @@
 import "./adminpln.css";
 import SideNavBar from "./SideNavBar.js";
-import { useState } from "react";
-import { useHref, useLocation } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import { db } from '../../firebase';
-import { updateDoc, doc } from "firebase/firestore";
+import { updateDoc, doc, getDocs, collection } from "firebase/firestore";
 import { Navigate, useNavigate } from "react-router-dom";
+import Spinner from "../Spinner/Spinner.js";
 import CryptoJS from "crypto-js";
 
 const Adminuseredit = () => {

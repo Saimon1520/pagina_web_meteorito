@@ -1,9 +1,9 @@
 import "./adminpln.css";
 import SideNavBar from "./SideNavBar.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHref, useLocation } from 'react-router-dom';
 import { db } from '../../firebase';
-import { updateDoc, doc } from "firebase/firestore";
+import { updateDoc, doc, collection, getDocs } from "firebase/firestore";
 import { Navigate, useNavigate } from "react-router-dom";
 import CryptoJS from "crypto-js";
 
@@ -11,13 +11,36 @@ const Adminuseredit = () => {
     const web = useLocation();
     const [rname, setRname] = useState("");
 
+    const [seldata, setSeldata] = useState("");
+
+    useEffect(() => {
+        const fetchPost = async () => {
+            await getDocs(collection(db, "roles"))
+                .then((querySnapshot) => {
+                    const newData = querySnapshot.docs
+                        .map((doc) => ({ ...doc.data(), id: doc.id }));
+                    setSeldata(newData);
+                });
+        };
+        fetchPost();
+    }, []);
+
     const role = web.state.data;
 
-    const editRole = async (e) => {
-        e.preventDefault();
+    const checkIfRoleExists = () => {
+        for (let i = 0; i < seldata.length; i++) {
+            if (seldata[i].name === rname) {
+                console.log('Role already exists');
+                return true;
+            }
+        }
+        console.log('Role does not exist');
+        return false;
+    }
 
-        if (rname === '') {
-            alert('Favor verificar todos los espacios!')
+    const editRole = async () => {
+        if (rname === '' || checkIfRoleExists() === true) {
+            alert('No se pueden dejar espacios en blanco o el Role ya existe!')
         }
 
         else {
@@ -61,7 +84,7 @@ const Adminuseredit = () => {
                             <label htmlFor="InputfName" className="form-label">Nombre del Role</label>
                             <input id="IRN" className="form-control" type="fname" placeholder={role.name} aria-label="role name input" onChange={(e) => setRname(e.target.value)}></input>
                         </div>
-                        <button id="btnl" type="submit" onClick={editRole} className="btn btn-primary">Editar</button>
+                        <button id="btnl" type="button" onClick={() => { editRole() }} className="btn btn-primary">Editar</button>
                     </form>
                 </div>
             </div>
