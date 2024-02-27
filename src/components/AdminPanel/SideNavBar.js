@@ -9,8 +9,11 @@ const SideNavBar = () => {
     const handleClickAU = () => {
         navigate("/admin/useradd");
     }
-    const handleClickAD = () => {
+    const handleClickGR = () => {
         navigate("/admin");
+    }
+    const handleClickAR = () => {
+        navigate("/admin/rolesadd");
     }
     const delLocalStorage = () => {
         navigate("/");
@@ -20,7 +23,7 @@ const SideNavBar = () => {
         <div className="maindiv">
             <nav className="navbar navbar-dark bg-dark fixed-top">
                 <div className="container-fluid">
-                    <a className="navbar-brand" onClick={handleClickAD}>
+                    <a className="navbar-brand" onClick={handleClickGR}>
                         <img src="/imgs/Logo_W.png" alt="logo" width="70" height="44"></img>
                     </a>
                     <button className="navbar-toggler" id="asd" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -33,8 +36,17 @@ const SideNavBar = () => {
                         </div>
                         <div className="offcanvas-body">
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" onClick={handleClickAD}>Gestor de Roles</a>
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Roles
+                                    </a>
+                                    <ul className="dropdown-menu dropdown-menu-dark">
+                                        <li><a className="dropdown-item" onClick={handleClickAR}>Agregar Roles</a></li>
+                                        <li>
+                                            <hr className="dropdown-divider"></hr>
+                                        </li>
+                                        <li><a className="dropdown-item" onClick={handleClickGR}>Gestor de Roles</a></li>
+                                    </ul>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

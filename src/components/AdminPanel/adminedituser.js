@@ -1,26 +1,65 @@
 import "./adminpln.css";
-import { useGlobalContext } from '../../global.js';
 import SideNavBar from "./SideNavBar.js";
-import { useState } from "react";
-import { useHref, useLocation } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import { db } from '../../firebase';
-import { updateDoc, doc } from "firebase/firestore";
+import { updateDoc, doc, getDocs, collection } from "firebase/firestore";
 import { Navigate, useNavigate } from "react-router-dom";
+import Spinner from "../Spinner/Spinner.js";
 import CryptoJS from "crypto-js";
 
 const Adminuseredit = () => {
     const web = useLocation();
+    const [users, setUsers] = useState("");
+    const [seldata, setSeldata] = useState("");
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
     const [email, setEmail] = useState("");
     const [role, setRole] = useState("");
     const [password, setPassword] = useState("");
-    const user = web.state.user;
+    const user = web.state.data;
+
+    useEffect(() => {
+        const fetchPost = async () => {
+            await getDocs(collection(db, "roles"))
+                .then((querySnapshot) => {
+
+                    const newData = querySnapshot.docs
+                        .map((doc) => ({ ...doc.data(), id: doc.id }));
+                    setSeldata(newData);
+                });
+        };
+        fetchPost();
+    }, []);
+
+    useEffect(() => {
+        const fetchPost = async () => {
+            await getDocs(collection(db, "users"))
+                .then((querySnapshot) => {
+
+                    const newData = querySnapshot.docs
+                        .map((doc) => ({ ...doc.data(), id: doc.id }));
+                    setUsers(newData);
+                });
+        };
+        fetchPost();
+    }, []);
+
+    const checkIfEmailExists = () => {
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].email === email) {
+                console.log('Email already exists');
+                return true;
+            }
+        }
+        console.log('Email does not exist');
+        return false;
+    }
 
     const editUser = async (e) => {
         e.preventDefault();
 
-        if (fname === '' || lname === '' || email === '' || password === '' || role === '' || role === '0') {
+        if (fname === '' || lname === '' || email === '' || password === '' || role === '' || role === '0' || checkIfEmailExists() === true) {
             alert('Favor verificar todos los espacios!')
         }
 
@@ -83,14 +122,17 @@ const Adminuseredit = () => {
                             <label htmlFor="InputlName" className="form-label">Apellido</label>
                             <input id="ILN" className="form-control" type="lname" placeholder={user.lname} aria-label="last name input" onChange={(e) => setLname(e.target.value)}></input>
                         </div>
-                        <div className="mb-3">
-                            <label htmlFor="InputRole" className="form-label">Rol</label>
-                            <select id ="INE" class="form-select" aria-label="select role" onChange={(e) => setRole(e.target.value)}>
-                                <option value="0" selected>Selecciona un rol de la lista</option>
-                                <option value="admin">Administrador</option>
-                                <option value="user">Usuario</option>
-                            </select>
-                        </div>
+                        {seldata === "" ? <Spinner /> :
+                            <div className="mb-3">
+                                <label htmlFor="InputRole" className="form-label">Rol</label>
+                                <select id="INE" className="form-select" aria-label="select role" defaultValue={0} onChange={(e) => setRole(e.target.value)}>
+                                    <option value="0">Selecciona un rol de la lista</option>
+                                    {seldata.map((data) => (
+                                        <option key={data.id} value={data.name}>{data.name}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        }
                         <div className="mb-3">
                             <label htmlFor="InputRole" className="form-label">Correo</label>
                             <input id="INR" className="form-control" type="email" placeholder={user.email} aria-label="email input" onChange={(e) => setEmail(e.target.value)}></input>

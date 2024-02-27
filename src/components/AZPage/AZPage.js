@@ -3,8 +3,8 @@ import React from "react";
 
 const AZPage = () => {
   return (
-    <div className="maindiv">
-    <br></br>
+    <div id="maindiv" className="maindiv">
+      <br></br>
       <div className="hcontainer">
         <h1 className="MTitle">Aguas Zarcas</h1>
         <img
@@ -25,11 +25,6 @@ const AZPage = () => {
             Sabías que: En el año 2019, cayó un meteorito en la zona, siendo
             encontrado por un vecino de la zona, siendo gran noticia por unas
             semanas, inspirando un proyecto de CODEIN.
-          </p>
-          <p className="facts3">
-            Sabías que: Aguas Zarcas se encuentra rodeado por los volcanes
-            Platanar, Porvenir, y Viejo, todos en el Parque nacional Juan Castro
-            Blanco. La zona se ubica un campo volcánico.
           </p>
         </div>
         <div className="mmodalcontainer">

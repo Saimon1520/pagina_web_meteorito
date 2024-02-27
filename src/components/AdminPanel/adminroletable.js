@@ -1,9 +1,7 @@
-import { GoogleOAuthProvider } from "@react-oauth/google";
-import GoogleAnalyticsApp from "../GoogleAnalytics/GoogleAnalyticsApp.jsx";
-import { useGlobalContext } from '../../global.js';
 import SideNavBar from "./SideNavBar.js";
 import { Navigate } from "react-router-dom";
 import CryptoJS from "crypto-js";
+import DataTable from "./dataTable.js";
 
 const Adminroles = () => {
 
@@ -22,6 +20,7 @@ const Adminroles = () => {
       <div className="maindiv">
         <SideNavBar />
         <h1 className="MTitle">Gestor de Roles</h1>
+        <DataTable table="roles" />
       </div>
     );
   }
