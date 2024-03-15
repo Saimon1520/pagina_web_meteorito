@@ -1,0 +1,44 @@
+
+
+section {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.contact {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionDiv {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+
+.texto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.imgInfo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.bg-d {
+    background-color: #021D40;
+}

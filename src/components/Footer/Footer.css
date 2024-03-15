@@ -1,0 +1,53 @@
+.footer-container {
+    background-color: var(--Azul_updated);    
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  }
+
+  .footer-content p {
+    font-size: 14px;
+    margin: 0;
+    font-family: 'Poppins';
+
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  li a:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    .footer-content{
+      flex-direction: row;
+    }
+    .footer-content div{
+      width: 50%;
+      height: auto;
+    }
+  }

@@ -1,0 +1,163 @@
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Bungee Inline";
+  src: url(https://fonts.gstatic.com/s/bungeeinline/v2/Tb-1914q4rFpjT-F66PLCTxObtw73-qQgbr7Be51v5c.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-family:"elevon";
+  src:url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+  }
+
+.modal-title{
+  font-family: "elevon";
+}
+.modal-body{
+  font-family: "Poppins";
+}
+.factscontainerh{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  text-align: center;
+  background: var(--Azul_updated);
+  padding: 0.2rem;
+  color: white;
+  border-style: solid;
+  border-radius: var(--bs-border-radius);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.factscontainerf{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  text-align: center;
+  background: var(--Azul_updated);
+  padding: 0.2rem;
+  color: white;
+  border-style: solid;
+  border-radius: var(--bs-border-radius);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.factscontainerfj{
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  text-align: center;
+  background: var(--Azul_updated);
+  padding: 0.2rem;
+  color: white;
+  border-style: solid;
+  border-radius: var(--bs-border-radius);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.facts1, .facts2, .facts3{
+  font-family: "Poppins";
+  align-items: center;
+  min-width: 214px;
+  text-align: center;
+  padding: 0.2rem;
+  background-color: var(--Azul_updated);
+  color: white;
+  border-style: solid;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 10px;
+
+}
+.mButton {
+  font-family: "Poppins";
+  padding: 0.5rem;
+  background-color: var(--Azul_updated);
+  color: #fff;
+  transition-duration: 0.4s;
+  border: solid;
+  border-color: white;
+  border-radius: var(--bs-border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  width: max-content;
+  margin-bottom: 13px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #1d1d1d;
+    color: white;
+  }
+}
+
+@media (max-width: 540px) {
+  .mButton{
+    font-size: 0.6rem;
+    padding: 0.2rem;
+  }
+  .factscontainerh, .factscontainerf, .factscontainerfj{
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    text-align: center;
+    background: #00307f;
+    padding: 0.5rem;
+    color: white;
+    border-style: solid;
+    border-radius: var(--bs-border-radius);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 2560px) {
+  .MTitle {
+    font-family: "Bungee Inline";
+    align-items: center;
+    text-align: center;
+    background-color: var(--Azul_updated);
+    color: white;
+    border-style: solid;
+    border-radius: var(--bs-border-radius);
+    font-size: 5rem;
+  }
+
+  .mButton{
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  }
+  .factscontainerh, .factscontainerf, .factscontainerfj{
+    font-size: 2rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background: #00307f;
+    padding: 0.5rem;
+    color: white;
+    border-style: solid;
+    border-radius: var(--bs-border-radius);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+#fButton, #hButton{
+  position: absolute;
+}
+.body {
+  font-family: "Poppins";
+}
+#maindiv{
+  text-align: left;
+  background: black;
+}
+

@@ -1,0 +1,320 @@
+
+.Meteoritos {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Azul_updated);
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+
+.title_frag,
+.text_definition,
+.source_container span,
+.title_container h2 {
+
+    color: white;
+}
+
+/* Style for Accordion header */
+.accordion{
+    width: 100%;
+    background-color: var(--Morado_updated);
+}
+
+
+
+.accordion-header button{
+    background-color: var(--Morado_updated);
+    /* Replace with your desired background color */
+    font-family: Poppins;
+    font-weight: bold;
+    color: white;
+
+}
+
+/* Style for Accordion body */
+.accordion-body {
+    background-color: var(--Azul_updated);
+    /* Replace with your desired background color */
+    color: white;
+    /* Text color, replace with your desired text color */
+    font-family: Poppins;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+}
+
+
+@font-face {
+    font-family: 'Bungee Inline';
+    src: url(https://fonts.gstatic.com/s/bungeeinline/v2/Tb-1914q4rFpjT-F66PLCTxObtw73-qQgbr7Be51v5c.woff2) format('woff2');
+}
+
+.title_frag {
+    font-family: Bungee Inline;
+    ;
+}
+
+.frag_and_title_container {
+    flex-direction: column;
+    background-color: var(--Azul_updated);
+}
+
+.title_container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.definition_and_image_container,
+.frag_and_title_container,
+.info_AZ_container {
+    display: flex;
+    /* Make the containers flex to control their positioning */
+    align-items: center;
+    /* Align the items vertically in the middle */
+    border: 2px solid white;
+    /* Add a black border around the container */
+    padding: 10px;
+    /* Add some padding to create space between the content and the border */
+    margin: 1%;
+    /* Add padding to all sides of the container */
+    border-radius: 20px;
+    position: relative;
+    z-index: 4;
+}
+
+.info_AZ_container {
+    flex-direction: column;
+}
+
+
+.text_info_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.definition_container {
+    flex: 1;
+    /* Take up the available space within the flex container */
+    /* Add any styles you need for the definition container */
+    display: flex;
+    flex-direction: column;
+    /* Stack the text_container and source_container vertically */
+    align-items: center;
+}
+
+.image_container {
+    margin-right: 20px;
+    /* Add margin to create space between the image and definition containers */
+    /* Add any styles you need for the image container */
+    z-index: 2;
+}
+
+.image_container img {
+    width: auto;
+    /* Adjust the width to your desired size */
+    height: 350px;
+    /* Maintain aspect ratio */
+    border-radius: 20px;
+    /* Adjust the value to control the level of rounding */
+    z-index: 1;
+}
+
+.text_container {
+    background-color: var(--Morado_updated);
+    /* Set the text color to red (you can use any valid color value) */
+    border-radius: 20px;
+    /* Adjust the value to control the level of rounding */
+    width: auto;
+    /* Adjust the width to your desired size */
+    height: auto;
+    padding: 20px;
+    z-index: -1;
+}
+
+
+.text_info_container_in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--Azul);
+    margin: 1%;
+    position: relative;
+    z-index: -1;
+}
+
+.title_container h2 {
+    font-family: Bungee Inline;
+}
+
+
+.title_container {
+    display: flex;
+    justify-content: center;
+    /* Horizontally center the content */
+    align-items: center;
+    /* Vertically center the content */
+    text-align: center;
+    /* Horizontally center the text */
+}
+
+.triangles {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 0;
+    /* Adjust the size as needed */
+    border-color: var(--Celeste) transparent transparent transparent;
+    /* Change the color as needed */
+    position: absolute;
+
+    border-radius: 20px;
+    /* Adjust the radius for rounded corners */
+    z-index: -1;
+}
+
+.triangle1 {
+    top: 5px;
+    /* Adjust the position to keep the triangle inside the container */
+    right: 10%;
+    /* Center the triangle horizontally */
+    transform: rotate(10deg);
+    border-color: var(--Azul_Oscuro) transparent transparent transparent;
+}
+
+.triangle2 {
+    bottom: 20px;
+    /* Adjust the position to keep the triangle inside the container */
+    left: 30%;
+    /* Center the triangle horizontally */
+    transform: rotate(-37deg);
+    border-color: var(--Color_letras_Logo) transparent transparent transparent;
+}
+
+.triangle3 {
+    top: 5%;
+    /* Adjust the position to keep the triangle inside the container */
+    left: 41%;
+    /* Center the triangle horizontally */
+    transform: rotate(-10deg);
+    border-color: var(--Verde_Claro) transparent transparent transparent;
+}
+
+.triangle4 {
+    bottom: 5%;
+    /* Adjust the position to keep the triangle inside the container */
+    right: 5px;
+    /* Center the triangle horizontally */
+    transform: rotate(-30deg);
+}
+
+.triangle5 {
+    top: 5px;
+    /* Adjust the position to keep the triangle inside the container */
+    right: 5px;
+    /* Center the triangle horizontally */
+    z-index: 2;
+    transform: rotate(-15deg);
+    border-color: var(--Verde_Claro) transparent transparent transparent;
+}
+
+.triangle6 {
+    bottom: 5px;
+    /* Adjust the position to keep the triangle inside the container */
+    left: 5px;
+    /* Center the triangle horizontally */
+    z-index: 2;
+    transform: rotate(30deg);
+}
+
+.triangle7 {
+    top: 5px;
+    /* Adjust the position to keep the triangle inside the container */
+    left: 5px;
+    /* Center the triangle horizontally */
+    z-index: 2;
+    transform: rotate(-42deg);
+}
+
+.title_container {
+    z-index: 3;
+}
+
+.text_info_container {
+    z-index: 3;
+}
+
+.source_container spam {
+    font-weight: bold;
+}
+
+.text_definition,
+.source_container spam,
+.p_info {
+    font-family: Poppins;
+}
+
+
+@media (max-width: 768px) {
+
+    .text_definition,
+    .source_container spam,
+    .title_container h2,
+    .p_info {
+        font-size: 25px;
+    }
+
+    .see-more {
+        cursor: pointer;
+        color: blue; /* or your desired color */
+        text-decoration: underline; /* or your desired decoration */
+      }
+
+    .definition_and_image_container {
+        flex-direction: column;
+        /* Stack the containers vertically on smaller screens */
+    }
+
+    .definition_container {
+        align-items: flex-start;
+        /* Align text to the left on smaller screens */
+        width: 100%;
+        /* Make the image container take up the available width */
+        height: auto;
+    }
+
+    .image_container {
+        margin-right: 0;
+        /* Remove margin on smaller screens */
+        width: 100%;
+        /* Make the image container take up the available width */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin-bottom: 2%;
+    }
+
+    .image_container img {
+        width: 100%;
+        /* Make the image container take up the available width */
+        height: auto;
+        /* Maintain aspect ratio */
+        border-radius: 20px;
+        /* Adjust the value to control the level of rounding */
+    }
+
+    .triangle1,
+    .triangle2,
+    .triangle3,
+    .triangle4,
+    .triangle6 {
+        display: none;
+    }
+}

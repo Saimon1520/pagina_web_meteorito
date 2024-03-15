@@ -1,0 +1,41 @@
+:root {
+  --Tamaño_letra_button: 20px;
+  --Tamaño_radius_button: 10px;
+  --Color_borde_button: rgba(0, 0, 0, 0.2);
+  --Color_fondo_button: rgba(0, 0, 0, 0.2);
+}
+
+.Barra_Obj {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+  }
+  
+  .obj-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+  }
+  
+  .buttonx {
+    font-size: var(--Tamaño_letra_button);
+    width: 100%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background: none;
+    border: none;
+    transition: background 0.3s, border 0.3s;
+    cursor: pointer;
+  }
+  
+  .buttonx:hover {
+    background: var(--Color_fondo_button);
+    border: 1px solid var(--Color_borde_button);
+    border-radius: var(--Tamaño_radius_button);
+  }
+  
+  .button_abajo {
+    margin-top: 6%;
+  }
