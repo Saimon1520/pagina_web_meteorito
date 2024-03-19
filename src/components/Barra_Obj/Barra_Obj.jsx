@@ -1,30 +1,30 @@
+import './Barra_Obj.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import './Barra_Obj.css';
 import React, { useState, useEffect } from 'react';
-import Obj_6 from '../OBJS/Obj_6';
-import RM01 from '../OBJS/RM01';
-import DAA01 from '../OBJS/DAA01'
 import Obj from '../Obj/Obj';
-import ABR02 from '../OBJS/ABR02';
-import ERB02 from '../OBJS/ERB02';
-import ERB03 from '../OBJS/ERB03';
-import ESS01 from '../OBJS/ESS01';
-import MAA01 from '../OBJS/MAA01';
+import ABR02 from '../../../public/objects/ABR02/ABR02';
+import DAA01 from '../../../public/objects/DAA01/DAA01';
+import ERB02 from '../../../public/objects/ERB02/ERB02';
+import ERB03 from '../../../public/objects/ERB03/ERB03';
+import ESS01 from '../../../public/objects/ESS01/ESS01';
+import MAA01 from '../../../public/objects/MAA01/MAA01';
+import OBJ_6 from '../../../public/objects/OBJ_6/OBJ_6';
+import RM01 from '../../../public/objects/RM01/RM01';
 const Barra_Obj = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(getInitialItemsPerPage());
 
   // Tu lista de objetos
   const listaDeObjetos = [
-    { obj: Obj_6, titulo: "Fragmento 6", descripcion: "Descripción 1", src: "../OBJS/Obj_6" },
-    { obj: RM01, titulo: "RM01", descripcion: "Descripción 2", src: "../OBJS/RM01" },
-    { obj: DAA01, titulo: "DAA01", descripcion: "Descripción 3", src: "../OBJS/DAA01" },
-    { obj: ABR02, titulo: "ABR02", descripcion: "Descripción 4", src: "../OBJS/ABR02" },
-    { obj: ERB02, titulo: "ERB02", descripcion: "Descripción 5", src: "../OBJS/ERB02" },
-    { obj: ERB03, titulo: "ERB03", descripcion: "Descripción 6", src: "../OBJS/ERB03" },
-    { obj: ESS01, titulo: "ESS01", descripcion: "Descripción 7", src: "../OBJS/ESS01" },
-    { obj: MAA01, titulo: "MAA01", descripcion: "Descripción 8", src: "../OBJS/MAA01" },
+    { obj: OBJ_6, titulo: "Fragmento 6", descripcion: "Descripción 1", src: "../../../public/objects/OBJ_6/OBJ_6" },
+    { obj: RM01, titulo: "RM01", descripcion: "Descripción 2", src: "../../../public/objects/RM01/RM01" },
+    { obj: DAA01, titulo: "DAA01", descripcion: "Descripción 3", src: "../../../public/objects/DAA01/DAA01" },
+    { obj: ABR02, titulo: "ABR02", descripcion: "Descripción 4", src: "../../../public/objects/ABR02/ABR02" },
+    { obj: ERB02, titulo: "ERB02", descripcion: "Descripción 5", src: "../../../public/objects/ERB02/ERB02" },
+    { obj: ERB03, titulo: "ERB03", descripcion: "Descripción 6", src: "../../../public/objects/ERB03/ERB03" },
+    { obj: ESS01, titulo: "ESS01", descripcion: "Descripción 7", src: "../../../public/objects/ESS01/ESS01" },
+    { obj: MAA01, titulo: "MAA01", descripcion: "Descripción 8", src: "../../../public/objects/MAA01/MAA01" },
   ];
 
   // Función para dividir la lista en grupos de 3 o 1
@@ -40,7 +40,7 @@ const Barra_Obj = (props) => {
 
   useEffect(() => {
     function handleResize() {
-      setItemsPerPage(getInitialItemsPerPage());
+      setItemsPerPage(getInitialItemsPerPage()); getInitialItemsPerPage
     }
 
     window.addEventListener('resize', handleResize);

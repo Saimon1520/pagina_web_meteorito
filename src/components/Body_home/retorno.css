@@ -1,21 +1,20 @@
 :root {
-    --Color_letras_Logo: #00307f;
-    --Azul_Oscuro: #024574;
-    --Celeste: #5fcfdd;
-    --Azul: #01a8e0;
     --Azul_principal: #01112a;
 }
 
 .Primero {
     display: flex;
     background: var(--Azul_principal);
-    height: 300px;
+    height: 310px;
+    margin: 0%;
+    padding: 0%;
 }
 
 .pp {
     text-align: center;
     width: 40%;
     height: 30%;
+    
 }
 
 .foto {
@@ -39,7 +38,6 @@
     justify-content: center;
     align-items: center;
     height: 80%;
-    margin-top: 1%;
 }
 
 .sub3 {
@@ -53,19 +51,18 @@
 }
 
 .div2 {
-    margin-top: 1%;
     text-align: center;
     background-color: rgba(1, 17, 42, 255);
     width: 100%;
-    height: 750px;
+    height: 650px;
 }
 
 .Principal3 {
-    margin-top: 1%;
+    margin-top: 0%;
     text-align: center;
     background-color: rgba(1, 17, 42, 255);
     width: 100%;
-    height: 750px;
+    height: 500px;
 }
 
 .borde {
@@ -103,8 +100,8 @@
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    background-color: white;
-    color: #fff;
+    background-color: var(--second-color);
+    color: var(--second-color);;
     font-size: 16px;
     text-align: center;
     line-height: 100px;
@@ -114,18 +111,37 @@
 }
 
 svg {
-    color: black;
+    color: white;
 }
 
 .boton:hover {
     background-color: rgb(247, 249, 250);
 }
 
-.yu {
+.Incomplete {
     text-align: justify;
     color: white;
     margin-top: 12%;
-    font-size: 12px;
+    font-size: 14px;
+}
+
+.Complete{
+    text-align: justify;
+    color: white;
+    margin-top: 12%;
+    font-size: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#button{
+    border-radius: 30px;
+    color: white;
+    border: 1px solid var(--third-color);
+    background-color: var(--second-color)
 }
 
 .argandar {
@@ -249,7 +265,6 @@ svg {
         justify-content: center;
         align-items: center;
         height: 80%;
-        margin-top: 1%;
     }
 
     .sub3 {
@@ -262,7 +277,6 @@ svg {
     }
 
     .div2 {
-        margin-top: 1%;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
@@ -270,11 +284,11 @@ svg {
     }
 
     .Principal3 {
-        margin-top: 1%;
+        margin-top: 0%;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
-        height: 750px;
+        height: 600px;
     }
 
     .borde {
@@ -312,7 +326,7 @@ svg {
         border-radius: 50%;
         width: 45px;
         height: 45px;
-        background-color: white;
+        background-color: var(--second-color);;
         color: #fff;
         font-size: 16px;
         text-align: center;
@@ -323,18 +337,37 @@ svg {
     }
 
     svg {
-        color: black;
+        color: white;
     }
 
     .boton:hover {
         background-color: rgb(247, 249, 250);
     }
 
-    .yu {
+    .Incomplete {
         text-align: justify;
         color: white;
         margin-top: 12%;
         font-size: 16px;
+    }
+
+    .Complete{
+        text-align: justify;
+        color: white;
+        margin-top: 12%;
+        font-size: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #button{
+        border-radius: 30px;
+        color: white;
+        border: 1px solid var(--third-color);
+        background-color: var(--second-color)
     }
 
     .argandar {
@@ -430,7 +463,7 @@ svg {
     .Primero {
         display: flex;
         background: var(--Azul_principal);
-        height: 300px;
+        height: 480px;
     }
 
     .pp {
@@ -441,12 +474,12 @@ svg {
 
     .foto {
         width: 60%;
-        height: 50%;
+        height: 100%;
     }
 
     .Imagen_perro {
         width: 100%;
-        height: 300px;
+        height: 100%;
     }
 
     .noticia1 {
@@ -460,7 +493,6 @@ svg {
         justify-content: center;
         align-items: center;
         height: 80%;
-        margin-top: 1%;
     }
 
     .sub3 {
@@ -469,23 +501,21 @@ svg {
         justify-content: center;
         align-items: center;
         height: 90%;
-        margin-top: 1%;
     }
 
     .div2 {
-        margin-top: 1%;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
-        height: 750px;
+        height: 550px;
     }
 
     .Principal3 {
-        margin-top: 1%;
+        margin-top: 0px;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
-        height: 750px;
+        height: 560px;
     }
 
     .borde {
@@ -512,6 +542,7 @@ svg {
         width: 85%;
         height: 400px;
         margin: 7%;
+        margin-top: 4%;
     }
 
     .boton {
@@ -521,9 +552,9 @@ svg {
         align-items: center;
         border: none;
         border-radius: 50%;
-        width: 65px;
-        height: 65px;
-        background-color: white;
+        width: 55px;
+        height: 55px;
+        background-color: var(--second-color);;
         color: #fff;
         font-size: 16px;
         text-align: center;
@@ -534,18 +565,37 @@ svg {
     }
 
     svg {
-        color: black;
+        color: white;
     }
 
     .boton:hover {
         background-color: rgb(247, 249, 250);
     }
 
-    .yu {
+    .Incomplete {
+        text-align: justify;
+        color: white;
+        margin-top: 12%;
+        font-size: 16px;
+    }
+
+    .Complete{
         text-align: justify;
         color: white;
         margin-top: 12%;
         font-size: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #button{
+        border-radius: 30px;
+        color: white;
+        border: 1px solid var(--third-color);
+        background-color: var(--second-color)
     }
 
     .argandar {
@@ -553,10 +603,11 @@ svg {
     }
 
     .titulo1 {
-        margin-top: 10%;
+        margin-top: 40%;
         color: #386db8;
         text-align: center;
-        font-size: 18px;
+        width: 100%;
+        font-size: 25px;
     }
 
     .titulo2 {
@@ -572,10 +623,10 @@ svg {
     }
 
     .parrafo1 {
-        margin-top: 10%;
+        margin-top: 20%;
         color: white;
         text-align: center;
-        font-size: 13px;
+        font-size: 16px;
         margin-bottom: 6%;
         margin-left: 5%;
         margin-right: 5%;
@@ -641,23 +692,27 @@ svg {
     .Primero {
         display: flex;
         background: var(--Azul_principal);
-        height: 600px;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
     }
 
     .pp {
         text-align: center;
         width: 40%;
-        height: 30%;
+        height: 50%;
     }
 
     .foto {
         width: 60%;
-        height: 50%;
+        height: 100%;
     }
 
     .Imagen_perro {
         width: 100%;
-        height: 600px;
+        height: 650px;
+        margin: 0px;
+        padding: 0px;
     }
 
     .noticia1 {
@@ -671,7 +726,6 @@ svg {
         justify-content: center;
         align-items: center;
         height: 80%;
-        margin-top: 1%;
     }
 
     .sub3 {
@@ -680,23 +734,21 @@ svg {
         justify-content: center;
         align-items: center;
         height: 90%;
-        margin-top: 1%;
     }
 
     .div2 {
-        margin-top: 1%;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
-        height: 750px;
+        height: 800px;
     }
 
     .Principal3 {
-        margin-top: 1%;
+        margin-top: 0;
         text-align: center;
         background-color: rgba(1, 17, 42, 255);
         width: 100%;
-        height: 750px;
+        height: 710px;
     }
 
     .borde {
@@ -730,9 +782,9 @@ svg {
         align-items: center;
         border: none;
         border-radius: 50%;
-        width: 65px;
-        height: 65px;
-        background-color: white;
+        width: 55px;
+        height: 55px;
+        background-color: var(--second-color);;
         color: #fff;
         font-size: 16px;
         text-align: center;
@@ -743,18 +795,37 @@ svg {
     }
 
     svg {
-        color: black;
+        color: white;
     }
 
     .boton:hover {
         background-color: rgb(247, 249, 250);
     }
 
-    .yu {
+    .Incomplete {
         text-align: justify;
         color: white;
         margin-top: 12%;
-        font-size: 15px;
+        font-size: 20px;
+    }
+
+    .Complete{
+        text-align: justify;
+        color: white;
+        margin-top: 12%;
+        font-size: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #button{
+        border-radius: 30px;
+        color: white;
+        border: 1px solid var(--third-color);
+        background-color: var(--second-color)
     }
 
     .argandar {
@@ -762,7 +833,7 @@ svg {
     }
 
     .titulo1 {
-        margin-top: 20%;
+        margin-top: 40%;
         color: #386db8;
         text-align: center;
         font-size: 35px;
@@ -781,7 +852,7 @@ svg {
     }
 
     .parrafo1 {
-        margin-top: 10%;
+        margin-top: 20%;
         color: white;
         text-align: center;
         font-size: 23px;

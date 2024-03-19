@@ -1,34 +1,26 @@
-import { useState } from 'react';
 import './styles/La_Palmera.css'
 
 const La_Palmera = () => {
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const openHandler = () => {
-        setIsOpen(!isOpen)
-    }
-
 
     return (
         <div>
             <div className="container-fluid firstContainer text-center">
                 <br></br>
                 <h1 className='communityTitle'>CODE-IN</h1>
-                <div class="row">
+                <div className="row">
                     <div className="col-sm">
                         <h1 className='mt-5 Title1 mb-5'>La Palmera</h1>
-                        <h2 className='mt-5'>Virtual Reality Comunity</h2>
+                        <h2 className='mt-5 titleVR'>Virtual Reality Comunity</h2>
                     </div>
                     <div className="col-sm lj">
-                        <img className='img-fluid my-3 mt-5 mb-5 firstImage' src='/img/img1.png' alt='fgfg'></img>
+                        <img className='img-fluid my-3 mt-5 mb-5 firstImage' src='imgs/img1.png' alt='fgfg'></img>
                     </div>
                 </div>
             </div>
             <div className="container-fluid secondContainer text-center">
                 <div className='informatioContainer'>
                     <h1 className=' mt-5 Title3'>La Palmera</h1>
-                    <div class="row">
+                    <div className="row">
                         <div className="col-sm">
                             <br />
                             <div>
@@ -44,14 +36,14 @@ const La_Palmera = () => {
                             </div>
                         </div>
                     </div>
-                    <img className='img-fluid my-3 mt-5 mb-5 secondImage' src='/img/img2.jpg' alt='fgfg'></img>
+                    <img className='img-fluid my-3 mt-5 mb-5 secondImage' src='imgs/img2.jpg' alt='fgfg'></img>
                 </div>
 
 
             </div>
             <div className="container-fluid thirdContainer text-center pb-4">
                 <br></br>
-                <div class="row">
+                <div className="row">
                     <div className="col-sm">
                         <h1 className='mt-5 Title1'>TAMAÑO</h1>
                     </div>
@@ -60,7 +52,7 @@ const La_Palmera = () => {
                     </div>
                 </div>
                 <br />
-                <img className='img-fluid my-3 mt-5 mb-5 thirdImage' src='/img/img3.png' alt='fgfg'></img>
+                <img className='img-fluid my-3 mt-5 mb-5 thirdImage' src='imgs/img3.png' alt='fgfg'></img>
             </div>
         </div >
     )
