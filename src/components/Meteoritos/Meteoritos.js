@@ -9,13 +9,13 @@ const Meteoritos = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const textDefinition =
-        'La Real Academia Española lo define como: “Fragmento de un cuerpo celeste que cae sobre la Tierra, o' +
-        'sobre un astro cualquiera”. Si bien es cierto, observar la caída de fragmentos de cuerpos celestes a la tierra es para' +
+        'La Real Academia Española lo define Meteorito “un cuerpo celeste que cae sobre la Tierra, o ' +
+        'sobre un astro cualquiera”. Si bien es cierto, observar la caída de fragmentos de cuerpos celestes a la tierra es para ' +
         'el ser humano un hecho hermoso de admirar, sin embargo, no es un acontecimiento poco cotidiano, según Lücke, Madrigal y' +
-        ' Soto (2019), pese a que sobre la Tierra caen unos 25 meteoritos cada día, aquellos que son vistos caer y recuperados alcanzan' +
-        'sólo unos 5 a 10 al año. (p.10).' +
-        'Es particularmente importante para la comunidad científica el hallazgo del Meteorito Aguas Zarcas, ya que abrirá nuevas' +
-        'oportunidades de investigación y arrojará datos interesantes sobre cómo se formó el sistema solar y sobre el origen de la' +
+        ' Soto (2019), pese a que sobre la Tierra caen unos 25 meteoritos cada día, aquellos que son vistos caer y recuperados alcanzan ' +
+        'sólo unos 5 a 10 al año. (p.10). ' +
+        'Es particularmente importante para la comunidad científica el hallazgo del Meteorito Aguas Zarcas, ya que abrirá nuevas ' +
+        'oportunidades de investigación y arrojará datos interesantes sobre cómo se formó el sistema solar y el origen de la ' +
         'vida en la Tierra.';
 
     useEffect(() => {
@@ -90,7 +90,7 @@ const Meteoritos = () => {
                     <Accordion.Item eventKey="2">
                         <Accordion.Header>Aspecto #3</Accordion.Header>
                         <Accordion.Body>
-                            Solo se han registrado dos meteoritos a nivel mundial con estas características, en 1969 cayó en Murchison, un pueblo ganadero australiano, un meteorito con estas mismas características, de los cuales se recogieron alrededor de 100 kilogramos de este. Y en el 2019 en el distrito de Aguas Zarcas, donde se recolectaron aproximadamente 30 kilogramos. Según investigadores hace más de cincuenta años que cayó el meteorito Murchison, no se tenía la tecnología con la que se cuenta ahora para realizar las pruebas e investigación como con el Meteorito Aguas Zarcas, razón por la cual aumenta el valor de este.
+                            Solo se han registrado dos meteoritos a nivel mundial con estas características. En 1969 cayó en Murchison, un pueblo ganadero australiano, un meteorito con estas mismas características, del cual se recogio alrededor de 100 kilogramos. En el 2019... En el distrito de Aguas Zarcas, donde se recolectaron aproximadamente 30 kilogramos. Según investigadores hace más de cincuenta años que cayó el meteorito Murchison, no se tenía la tecnología con la que se cuenta ahora para realizar las pruebas e investigación como con el Meteorito Aguas Zarcas, razón por la cual aumenta el valor de este.
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
