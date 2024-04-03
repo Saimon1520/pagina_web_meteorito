@@ -23,7 +23,7 @@ const Comunidad = () => {
                     <div className='sectionDiv bg-d'>
                         <div className='texto'>
                             <h2 className='text-white'>
-                                Somos una comunidad de estudiantes que buscan expandir su conocimiento mientras resuelven problematicas de caracter social con nuevas tecnologias.
+                            Somos una comunidad de estudiantes que buscan expandir su conocimiento mientras resolvemos problemáticas de carácter social con nuevas tecnologías.
                             </h2>
                         </div>
                     </div>

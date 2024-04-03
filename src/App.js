@@ -10,22 +10,23 @@ import AZPage from "./components/AZPage/AZPage.js";
 import LaPalmera from "./pages/La_Palmera.js";
 import Navigation from "./components/Navigation/Navigation.js";
 import Login from './pages/Login.js';
-import GLog from "./components/GLog/GLog.js";
-import AdminPage from "./components/AdminPanel/adminanaltytics.js";
+import AdminPage from "./components/AdminPanel/adminroletable.js";
 import Adminadduser from "./components/AdminPanel/adminadduser.js";
 import Adminusertable from "./components/AdminPanel/adminusertable.js";
 import Adminuseredit from "./components/AdminPanel/adminedituser.js";
-import { GlobalProvider } from './global';
-import { InitializeGoogleAnalytics } from "./components/GoogleAnalytics/Analytics.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import CryptoJS from 'crypto-js';
+import Adminaddrole from "./components/AdminPanel/adminaddrole.js";
+import Adminroledit from "./components/AdminPanel/admineditrole.js";
 
 function App() {
-  //localStorage.clear();
-  //localStorage.setItem("isAdmin", "true");
-  //InitializeGoogleAnalytics();
   const key = "qwaser1221";
+
+  if (localStorage.getItem('loginVerification') === null) {
+    localStorage.setItem('loginVerification', "false")
+  }
+
 
   const desencryptDate = () => {
     const f = new Date();
@@ -51,32 +52,32 @@ function App() {
   }
 
   return (
-    <GlobalProvider>
-      <div className="App">
-        <div>
-          <Router>
-            <Navigation />
-            <Routes>
-              <Route path="/" element={<Home></Home>} />
-              <Route path="/La_Palmera" element={<LaPalmera />} />
-              <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
-              <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
-              <Route path="/Museo" element={<Museo></Museo>} />
-              <Route path="/AZPage" element={<AZPage></AZPage>} />
-              <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
-              <Route path="/Login" element={<Login></Login>} />
-              <Route path="/admin" element={<AdminPage></AdminPage>} />
-              <Route path="/admin/useradd" element={<Adminadduser></Adminadduser>} />
-              <Route path="/admin/usertable" element={<Adminusertable></Adminusertable>} />
-              <Route path="/admin/usertable/useredit" element={<Adminuseredit></Adminuseredit>} />
-            </Routes>
-          </Router>
-        </div>
-        <footer>
-          <Footer></Footer>
-        </footer>
+    <div className="App">
+      <div>
+        <Router>
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<Home></Home>} />
+            <Route path="/La_Palmera" element={<LaPalmera />} />
+            <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
+            <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
+            <Route path="/Museo" element={<Museo></Museo>} />
+            <Route path="/AZPage" element={<AZPage></AZPage>} />
+            <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
+            <Route path="/Login" element={<Login></Login>} />
+            <Route path="/admin" element={<AdminPage></AdminPage>} />
+            <Route path="/admin/useradd" element={<Adminadduser></Adminadduser>} />
+            <Route path="/admin/usertable" element={<Adminusertable></Adminusertable>} />
+            <Route path="/admin/usertable/useredit" element={<Adminuseredit></Adminuseredit>} />
+            <Route path="/admin/rolesadd" element={<Adminaddrole></Adminaddrole>} />
+            <Route path="/admin/roleedit" element={<Adminroledit></Adminroledit>} />
+          </Routes>
+        </Router>
       </div>
-    </GlobalProvider>
+      <footer>
+        <Footer></Footer>
+      </footer>
+    </div>
   );
 }
 
