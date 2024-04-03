@@ -1,8 +1,8 @@
 import './Obj.css';
-import React, { useState } from 'react';
-import {Canvas} from 'react-three-fiber'
-import { Suspense } from 'react';
-import {OrbitControls} from '@react-three/drei'
+import React, { useState, Suspense } from 'react';
+import {Canvas} from 'react-three-fiber';
+import {OrbitControls} from '@react-three/drei';
+import OBJ from '../../../public/objects/OBJ_6/OBJ_6';
 const Obj = (props) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
