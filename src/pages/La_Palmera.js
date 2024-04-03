@@ -32,7 +32,7 @@ const La_Palmera = () => {
                         <div className="col-sm">
                             <br />
                             <div>
-                                <p className='informationField'>La principal actividad de este lugar es la ganadería, y en menos proporción el cultivo de cítricos, caña de azúcar, raices y tubérculos. Se da también la explotación de carbonato de calcio.</p>
+                                <p className='informationField'>La principal actividad de este lugar es la ganadería, y en menos proporción el cultivo de cítricos, caña de azúcar, raices y tubérculos.</p>
                             </div>
                         </div>
                     </div>
