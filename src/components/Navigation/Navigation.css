@@ -15,7 +15,7 @@
 }
 
 .nav {
-    background: linear-gradient(to right, var(--first-color) , var(--second-color), var(--third-color));
+    background: linear-gradient( var(--second-color) , var(--second-color), var(--second-color));
 }
 
 .nav a{

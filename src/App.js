@@ -19,6 +19,7 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import CryptoJS from 'crypto-js';
 import Adminaddrole from "./components/AdminPanel/adminaddrole.js";
 import Adminroledit from "./components/AdminPanel/admineditrole.js";
+import Eventos from "./components/Eventos/Eventos.js";
 
 function App() {
   const key = "qwaser1221";
@@ -58,19 +59,19 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/" element={<Home></Home>} />
-            <Route path="/La_Palmera" element={<LaPalmera />} />
-            <Route path="/Fragmentos" element={<Meteoritos></Meteoritos>} />
+            <Route path="/Meteorito" element={<Meteoritos></Meteoritos>} />
             <Route path="/Comunidad" element={<Comunidad></Comunidad>} />
             <Route path="/Museo" element={<Museo></Museo>} />
+            <Route path="/La-Palmera" element={<LaPalmera></LaPalmera>} />
             <Route path="/AZPage" element={<AZPage></AZPage>} />
-            <Route path="/Acerca-de" element={<AcercaDe></AcercaDe>} />
-            <Route path="/Login" element={<Login></Login>} />
             <Route path="/admin" element={<AdminPage></AdminPage>} />
             <Route path="/admin/useradd" element={<Adminadduser></Adminadduser>} />
             <Route path="/admin/usertable" element={<Adminusertable></Adminusertable>} />
             <Route path="/admin/usertable/useredit" element={<Adminuseredit></Adminuseredit>} />
             <Route path="/admin/rolesadd" element={<Adminaddrole></Adminaddrole>} />
             <Route path="/admin/roleedit" element={<Adminroledit></Adminroledit>} />
+            <Route path="/Eventos" element={<Eventos></Eventos>} />
+            <Route path="/login" element={<Login></Login>} />
           </Routes>
         </Router>
       </div>
