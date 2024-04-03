@@ -17,11 +17,17 @@ const Adminroledit = () => {
     const addUser = async (e) => {
         e.preventDefault();
 
-        if (fname === '' || lname === '' || email === '' || password === '' || role === '') {
+        if (fname === '' || lname === '' || email === '' || password === '' || role === '' || role === '0') {
             alert('Favor verificar todos los espacios!')
         }
 
         else {
+            if (role === '1') {
+                setRole("admin");
+            }
+            else if (role === '2') {
+                setRole("user");
+            }
 
             try {
                 const docRef = await addDoc(collection(db, "users"), {
@@ -29,14 +35,23 @@ const Adminroledit = () => {
                 });
                 console.log("Usuario agregado con el id: ", docRef.id);
                 alert('Usuario Agregado!');
+                clearValues();
             } catch (e) {
                 console.error("Error agregando al Usuario: ", e);
                 alert('Error agregando al Usuario!');
             }
         }
+
+    }
+    const encryptData = (data) => {
+        const encryptedData = CryptoJS.AES.encrypt(data, "qwaser1221").toString();
+        return encryptedData
+    }
+
+    const clearValues = () => {
         document.getElementById('IFN').value = '';
         document.getElementById('ILN').value = '';
-        document.getElementById('INE').value = '';
+        document.getElementById('INE').value = '0';
         document.getElementById('INR').value = '';
         document.getElementById('inputPassword6').value = '';
     }
@@ -47,7 +62,7 @@ const Adminroledit = () => {
             return "false"
         }
     }
-    
+
     if (getVerification() !== "true") {
         return <Navigate replace to="/Login" />;
     } else {
@@ -66,8 +81,12 @@ const Adminroledit = () => {
                             <input id="ILN" className="form-control" type="lname" placeholder="Perez" aria-label="last name input" onChange={(e) => setLname(e.target.value)}></input>
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="InputEmail" className="form-label">Rol</label>
-                            <input id="INE" className="form-control" type="role" placeholder="admin/user" aria-label="role input" onChange={(e) => setRole(e.target.value)}></input>
+                            <label htmlFor="InputRole" className="form-label">Rol</label>
+                            <select id="INE" class="form-select" aria-label="select role" onChange={(e) => setRole(e.target.value)}>
+                                <option value="0" selected>Selecciona un rol de la lista</option>
+                                <option value="admin">Administrador</option>
+                                <option value="user">Usuario</option>
+                            </select>
                         </div>
                         <div className="mb-3">
                             <label htmlFor="InputRole" className="form-label">Correo</label>
@@ -75,7 +94,7 @@ const Adminroledit = () => {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="InputPassword" className="form-label">Contraseña</label>
-                            <input type="password" id="inputPassword6" className="form-control" aria-describedby="password input" onChange={(e) => setPassword(e.target.value)}></input>
+                            <input type="password" id="inputPassword6" className="form-control" aria-describedby="password input" onChange={(e) => setPassword(encryptData(e.target.value))}></input>
                         </div>
                         <button id="btnl" type="submit" onClick={addUser} className="btn btn-primary">Agregar</button>
                     </form>
