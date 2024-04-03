@@ -18,6 +18,7 @@ const Adminuseredit = () => {
     const [role, setRole] = useState("");
     const [password, setPassword] = useState("");
     const user = web.state.data;
+    const oldEmail = user.email;
 
     useEffect(() => {
         const fetchPost = async () => {
@@ -46,14 +47,18 @@ const Adminuseredit = () => {
     }, []);
 
     const checkIfEmailExists = () => {
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].email === email) {
-                console.log('Email already exists');
-                return true;
+        if (oldEmail === email) {
+            return false;
+        } else {
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email === email) {
+                    console.log('Email already exists');
+                    return true;
+                }
             }
+            console.log('Email does not exist');
+            return false;
         }
-        console.log('Email does not exist');
-        return false;
     }
 
     const editUser = async (e) => {
@@ -90,13 +95,6 @@ const Adminuseredit = () => {
         return encryptedData
     }
 
-    const clearValues = () => {
-        document.getElementById('IFN').value = '';
-        document.getElementById('ILN').value = '';
-        document.getElementById('INE').value = '0';
-        document.getElementById('INR').value = '';
-        document.getElementById('inputPassword6').value = '';
-    }
     const getVerification = () => {
         try {
             return CryptoJS.AES.decrypt(localStorage.getItem('loginVerification'), "qwaser1221").toString(CryptoJS.enc.Utf8)
