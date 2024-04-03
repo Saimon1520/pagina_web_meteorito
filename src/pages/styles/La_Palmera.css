@@ -1,13 +1,15 @@
 :root {
-    --first-color: #021d40;
+    --first-color: #021D40;
     --second-color: #6151d6;
     --third-color: #7ae7ea;
 }
 
 @font-face {
-    font-family: 'Bungee Inline';
-    src: url(https://fonts.gstatic.com/s/bungeeinline/v2/Tb-1914q4rFpjT-F66PLCTxObtw73-qQgbr7Be51v5c.woff2) format('woff2');
+    font-family:"elevon";
+    src:url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
 }
+
 @font-face {
     font-family: 'Poppins';
     src: url(https://fonts.gstatic.com/s/poppins/v15/pxiGyp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2) format('woff2');
@@ -38,14 +40,14 @@
 }
 
 .communityTitle {
-    color: black;
-    font-family: Bungee Inline;
+    color: white;
+    font-family: "elevon";
     margin-bottom: 50px;
     margin-top: 70px;
 }
 
 h2 {
-    color: black;
+    color: white;
 }
 
 .firstImage {
@@ -61,13 +63,13 @@ h2 {
 
 .Title1 {
     padding-top: 90px;
-    color: black;
-    font-family: Bungee Inline;
+    color: white;
+    font-family: "elevon";
 }
 
 .informationField {
     font-size: 1.5rem;
-    color: black;
+    color: white;
     text-align: justify;
     width: 95%;
 }
@@ -92,7 +94,7 @@ h2 {
 
 .Title2 {
     padding-top: 100px;
-    color: black;
+    color: white;
 }
 
 .thirdImage {
@@ -104,8 +106,8 @@ h2 {
 }
 
 .Title3 {
-    color: black;
-    font-family: Bungee Inline;
+    color: white;
+    font-family: "elevon";
     margin-bottom: 50px;
 }
 
@@ -141,6 +143,7 @@ h2 {
 /* Estilos del menú para dispositivos móviles */
 @media (max-width: 768px) {
     .Title1 {
+        color: white;
         padding-top: 0;
         padding-bottom: 0;
     }
