@@ -11,11 +11,11 @@ const Retorno = () => {
     },
     {
       src: "imgs/foto1.png",
-      text: "En una subasta en Estados Unidos, la casa de Roky que fue impactada por un meteorito en San Carlos fue inicialmente ofertada con un precio base de ₡191 millones.",
+      text: "En una subasta en Estados Unidos, la casa de Roky que fue impactada por un meteorito en San Carlos Costa Rica, inicialmente ofertada con un precio base de ₡191 millones.",
     },
     {
       src: "imgs/foto2.jpeg",
-      text: "La universidad técnica nacional de la sede de San Carlos realizó un mapa guia de la caída de meteoritos.",
+      text: "La Universidad Técnica Nacional de la sede de San Carlos realizó un mapa guia de la caída de meteoritos.",
     },
     {
       src: "imgs/foto4.jpg",
@@ -27,16 +27,33 @@ const Retorno = () => {
     },
   ];
 
+  const [isComplete, setIsComplete] = useState(true);
+
+  const change_Text = () => {
+      setIsComplete(!isComplete);
+  };
+
   const nextImage = () => {
     setCurrentImageIndex((currentImageIndex + 1) % images.length);
+    isComplete? "": setIsComplete(true);
   };
+
+  const previusImage = () => {
+    if (currentImageIndex == 0){
+      setCurrentImageIndex(4);
+    }else{
+      setCurrentImageIndex(currentImageIndex - 1);
+    }
+    isComplete? "": setIsComplete(true);
+  };
+
 
   return (
     <div className='Div_Principal'>
       <div className='Primero'>
         <div className='pp'>
           <h1 className='titulo1'>TE DAMOS LA BIENVENIDA A<br />NUESTRO MUSEO VIRTUAL</h1>
-          <p className='parrafo1'>Un proyecto desarrollado porestudiantes universitarios con elpropósito de poder brindar la experiencia deseada por muchos</p>
+          <p className='parrafo1'>Un proyecto desarrollado por estudiantes universitarios con el propósito de brindar la experiencia deseada por muchos.</p>
         </div>
         <div className='foto'>
           <img className='Imagen_perro' src="https://i.blogs.es/b80720/virtual/1024_2000.jpg" alt="Museo Virtual" />
@@ -47,7 +64,7 @@ const Retorno = () => {
         <div className='noticias_curiosidades'>
           <button
             className='boton'
-            onClick={nextImage}
+            onClick={previusImage}
           ><FontAwesomeIcon icon={faChevronLeft} size='xl' /></button>
           <div className='borde'>
             <img
@@ -55,7 +72,8 @@ const Retorno = () => {
               className={`foto${currentImageIndex + 1} curiosidades`}
               alt={`Imagen ${currentImageIndex + 1}`}
             ></img>
-            <p className='yu'>{images[currentImageIndex].text}</p>
+            <p id='yu' className={isComplete ? 'Complete' : 'Incomplete'}>{images[currentImageIndex].text}</p>
+            <button id='button' onClick={change_Text}>{isComplete? "Ver mas" : "Ver menos"}</button>
           </div>
           <button
             className='boton'
@@ -67,7 +85,7 @@ const Retorno = () => {
         <h1 className='titulo3'>Acerca de</h1>
         <div className='Sub3'>
           <div className='contenendor3'>
-            <p className='Acerca_de'>Este espacio se llena con información importante del proyecto</p>
+            <p className='Acerca_de'>Este espacio se llena con información importante del proyecto.</p>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const La_Palmera = () => {
             <div className="container-fluid firstContainer text-center">
                 <br></br>
                 <h1 className='communityTitle'>CODE-IN</h1>
-                <div class="row">
+                <div className="row">
                     <div className="col-sm">
                         <h1 className='mt-5 Title1 mb-5'>La Palmera</h1>
                         <h2 className='mt-5 titleVR'>Virtual Reality Comunity</h2>
@@ -20,7 +20,7 @@ const La_Palmera = () => {
             <div className="container-fluid secondContainer text-center">
                 <div className='informatioContainer'>
                     <h1 className=' mt-5 Title3'>La Palmera</h1>
-                    <div class="row">
+                    <div className="row">
                         <div className="col-sm">
                             <br />
                             <div>
@@ -32,7 +32,7 @@ const La_Palmera = () => {
                         <div className="col-sm">
                             <br />
                             <div>
-                                <p className='informationField'>La principal actividad de este lugar es la ganadería, y en menos proporción el cultivo de cítricos, caña de azúcar, raices y tubérculos. Se da también la explotación de carbonato de calcio.</p>
+                                <p className='informationField'>La principal actividad de este lugar es la ganadería, y en menos proporción el cultivo de cítricos, caña de azúcar, raices y tubérculos.</p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ const La_Palmera = () => {
             </div>
             <div className="container-fluid thirdContainer text-center pb-4">
                 <br></br>
-                <div class="row">
+                <div className="row">
                     <div className="col-sm">
                         <h1 className='mt-5 Title1'>TAMAÑO</h1>
                     </div>

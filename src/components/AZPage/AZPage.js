@@ -3,8 +3,8 @@ import React from "react";
 
 const AZPage = () => {
   return (
-    <div className="maindiv">
-    <br></br>
+    <div id="maindiv" className="maindiv">
+      <br></br>
       <div className="hcontainer">
         <h1 className="MTitle">Aguas Zarcas</h1>
         <img
@@ -19,17 +19,12 @@ const AZPage = () => {
           <p className="facts1">
             Sabías que: El nombre de Aguas Zarcas, proviene de las aguas
             termales de manantial. El color turquesa es debido a la gran
-            cantidad de azufre que contiene en si el río Aguas Zarcas.
+            cantidad de azufre que contiene el río Aguas Zarcas.
           </p>
           <p className="facts2">
-            Sabías que: En el año 2019, cayó un meteorito en la zona, siendo
-            encontrado por un vecino de la zona, siendo gran noticia por unas
-            semanas, inspirando un proyecto de CODEIN.
-          </p>
-          <p className="facts3">
-            Sabías que: Aguas Zarcas se encuentra rodeado por los volcanes
-            Platanar, Porvenir, y Viejo, todos en el Parque nacional Juan Castro
-            Blanco. La zona se ubica un campo volcánico.
+            Sabías que en el año 2019, cayó un meteorito en la zona, 
+            encontrado por un habitante. Este acontecimiento fue noticia a nivel nacional y 
+            mundial, lo que inspirá el proyecto de la Comunidad de Desarrollo e Innovación Universitaria.
           </p>
         </div>
         <div className="mmodalcontainer">
@@ -86,16 +81,14 @@ const AZPage = () => {
         ></img>
         <div className="factscontainerf">
           <p className="facts1">
-            Los 15 de Septiembre en Aguas Zarcas suelen ser muy alegre y llenos
-            de un gran ambiente familiar, en el cual las bandas de los centros
-            educativos de toda la zona van desfilando por las calles de Aguas
-            Zarcas alegremente todo el día celebrando!
+            Los 15 de Septiembre en Aguas Zarcas suelen ser muy alegres y llenos
+            de gran ambiente familiar, en el cual las bandas de los centros
+            educativos de toda la zona desfilan por sus calles, todo el día.
           </p>
           <p className="facts2">
-            Suelen haber desfiles conmemorando el dia de la independencia en
-            cual el colegio más grande de la zona es el CTP de Aguas Zarcas, el
-            cual trae bandas y grupos de baile folclórico, el desfile inicia
-            desde el CTP hasta el centro de Aguas Zarcas.
+          El desfile se extiende por las principales calles de Aguas Zarcas; 
+          el colegio que participa con mayor delegación es El Colegio Técnico 
+          Profesional de Aguas Zarcas con sus bandas y grupos de bailes folclóricos.
           </p>
         </div>
         <div className="fmodalcontainer">
@@ -129,18 +122,15 @@ const AZPage = () => {
                   ></button>
                 </div>
                 <div className="modal-body">
-                  Aguas Zarcas ofrece oportunidades únicas para los amantes del
-                  ecoturismo, con emocionantes actividades como el avistamiento
-                  de aves exóticas, emocionantes recorridos en kayak por los
-                  ríos serpenteantes y emocionantes excursiones a reservas
-                  naturales cercanas. Ya sea que busques una escapada tranquila
-                  o una aventura llena de adrenalina, Agua Zarcas te ofrece el
-                  escenario perfecto para una experiencia memorable y
-                  enriquecedora. Ven a descubrir este paraíso escondido y déjate
-                  seducir por la magia de Agua Zarcas, un destino que te
-                  conquistará con su encanto incomparable y su espíritu
-                  acogedor. ¡La aventura te aguarda en este rincón de Costa Rica
-                  que te enamorará desde el primer instante!
+                Aguas Zarcas ofrece oportunidades únicas para los amantes del ecoturismo, con 
+                actividades como el avistamiento de aves exóticas, emocionantes recorridos en 
+                kayak por los ríos serpenteantes y excursiones a reservas naturales cercanas. 
+                Si busca una escapada tranquila o una aventura llena de adrenalina, Aguas Zarcas 
+                te ofrece el escenario perfecto para una experiencia memorable y enriquecedora. 
+                Ven a descubrir este paraíso escondido y déjate seducir por la magia de esta comunidad. 
+                Aguas Zarcas, un destino que te conquistará con su encanto incomparable y su espíritu 
+                acogedor. ¡La aventura te aguarda en este rincón de Costa Rica que te enamorará desde 
+                el primer instante!
                 </div>
               </div>
             </div>

@@ -1,48 +1,100 @@
 import "./adminpln.css";
-import { useGlobalContext } from '../../global.js';
 import SideNavBar from "./SideNavBar.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import { db } from '../../firebase';
-import { updateDoc, doc } from "firebase/firestore";
+import { updateDoc, doc, getDocs, collection } from "firebase/firestore";
 import { Navigate, useNavigate } from "react-router-dom";
+import Spinner from "../Spinner/Spinner.js";
 import CryptoJS from "crypto-js";
 
 const Adminuseredit = () => {
     const web = useLocation();
+    const [users, setUsers] = useState("");
+    const [seldata, setSeldata] = useState("");
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
     const [email, setEmail] = useState("");
     const [role, setRole] = useState("");
     const [password, setPassword] = useState("");
-    const user = web.state.user;
+    const user = web.state.data;
+    const oldEmail = user.email;
+
+    useEffect(() => {
+        const fetchPost = async () => {
+            await getDocs(collection(db, "roles"))
+                .then((querySnapshot) => {
+
+                    const newData = querySnapshot.docs
+                        .map((doc) => ({ ...doc.data(), id: doc.id }));
+                    setSeldata(newData);
+                });
+        };
+        fetchPost();
+    }, []);
+
+    useEffect(() => {
+        const fetchPost = async () => {
+            await getDocs(collection(db, "users"))
+                .then((querySnapshot) => {
+
+                    const newData = querySnapshot.docs
+                        .map((doc) => ({ ...doc.data(), id: doc.id }));
+                    setUsers(newData);
+                });
+        };
+        fetchPost();
+    }, []);
+
+    const checkIfEmailExists = () => {
+        if (oldEmail === email) {
+            return false;
+        } else {
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email === email) {
+                    console.log('Email already exists');
+                    return true;
+                }
+            }
+            console.log('Email does not exist');
+            return false;
+        }
+    }
 
     const editUser = async (e) => {
         e.preventDefault();
 
-        if (fname === '' || lname === '' || email === '' || password === '' || role === '') {
+        if (fname === '' || lname === '' || email === '' || password === '' || role === '' || role === '0' || checkIfEmailExists() === true) {
             alert('Favor verificar todos los espacios!')
         }
 
         else {
-
+            if (role === '1') {
+                setRole("admin");
+            }
+            else if (role === '2') {
+                setRole("user");
+            }
             try {
                 const docRef = doc(db, "users", user.id);
                 await updateDoc(docRef, {
                     fname: fname, lname: lname, role: role, email: email, password: password
                 });
                 alert('Usuario Editado!');
+                clearValues();
+                window.location.replace("/admin/usertable");
             } catch (e) {
                 console.error("Error Editando Usuario: ", e);
                 alert('Error Editando Usuario!');
             }
         }
-        document.getElementById('IFN').value = '';
-        document.getElementById('ILN').value = '';
-        document.getElementById('INE').value = '';
-        document.getElementById('INR').value = '';
-        document.getElementById('inputPassword6').value = '';
     }
+
+    const encryptData = (data) => {
+        const encryptedData = CryptoJS.AES.encrypt(data, "qwaser1221").toString();
+        return encryptedData
+    }
+
     const getVerification = () => {
         try {
             return CryptoJS.AES.decrypt(localStorage.getItem('loginVerification'), "qwaser1221").toString(CryptoJS.enc.Utf8)
@@ -68,17 +120,24 @@ const Adminuseredit = () => {
                             <label htmlFor="InputlName" className="form-label">Apellido</label>
                             <input id="ILN" className="form-control" type="lname" placeholder={user.lname} aria-label="last name input" onChange={(e) => setLname(e.target.value)}></input>
                         </div>
-                        <div className="mb-3">
-                            <label htmlFor="InputEmail" className="form-label">Rol</label>
-                            <input id="INE" className="form-control" type="role" placeholder={user.role} aria-label="role input" onChange={(e) => setRole(e.target.value)}></input>
-                        </div>
+                        {seldata === "" ? <Spinner /> :
+                            <div className="mb-3">
+                                <label htmlFor="InputRole" className="form-label">Rol</label>
+                                <select id="INE" className="form-select" aria-label="select role" defaultValue={0} onChange={(e) => setRole(e.target.value)}>
+                                    <option value="0">Selecciona un rol de la lista</option>
+                                    {seldata.map((data) => (
+                                        <option key={data.id} value={data.name}>{data.name}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        }
                         <div className="mb-3">
                             <label htmlFor="InputRole" className="form-label">Correo</label>
                             <input id="INR" className="form-control" type="email" placeholder={user.email} aria-label="email input" onChange={(e) => setEmail(e.target.value)}></input>
                         </div>
                         <div className="mb-3">
                             <label htmlFor="InputPassword" className="form-label">Contraseña</label>
-                            <input type="password" id="inputPassword6" className="form-control" aria-describedby="password input" onChange={(e) => setPassword(e.target.value)}></input>
+                            <input type="password" id="inputPassword6" className="form-control" aria-describedby="password input" onChange={(e) => setPassword(encryptData(e.target.value))}></input>
                         </div>
                         <button id="btnl" type="submit" onClick={editUser} className="btn btn-primary">Editar</button>
                     </form>

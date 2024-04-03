@@ -1,6 +1,6 @@
 import './styles/Login.css'
 import { useEffect, useState } from 'react';
-import { collection, query, where, getDocs, addDoc, doc, deleteDoc, updateDoc, getDoc } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 import { db } from '../firebase'
 import { Navigate, useNavigate } from "react-router-dom";
 import CryptoJS from 'crypto-js';
@@ -54,7 +54,7 @@ const Login = () => {
                 let findIt = false
                 let option = 1;
                 userss.forEach(user => {
-                    if ((user.userData.email === email) && (user.userData.password === password)) {
+                    if ((user.userData.email === email) && (decryptData(user.userData.password) === password)) {
                         localStorage.setItem('loginVerification', CryptoJS.AES.encrypt("true", key).toString());
                         nav("/admin");
                         localStorage.setItem("isAdmin", "true");
@@ -79,7 +79,7 @@ const Login = () => {
                 let findIt = false;
                 let option = 1;
                 users.forEach(user => {
-                    if ((user.userData.email === email) && (user.userData.password === password)) {
+                    if ((user.userData.email === email) && (decryptData(user.userData.password) === password)) {
                         localStorage.setItem('loginVerification', CryptoJS.AES.encrypt("true", key).toString());
                         nav("/admin");
                         localStorage.setItem("isAdmin", "true");
@@ -106,8 +106,16 @@ const Login = () => {
         }
         setPassword("");
 
+    }
 
+    const encryptData = (data) => {
+        const encryptedData = CryptoJS.AES.encrypt(data, key).toString();
+        return encryptedData
+    }
 
+    const decryptData = (data) => {
+        const decryptedData = CryptoJS.AES.decrypt(data, key).toString(CryptoJS.enc.Utf8);
+        return decryptedData
     }
 
     const changeData = (data) => {
@@ -124,7 +132,7 @@ const Login = () => {
             data = "false"
         }
         return data;
-        
+
     }
 
     if (getVerification() === "true") {
@@ -143,7 +151,7 @@ const Login = () => {
                         </div>
                         <div className="mb-5">
                             <label className="form-label text-ti">Contraseña</label>
-                            <input type="password" className="form-control" id="exampleInputPassword1" value={password} onChange={(e) => changeData(e.target.value)} />
+                            <input type="password" className="form-control" id="exampleInputPassword1" onChange={(e) => changeData(e.target.value)} />
                             <div id="emailHelp" className=" msg_alert">{msgError}</div>
                         </div>
                         <button onClick={() => checkData()} className="btn btn-primary">Ingresar</button>

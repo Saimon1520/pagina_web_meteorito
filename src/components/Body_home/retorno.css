@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  }
+  
+  @font-face {
+    font-family:"elevon";
+    src:url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+  }
+
 :root {
-    --Azul_principal: #01112a;
+    --Azul_principal: #021D40;
 }
 
 .Primero {
@@ -33,6 +44,7 @@
 }
 
 .noticias_curiosidades {
+    background-color: var(--Azul_principal);
     display: flex;
     width: 100%;
     justify-content: center;
@@ -52,17 +64,17 @@
 
 .div2 {
     text-align: center;
-    background-color: rgba(1, 17, 42, 255);
+    background-color: var(--Azul_principal);
     width: 100%;
-    height: 750px;
+    height: 650px;
 }
 
 .Principal3 {
-    margin-top: 1%;
+    margin-top: 0%;
     text-align: center;
-    background-color: rgba(1, 17, 42, 255);
+    background-color: var(--Azul_principal);
     width: 100%;
-    height: 750px;
+    height: 500px;
 }
 
 .borde {
@@ -70,7 +82,7 @@
     border: 1px solid #024574;
     border-radius: 3%;
     padding: 10px;
-    background-color: #024574;
+    background-color: var(--Azul_principal);
     width: 60%;
     height: 90%;
     display: block;
@@ -85,7 +97,7 @@
     border: 1px solid #024574;
     border-radius: 3%;
     padding: 10px;
-    background-color: #024574;
+    background-color: var(--Azul_principal);
     width: 85%;
     height: 400px;
     margin: 7%;
@@ -100,8 +112,8 @@
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    background-color: white;
-    color: #fff;
+    background-color: var(--second-color);
+    color: var(--second-color);;
     font-size: 16px;
     text-align: center;
     line-height: 100px;
@@ -111,18 +123,39 @@
 }
 
 svg {
-    color: black;
+    color: white;
 }
 
 .boton:hover {
     background-color: rgb(247, 249, 250);
 }
 
-.yu {
+.Incomplete {
+    font-family: "Poppins";
     text-align: justify;
     color: white;
     margin-top: 12%;
-    font-size: 12px;
+    font-size: 14px;
+}
+
+.Complete{
+    font-family: "Poppins";
+    text-align: justify;
+    color: white;
+    margin-top: 12%;
+    font-size: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#button{
+    border-radius: 30px;
+    color: white;
+    border: 1px solid var(--third-color);
+    background-color: var(--second-color)
 }
 
 .argandar {
@@ -130,6 +163,7 @@ svg {
 }
 
 .titulo1 {
+    font-family: "elevon";
     margin-top: 35%;
     color: #386db8;
     text-align: center;
@@ -137,18 +171,23 @@ svg {
 }
 
 .titulo2 {
+    background-color: var(--Azul_principal);
+    font-family: "elevon";
     padding-top: 2%;
     padding-bottom: 2%;
     color: #386db8;
 }
 
 .titulo3 {
+    background-color: var(--Azul_principal);
+    font-family: "elevon";
     padding-top: 2%;
     text-align: center;
     color: #386db8;
 }
 
 .parrafo1 {
+    font-family: "Poppins";
     margin-top: 20%;
     color: white;
     text-align: center;
@@ -164,6 +203,7 @@ svg {
 }
 
 .Acerca_de {
+    font-family: "Poppins";
     margin-top: 10%;
     color: white;
     text-align: center;
@@ -241,6 +281,7 @@ svg {
     }
 
     .noticias_curiosidades {
+        background-color: var(--Azul_principal);
         display: flex;
         width: 100%;
         justify-content: center;
@@ -259,25 +300,25 @@ svg {
 
     .div2 {
         text-align: center;
-        background-color: rgba(1, 17, 42, 255);
+        background-color: var(--Azul_principal);
         width: 100%;
         height: 750px;
     }
 
     .Principal3 {
-        margin-top: 1%;
+        margin-top: 0%;
         text-align: center;
-        background-color: rgba(1, 17, 42, 255);
+        background-color: var(--Azul_principal);
         width: 100%;
-        height: 750px;
+        height: 600px;
     }
 
     .borde {
         text-align: center;
-        border: 1px solid #024574;
+        border: 1px solid var(--Azul_principal);
         border-radius: 3%;
         padding: 10px;
-        background-color: #024574;
+        background-color: var(--Azul_principal);
         width: 60%;
         height: 90%;
         display: block;
@@ -289,10 +330,10 @@ svg {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #024574;
+        border: 1px solid var(--Azul_principal);
         border-radius: 3%;
         padding: 10px;
-        background-color: #024574;
+        background-color: var(--Azul_principal);
         width: 85%;
         height: 400px;
         margin: 7%;
@@ -307,7 +348,7 @@ svg {
         border-radius: 50%;
         width: 45px;
         height: 45px;
-        background-color: white;
+        background-color: var(--second-color);;
         color: #fff;
         font-size: 16px;
         text-align: center;
@@ -318,18 +359,39 @@ svg {
     }
 
     svg {
-        color: black;
+        color: white;
     }
 
     .boton:hover {
         background-color: rgb(247, 249, 250);
     }
 
-    .yu {
+    .Incomplete {
+        font-family: "Poppins";
         text-align: justify;
         color: white;
         margin-top: 12%;
         font-size: 16px;
+    }
+
+    .Complete{
+        font-family: "Poppins";
+        text-align: justify;
+        color: white;
+        margin-top: 12%;
+        font-size: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #button{
+        border-radius: 30px;
+        color: white;
+        border: 1px solid var(--third-color);
+        background-color: var(--second-color)
     }
 
     .argandar {
@@ -337,6 +399,7 @@ svg {
     }
 
     .titulo1 {
+        font-family: "elevon";
         margin-top: 15%;
         color: #386db8;
         text-align: center;
@@ -344,18 +407,23 @@ svg {
     }
 
     .titulo2 {
+        background-color: var(--Azul_principal);
+        font-family: "elevon";
         padding-top: 2%;
         padding-bottom: 2%;
         color: #386db8;
     }
 
     .titulo3 {
+        background-color: var(--Azul_principal);
+        font-family: "elevon";
         padding-top: 2%;
         text-align: center;
         color: #386db8;
     }
 
     .parrafo1 {
+        font-family: "Poppins";
         margin-top: 15%;
         color: white;
         text-align: center;
@@ -372,6 +440,7 @@ svg {
     }
 
     .Acerca_de {
+        font-family: "Poppins";
         margin-top: 10%;
         color: white;
         text-align: center;
@@ -450,6 +519,7 @@ svg {
     }
 
     .noticias_curiosidades {
+        background-color: var(--Azul_principal);
         display: flex;
         width: 100%;
         justify-content: center;
@@ -467,16 +537,17 @@ svg {
 
     .div2 {
         text-align: center;
-        background-color: rgba(1, 17, 42, 255);
+        background-color: var(--Azul_principal);
         width: 100%;
-        height: 750px;
+        height: 550px;
     }
 
     .Principal3 {
+        margin-top: 0px;
         text-align: center;
-        background-color: rgba(1, 17, 42, 255);
+        background-color: var(--Azul_principal);
         width: 100%;
-        height: 750px;
+        height: 560px;
     }
 
     .borde {
@@ -503,6 +574,7 @@ svg {
         width: 85%;
         height: 400px;
         margin: 7%;
+        margin-top: 4%;
     }
 
     .boton {
@@ -512,9 +584,9 @@ svg {
         align-items: center;
         border: none;
         border-radius: 50%;
-        width: 65px;
-        height: 65px;
-        background-color: white;
+        width: 55px;
+        height: 55px;
+        background-color: var(--second-color);;
         color: #fff;
         font-size: 16px;
         text-align: center;
@@ -525,18 +597,39 @@ svg {
     }
 
     svg {
-        color: black;
+        color: white;
     }
 
     .boton:hover {
         background-color: rgb(247, 249, 250);
     }
 
-    .yu {
+    .Incomplete {
+        font-family: "Poppins";
+        text-align: justify;
+        color: white;
+        margin-top: 12%;
+        font-size: 16px;
+    }
+
+    .Complete{
+        font-family: "Poppins";
         text-align: justify;
         color: white;
         margin-top: 12%;
         font-size: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #button{
+        border-radius: 30px;
+        color: white;
+        border: 1px solid var(--third-color);
+        background-color: var(--second-color)
     }
 
     .argandar {
@@ -544,6 +637,7 @@ svg {
     }
 
     .titulo1 {
+        font-family: "elevon";
         margin-top: 40%;
         color: #386db8;
         text-align: center;
@@ -552,18 +646,23 @@ svg {
     }
 
     .titulo2 {
+        background-color: var(--Azul_principal);
+        font-family: "elevon";
         padding-top: 2%;
         padding-bottom: 2%;
         color: #386db8;
     }
 
     .titulo3 {
+        background-color: var(--Azul_principal);
+        font-family: "elevon";
         padding-top: 2%;
         text-align: center;
         color: #386db8;
     }
 
     .parrafo1 {
+        font-family: "Poppins";
         margin-top: 20%;
         color: white;
         text-align: center;
@@ -580,6 +679,7 @@ svg {
     }
 
     .Acerca_de {
+        font-family: "Poppins";
         margin-top: 10%;
         color: white;
         text-align: center;
@@ -662,6 +762,7 @@ svg {
     }
 
     .noticias_curiosidades {
+        background-color: var(--Azul_principal);
         display: flex;
         width: 100%;
         justify-content: center;
@@ -679,16 +780,17 @@ svg {
 
     .div2 {
         text-align: center;
-        background-color: rgba(1, 17, 42, 255);
+        background-color: var(--Azul_principal);
         width: 100%;
-        height: 900px;
+        height: 800px;
     }
 
     .Principal3 {
+        margin-top: 0;
         text-align: center;
-        background-color: rgba(1, 17, 42, 255);
+        background-color: var(--Azul_principal);
         width: 100%;
-        height: 750px;
+        height: 710px;
     }
 
     .borde {
@@ -722,9 +824,9 @@ svg {
         align-items: center;
         border: none;
         border-radius: 50%;
-        width: 65px;
-        height: 65px;
-        background-color: white;
+        width: 55px;
+        height: 55px;
+        background-color: var(--second-color);;
         color: #fff;
         font-size: 16px;
         text-align: center;
@@ -735,18 +837,39 @@ svg {
     }
 
     svg {
-        color: black;
+        color: white;
     }
 
     .boton:hover {
         background-color: rgb(247, 249, 250);
     }
 
-    .yu {
+    .Incomplete {
+        font-family: "Poppins";
         text-align: justify;
         color: white;
         margin-top: 12%;
-        font-size: 15px;
+        font-size: 20px;
+    }
+
+    .Complete{
+        font-family: "Poppins";
+        text-align: justify;
+        color: white;
+        margin-top: 12%;
+        font-size: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #button{
+        border-radius: 30px;
+        color: white;
+        border: 1px solid var(--third-color);
+        background-color: var(--second-color)
     }
 
     .argandar {
@@ -754,6 +877,7 @@ svg {
     }
 
     .titulo1 {
+        font-family: "elevon";
         margin-top: 40%;
         color: #386db8;
         text-align: center;
@@ -761,18 +885,23 @@ svg {
     }
 
     .titulo2 {
+        background-color: var(--Azul_principal);
+        font-family: "elevon";
         padding-top: 2%;
         padding-bottom: 2%;
         color: #386db8;
     }
 
     .titulo3 {
+        background-color: var(--Azul_principal);
+        font-family: "elevon";
         padding-top: 2%;
         text-align: center;
         color: #386db8;
     }
 
     .parrafo1 {
+        font-family: "Poppins";
         margin-top: 20%;
         color: white;
         text-align: center;
@@ -781,6 +910,7 @@ svg {
     }
 
     .Acerca_de {
+        font-family: "Poppins";
         margin-top: 10%;
         color: white;
         text-align: center;
