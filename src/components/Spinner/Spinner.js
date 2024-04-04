@@ -1,7 +1,6 @@
-import './Spinner.css';
-const Spin = () => {
-    return (
-        <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    )
-}
-export default Spin;
+import "./Spinner.css";
+const Spinner = () => {
+    return <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+};
+export default Spinner;
+
