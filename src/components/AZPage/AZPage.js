@@ -17,7 +17,7 @@ const AZPage = () => {
       <div className="mcontainer">
         <div className="factscontainerh">
           <p className="facts1">
-            Sabías que: El nombre de Aguas Zarcas, proviene de las aguas
+            Sabías que El nombre de Aguas Zarcas, proviene de las aguas
             termales de manantial. El color turquesa es debido a la gran
             cantidad de azufre que contiene el río Aguas Zarcas.
           </p>
@@ -63,7 +63,7 @@ const AZPage = () => {
                   una danza armoniosa que te sorprenderá en cada rincón. Pasea
                   por sus calles pintorescas y admira las coloridas casas que
                   reflejan la esencia de la tradición costarricense. Sumérgete
-                  en los mercados locales, donde los aromas de frutas tropicales
+                  en las tiendas locales, donde los aromas de frutas tropicales
                   y café recién tostado llenarán tus sentidos. No puedes dejar
                   de probar la deliciosa gastronomía típica, que combina sabores
                   auténticos con ingredientes frescos de la región.
@@ -88,7 +88,7 @@ const AZPage = () => {
           <p className="facts2">
           El desfile se extiende por las principales calles de Aguas Zarcas;
           el colegio que participa con mayor delegación es El Colegio Técnico
-          Profesional de Aguas Zarcas con sus bandas y grupos de bailes folclóricos.
+          Profesional Nataniel Arias Murillo con sus bandas y grupos de bailes folclóricos.
           </p>
         </div>
         <div className="fmodalcontainer">
@@ -122,14 +122,14 @@ const AZPage = () => {
                   ></button>
                 </div>
                 <div className="modal-body">
-                Aguas Zarcas ofrece oportunidades únicas para los amantes del ecoturismo, con 
-                actividades como el avistamiento de aves exóticas, emocionantes recorridos en 
-                kayak por los ríos serpenteantes y excursiones a reservas naturales cercanas. 
-                Si busca una escapada tranquila o una aventura llena de adrenalina, Aguas Zarcas 
-                te ofrece el escenario perfecto para una experiencia memorable y enriquecedora. 
-                Ven a descubrir este paraíso escondido y déjate seducir por la magia de esta comunidad. 
-                Aguas Zarcas, un destino que te conquistará con su encanto incomparable y su espíritu 
-                acogedor. ¡La aventura te aguarda en este rincón de Costa Rica que te enamorará desde 
+                Aguas Zarcas ofrece oportunidades únicas para los amantes del ecoturismo, con
+                actividades como el avistamiento de aves exóticas, recorridos en
+                kayak por los ríos serpenteantes y excursiones a reservas naturales cercanas.
+                Si busca una escapada tranquila o una aventura llena de adrenalina, Aguas Zarcas
+                te ofrece el escenario perfecto para una experiencia memorable y enriquecedora.
+                Ven a descubrir este paraíso escondido y déjate seducir por la magia de esta comunidad.
+                Aguas Zarcas, un destino que te conquistará con su encanto incomparable y su espíritu
+                acogedor. ¡La aventura te aguarda en este rincón de Costa Rica que te enamorará desde
                 el primer instante!
                 </div>
               </div>
@@ -142,7 +142,7 @@ const AZPage = () => {
           alt="15 de Septiembre Aguas Zarcas"
         ></img>
         <div className="factscontainerfj">
-          <p className="facts1">
+          <p className="facts2">
             Aguas Zarcas esta a los pies del Parque Nacional Juan Castro Blanco
             fundado en 1992 con aproximadamente 14.308 hectáreas de extensión,
             proveyendo abundantes fuentes de agua natural, limpia y potable para

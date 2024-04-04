@@ -1,16 +1,14 @@
-
 @font-face {
   font-family: 'Poppins';
   src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
 }
 
-.modal-title{
+.modal-title,
+.modal-body {
   font-family: "Poppins";
 }
-.modal-body{
-  font-family: "Poppins";
-}
-.factscontainerh{
+
+.factscontainerh {
   display: grid;
   grid-template-columns: auto auto auto;
   align-items: center;
@@ -24,7 +22,7 @@
   margin-bottom: 10px;
 }
 
-.factscontainerf{
+.factscontainerf {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -37,7 +35,8 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.factscontainerfj{
+
+.factscontainerfj {
   display: grid;
   grid-template-columns: auto;
   align-items: center;
@@ -50,7 +49,9 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.facts1, .facts2, .facts3{
+
+.facts1,
+.facts3 {
   font-family: "Poppins";
   align-items: center;
   min-width: 214px;
@@ -58,14 +59,27 @@
   padding: 0.2rem;
   background-color: var(--Azul_updated);
   color: white;
-  border-style: solid;
-  border-radius: 8px;
+  border-right: solid;
   margin-top: 10px;
   margin-left: 1px;
   margin-right: 1px;
   margin-bottom: 10px;
-
 }
+
+.facts2 {
+  font-family: "Poppins";
+  align-items: center;
+  min-width: 214px;
+  text-align: center;
+  padding: 0.2rem;
+  background-color: var(--Azul_updated);
+  color: white;
+  margin-top: 10px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 10px;
+}
+
 .mButton {
   font-family: "Poppins";
   padding: 0.5rem;
@@ -90,11 +104,14 @@
 }
 
 @media (max-width: 540px) {
-  .mButton{
+  .mButton {
     font-size: 0.6rem;
     padding: 0.2rem;
   }
-  .factscontainerh, .factscontainerf, .factscontainerfj{
+
+  .factscontainerh,
+  .factscontainerf,
+  .factscontainerfj {
     font-size: 0.8rem;
     display: grid;
     grid-template-columns: auto;
@@ -109,6 +126,7 @@
     margin-bottom: 10px;
   }
 }
+
 @media (min-width: 2560px) {
   .MTitle {
     font-family: "Poppins";
@@ -121,11 +139,14 @@
     font-size: 5rem;
   }
 
-  .mButton{
+  .mButton {
     font-size: 1.5rem;
     padding: 0.2rem;
   }
-  .factscontainerh, .factscontainerf, .factscontainerfj{
+
+  .factscontainerh,
+  .factscontainerf,
+  .factscontainerfj {
     font-size: 2rem;
     display: grid;
     align-items: center;
@@ -139,14 +160,17 @@
     margin-bottom: 10px;
   }
 }
-#fButton, #hButton{
+
+#fButton,
+#hButton {
   position: absolute;
 }
+
 .body {
   font-family: "Poppins";
-#maindivAZ{
-  text-align: left;
-  background: black;
-}
 
+  #maindivAZ {
+    text-align: left;
+    background: black;
+  }
 }
