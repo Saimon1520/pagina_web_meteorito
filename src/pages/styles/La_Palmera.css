@@ -16,6 +16,7 @@
 }
 .titleVR{
     color: white;
+    font-family: "Poppins";
 }
 .firstContainer {
     background-color: var(--first-color);
@@ -35,9 +36,6 @@
 
 }
 
-.lj {
-    background-image: url('/public/imgs/fondo1.png');
-}
 
 .communityTitle {
     color: white;
@@ -72,6 +70,7 @@ h2 {
     color: white;
     text-align: justify;
     width: 95%;
+    font-family: "Poppins";
 }
 
 .informatioContainer {
@@ -89,12 +88,12 @@ h2 {
 
 .thirdContainer {
     background-color: var(--first-color);
-    background-image: url('/public/imgs/fondo1.png');
 }
 
 .Title2 {
     padding-top: 100px;
     color: white;
+    font-family: "Poppins";
 }
 
 .thirdImage {
@@ -109,6 +108,14 @@ h2 {
     color: white;
     font-family: "elevon";
     margin-bottom: 50px;
+}
+
+.linkRef:visited, .linkRef:active{
+    text-decoration: none;
+    color: #021D40;
+}
+.linkRef:hover{
+    color: #7ae7ea;
 }
 
 /* Estilos del menú para escritorio pequeño */

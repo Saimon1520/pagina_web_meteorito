@@ -25,18 +25,18 @@ const La_Palmera = () => {
                             <br />
                             <div>
                                 <p className='informationField'>La palmera, tiene un proyecto socio-productivo administrado por la cual la Asociación de Desarrollo Integral el cuál es una planta de Carbonato de Calcio que promociona
-                                    su producto para balancear el PH del suelo y así ayudar a los cultivos. La cabecera, cuenta con servicios de salud, educativos, restaurantes y locales de abarrotes.
+                                    su producto para balancear el PH del suelo y así ayudar a los cultivos. La cabecera, cuenta con servicios de salud, educativos, restaurantes y locales de abarrotes. 
                                 </p>
                             </div>
                         </div>
                         <div className="col-sm">
                             <br />
                             <div>
-                                <p className='informationField'>La principal actividad de este lugar es la ganadería, y en menos proporción el cultivo de cítricos, caña de azúcar, raices y tubérculos.</p>
+                                <p className='informationField'>La ganadería es la actividad predominante en este lugar, complementada en menor medida por el cultivo de cítricos, caña de azúcar, raíces y tubérculos. Además, destaca por ser una región abundantemente provista de aguas termales. Según <a className='linkRef' href='https://telencuestas.com/censos-de-poblacion/costa-rica/2024/alajuela/san-carlos/la-palmera'>TelEncuentas </a>(2024), actualmente La Palmera tiene 8158 habitantes.</p>
                             </div>
                         </div>
                     </div>
-                    <img className='img-fluid my-3 mt-5 mb-5 secondImage' src='imgs/img2.jpg' alt='fgfg'></img>
+                    <img className='img-fluid my-3 mt-5 mb-5 secondImage' src='imgs/vacas.jpg' alt='fgfg'></img>
                 </div>
 
 

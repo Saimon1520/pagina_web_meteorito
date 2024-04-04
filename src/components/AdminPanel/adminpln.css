@@ -12,15 +12,15 @@
     text-align: left;
 }
 .navbar {
-    background: linear-gradient(to right, var(--first-color), var(--second-color), var(--third-color));
+    background: linear-gradient(to right, var(--second-color), var(--second-color), var(--second-color));
 }
 
 .offcanvas {
-    background: linear-gradient(to top, var(--first-color), var(--second-color), var(--third-color));
+    background: linear-gradient(to top, var(--second-color), var(--second-color), var(--second-color));
 }
 
 .dropdown-menu {
-    background: linear-gradient(to top, var(--first-color), var(--second-color));
+    background: linear-gradient(to top, var(--second-color), var(--second-color));
 }
 
 .navbar-toggler {
