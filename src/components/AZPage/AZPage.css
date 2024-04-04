@@ -4,14 +4,8 @@
   src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
 }
 
-@font-face {
-  font-family:"elevon";
-  src:url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
-  font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
-}
-
 .modal-title{
-  font-family: "elevon";
+  font-family: "Poppins";
 }
 .modal-body{
   font-family: "Poppins";
@@ -73,7 +67,7 @@
 
 }
 .mButton {
-  font-family: "elevon";
+  font-family: "Poppins";
   padding: 0.5rem;
   background-color: var(--Azul_updated);
   color: #fff;
@@ -87,6 +81,7 @@
   margin-bottom: 13px;
   text-align: center;
   text-decoration: none;
+  align-self: normal;
 
   &:hover {
     background-color: #1d1d1d;
@@ -116,7 +111,7 @@
 }
 @media (min-width: 2560px) {
   .MTitle {
-    font-family: "elevon";
+    font-family: "Poppins";
     align-items: center;
     text-align: center;
     background-color: var(--Azul_updated);
@@ -148,8 +143,8 @@
   position: absolute;
 }
 .body {
-  font-family: "elevon";
-#maindiv{
+  font-family: "Poppins";
+#maindivAZ{
   text-align: left;
   background: black;
 }

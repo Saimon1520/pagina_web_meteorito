@@ -3,7 +3,7 @@ import React from "react";
 
 const AZPage = () => {
   return (
-    <div id="maindiv" className="maindiv">
+    <div id="maindivAZ" className="maindivAZ">
       <br></br>
       <div className="hcontainer">
         <h1 className="MTitle">Aguas Zarcas</h1>
@@ -22,8 +22,8 @@ const AZPage = () => {
             cantidad de azufre que contiene el río Aguas Zarcas.
           </p>
           <p className="facts2">
-            Sabías que en el año 2019, cayó un meteorito en la zona, 
-            encontrado por un habitante. Este acontecimiento fue noticia a nivel nacional y 
+            Sabías que en el año 2019, cayó un meteorito en la zona,
+            encontrado por un habitante. Este acontecimiento fue noticia a nivel nacional y
             mundial, lo que inspirá el proyecto de la Comunidad de Desarrollo e Innovación Universitaria.
           </p>
         </div>
@@ -86,8 +86,8 @@ const AZPage = () => {
             educativos de toda la zona desfilan por sus calles, todo el día.
           </p>
           <p className="facts2">
-          El desfile se extiende por las principales calles de Aguas Zarcas; 
-          el colegio que participa con mayor delegación es El Colegio Técnico 
+          El desfile se extiende por las principales calles de Aguas Zarcas;
+          el colegio que participa con mayor delegación es El Colegio Técnico
           Profesional de Aguas Zarcas con sus bandas y grupos de bailes folclóricos.
           </p>
         </div>
