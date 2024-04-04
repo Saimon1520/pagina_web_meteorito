@@ -17,13 +17,12 @@ const Navigation = () => {
                         <div className="collapse navbar-collapse nav_bar" id="navbarNavAltMarkup">
                             <div className="navbar-nav">
                                 <NavLink className="nav-link" to="/">Inicio</NavLink>
-                                <NavLink className="nav-link" to="/Fragmentos">Fragmentos</NavLink>
-                                <NavLink className="nav-link" to="/AZPage">Aguas Zarcas</NavLink>
-                                <NavLink className="nav-link" to="/La_Palmera">La Palmera</NavLink>
-                                <NavLink className="nav-link" to="/Comunidad">Comunidad</NavLink>
+                                <NavLink className="nav-link" to="/Meteorito">Meteorito</NavLink>
                                 <a className="nav-link" href='aquiVaElLinkDelMuseo.com' target="_blank">Museo</a>
-                                <NavLink className="nav-link" to="/Acerca-de">Acerca de</NavLink>
-                                <NavLink className="nav-link" to="/Login">Login</NavLink>
+                                <NavLink className="nav-link" to="/AZPage">Aguas Zarcas</NavLink>
+                                <NavLink className="nav-link" to="/Eventos">Eventos</NavLink>
+                                <NavLink className="nav-link" to="/Comunidad">Comunidad</NavLink>
+                                
                             </div>
                         </div>
                     </div>
