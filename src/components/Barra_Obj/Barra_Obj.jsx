@@ -1,7 +1,7 @@
 import './Barra_Obj.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Obj from '../Obj/Obj';
 import ABR02 from '../../../public/objects/ABR02/ABR02';
 import DAA01 from '../../../public/objects/DAA01/DAA01';
@@ -11,6 +11,7 @@ import ESS01 from '../../../public/objects/ESS01/ESS01';
 import MAA01 from '../../../public/objects/MAA01/MAA01';
 import OBJ_6 from '../../../public/objects/OBJ_6/OBJ_6';
 import RM01 from '../../../public/objects/RM01/RM01';
+import Spin from '../Spinner/Spinner';
 const Barra_Obj = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(getInitialItemsPerPage());
@@ -71,7 +72,9 @@ const Barra_Obj = (props) => {
       </div>
       <div className='obj-container spinner-container'>
         {gruposDeObjetos[currentPage - 1].map((obj, index) => (
-          <Obj key={index} obj={obj.obj} titulo={obj.titulo} descripcion={obj.descripcion} src={obj.src} />
+          <Suspense fallback={<Spin></Spin>}>
+            <Obj key={index} obj={obj.obj} titulo={obj.titulo} descripcion={obj.descripcion} src={obj.src} />
+          </Suspense>
         ))}
       </div>
       <div className='button_abajo'>
