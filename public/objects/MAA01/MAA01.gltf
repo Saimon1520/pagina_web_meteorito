@@ -1,11 +1,15 @@
 {
 	"asset":{
-		"generator":"Khronos glTF Blender I/O v3.6.27",
+		"generator":"Khronos glTF Blender I/O v4.0.44",
 		"version":"2.0"
 	},
 	"extensionsUsed":[
+		"KHR_draco_mesh_compression",
 		"KHR_materials_specular",
 		"KHR_materials_ior"
+	],
+	"extensionsRequired":[
+		"KHR_draco_mesh_compression"
 	],
 	"scene":0,
 	"scenes":[
@@ -35,7 +39,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.001",
+			"name":"Material.010",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
@@ -51,9 +55,9 @@
 			"extensions":{
 				"KHR_materials_specular":{
 					"specularColorFactor":[
-						0,
-						0,
-						0
+						0.0,
+						0.0,
+						0.0
 					]
 				},
 				"KHR_materials_ior":{
@@ -71,7 +75,7 @@
 	],
 	"meshes":[
 		{
-			"name":"Cylinder",
+			"name":"Cylinder.006",
 			"primitives":[
 				{
 					"attributes":{
@@ -79,8 +83,19 @@
 						"NORMAL":1,
 						"TEXCOORD_0":2
 					},
+					"extensions":{
+						"KHR_draco_mesh_compression":{
+							"bufferView":0,
+							"attributes":{
+								"POSITION":0,
+								"NORMAL":1,
+								"TEXCOORD_0":2
+							}
+						}
+					},
 					"indices":3,
-					"material":0
+					"material":0,
+					"mode":4
 				},
 				{
 					"attributes":{
@@ -88,8 +103,19 @@
 						"NORMAL":5,
 						"TEXCOORD_0":6
 					},
+					"extensions":{
+						"KHR_draco_mesh_compression":{
+							"bufferView":1,
+							"attributes":{
+								"POSITION":0,
+								"NORMAL":1,
+								"TEXCOORD_0":2
+							}
+						}
+					},
 					"indices":7,
-					"material":1
+					"material":1,
+					"mode":4
 				}
 			]
 		}
@@ -112,22 +138,21 @@
 		{
 			"mimeType":"image/jpeg",
 			"name":"Gravel023_8K-PNG_Color",
-			"uri":"Gravel023_8K-PNG_Color.jpg"
+			"uri":"Textures/Gravel023_8K-PNG_Color.jpg"
 		},
 		{
 			"mimeType":"image/jpeg",
 			"name":"Gravel023_8K-PNG_Roughness",
-			"uri":"Gravel023_8K-PNG_Roughness.jpg"
+			"uri":"Textures/Gravel023_8K-PNG_Roughness.jpg"
 		},
 		{
 			"mimeType":"image/jpeg",
 			"name":"Fragmento_Principal",
-			"uri":"Fragmento_Principal.jpg"
+			"uri":"Textures/Fragmento_Principal.jpg"
 		}
 	],
 	"accessors":[
 		{
-			"bufferView":0,
 			"componentType":5126,
 			"count":606,
 			"max":[
@@ -143,106 +168,61 @@
 			"type":"VEC3"
 		},
 		{
-			"bufferView":1,
 			"componentType":5126,
 			"count":606,
 			"type":"VEC3"
 		},
 		{
-			"bufferView":2,
 			"componentType":5126,
 			"count":606,
 			"type":"VEC2"
 		},
 		{
-			"bufferView":3,
 			"componentType":5123,
 			"count":1140,
 			"type":"SCALAR"
 		},
 		{
-			"bufferView":4,
 			"componentType":5126,
-			"count":181870,
+			"count":148376,
 			"max":[
-				0.5765817165374756,
-				11.697710037231445,
+				0.5765151381492615,
+				11.695182800292969,
 				0.4303169846534729
 			],
 			"min":[
 				-0.556763768196106,
 				4.029477119445801,
-				-0.4267385005950928
+				-0.4258783161640167
 			],
 			"type":"VEC3"
 		},
 		{
-			"bufferView":5,
 			"componentType":5126,
-			"count":181870,
+			"count":148376,
 			"type":"VEC3"
 		},
 		{
-			"bufferView":6,
 			"componentType":5126,
-			"count":181870,
+			"count":148376,
 			"type":"VEC2"
 		},
 		{
-			"bufferView":7,
 			"componentType":5125,
-			"count":181920,
+			"count":148518,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":7272,
-			"byteOffset":0,
-			"target":34962
+			"byteLength":3973,
+			"byteOffset":0
 		},
 		{
 			"buffer":0,
-			"byteLength":7272,
-			"byteOffset":7272,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":4848,
-			"byteOffset":14544,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":2280,
-			"byteOffset":19392,
-			"target":34963
-		},
-		{
-			"buffer":0,
-			"byteLength":2182440,
-			"byteOffset":21672,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":2182440,
-			"byteOffset":2204112,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":1454960,
-			"byteOffset":4386552,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":727680,
-			"byteOffset":5841512,
-			"target":34963
+			"byteLength":797489,
+			"byteOffset":3976
 		}
 	],
 	"samplers":[
@@ -253,7 +233,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":6569192,
+			"byteLength":801468,
 			"uri":"MAA01.bin"
 		}
 	]

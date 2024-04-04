@@ -11,8 +11,8 @@ export default function Model(props) {
   return (
     <group {...props} dispose={null}>
       <group position={[0, 0.294, 0]} scale={[0.604, 0.058, 0.604]}>
-        <mesh geometry={nodes.Cylinder_1.geometry} material={materials['Material.001']} />
-        <mesh geometry={nodes.Cylinder_2.geometry} material={materials.erb02} />
+        <mesh geometry={nodes.Cylinder003.geometry} material={materials['Material.006']} />
+        <mesh geometry={nodes.Cylinder003_1.geometry} material={materials['erb02.001']} />
       </group>
     </group>
   )
