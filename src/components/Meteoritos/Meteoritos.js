@@ -9,13 +9,13 @@ const Meteoritos = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const textDefinition =
-        'La Real Academia Española lo define Meteorito “un cuerpo celeste que cae sobre la Tierra, o ' +
+        'La Real Academia Española define Meteorito “un cuerpo celeste que cae sobre la Tierra, o ' +
         'sobre un astro cualquiera”. Si bien es cierto, observar la caída de fragmentos de cuerpos celestes a la tierra es para ' +
         'el ser humano un hecho hermoso de admirar, sin embargo, no es un acontecimiento poco cotidiano, según Lücke, Madrigal y' +
         ' Soto (2019), pese a que sobre la Tierra caen unos 25 meteoritos cada día, aquellos que son vistos caer y recuperados alcanzan ' +
         'sólo unos 5 a 10 al año. (p.10). ' +
         'Es particularmente importante para la comunidad científica el hallazgo del Meteorito Aguas Zarcas, ya que abrirá nuevas ' +
-        'oportunidades de investigación y arrojará datos interesantes sobre cómo se formó el sistema solar y el origen de la ' +
+        'oportunidades de investigación y arrojará datos interesantes cómo se formó el sistema solar y el origen de la ' +
         'vida en la Tierra.';
 
     useEffect(() => {

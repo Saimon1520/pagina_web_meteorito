@@ -10,9 +10,10 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('objects/ERB03/ERB03.gltf')
   return (
     <group {...props} dispose={null}>
+
       <group position={[0, 0.294, 0]} scale={[0.604, 0.058, 0.604]}>
-        <mesh geometry={nodes.Cylinder_1.geometry} material={materials['Material.001']} />
-        <mesh geometry={nodes.Cylinder_2.geometry} material={materials.Material} />
+        <mesh geometry={nodes.Cylinder004.geometry} material={materials['Material.007']} />
+        <mesh geometry={nodes.Cylinder004_1.geometry} material={materials['Material.008']} />
       </group>
     </group>
   )
