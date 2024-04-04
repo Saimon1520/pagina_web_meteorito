@@ -10,8 +10,13 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('objects/RM01/RM01.gltf')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Cylinder.geometry} material={materials['Material.001']} position={[0.027, 0.294, 0.024]} scale={[0.604, 0.058, 0.604]} />
-      <mesh geometry={nodes.RM01.geometry} material={materials['Material.002']} position={[0.145, 0.69, 4.517]} rotation={[Math.PI / 2, 0, 0]} scale={2.496} />
+      
+      <group rotation={[1, 0, 0]}>
+        
+      <mesh geometry={nodes.RM01_1.geometry} material={materials['Material.012']} />
+      <mesh geometry={nodes.RM01_2.geometry} material={materials['Material.012']} />
+      </group>
+
     </group>
   )
 }

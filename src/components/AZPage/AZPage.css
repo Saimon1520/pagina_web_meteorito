@@ -1,22 +1,16 @@
-
 @font-face {
   font-family: 'Poppins';
   src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
 }
 
-@font-face {
-  font-family:"elevon";
-  src:url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/0d47b1/00000000000000007735fd27/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
-  font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
-}
-
-.modal-title{
-  font-family: "elevon";
-}
-.modal-body{
+.modal-title,
+.modal-body {
   font-family: "Poppins";
 }
-.factscontainerh{
+.MTitle{
+  padding-bottom: 8px;
+}
+.factscontainerh {
   display: grid;
   grid-template-columns: auto auto auto;
   align-items: center;
@@ -30,7 +24,7 @@
   margin-bottom: 10px;
 }
 
-.factscontainerf{
+.factscontainerf {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -43,7 +37,8 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.factscontainerfj{
+
+.factscontainerfj {
   display: grid;
   grid-template-columns: auto;
   align-items: center;
@@ -56,7 +51,9 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.facts1, .facts2, .facts3{
+
+.facts1,
+.facts3 {
   font-family: "Poppins";
   align-items: center;
   min-width: 214px;
@@ -64,16 +61,29 @@
   padding: 0.2rem;
   background-color: var(--Azul_updated);
   color: white;
-  border-style: solid;
-  border-radius: 8px;
+  border-right: solid;
   margin-top: 10px;
   margin-left: 1px;
   margin-right: 1px;
   margin-bottom: 10px;
-
 }
+
+.facts2 {
+  font-family: "Poppins";
+  align-items: center;
+  min-width: 214px;
+  text-align: center;
+  padding: 0.2rem;
+  background-color: var(--Azul_updated);
+  color: white;
+  margin-top: 10px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 10px;
+}
+
 .mButton {
-  font-family: "elevon";
+  font-family: "Poppins";
   padding: 0.5rem;
   background-color: var(--Azul_updated);
   color: #fff;
@@ -87,6 +97,7 @@
   margin-bottom: 13px;
   text-align: center;
   text-decoration: none;
+  align-self: normal;
 
   &:hover {
     background-color: #1d1d1d;
@@ -95,11 +106,14 @@
 }
 
 @media (max-width: 540px) {
-  .mButton{
+  .mButton {
     font-size: 0.6rem;
     padding: 0.2rem;
   }
-  .factscontainerh, .factscontainerf, .factscontainerfj{
+
+  .factscontainerh,
+  .factscontainerf,
+  .factscontainerfj {
     font-size: 0.8rem;
     display: grid;
     grid-template-columns: auto;
@@ -114,9 +128,10 @@
     margin-bottom: 10px;
   }
 }
+
 @media (min-width: 2560px) {
   .MTitle {
-    font-family: "elevon";
+    font-family: "Poppins";
     align-items: center;
     text-align: center;
     background-color: var(--Azul_updated);
@@ -126,11 +141,14 @@
     font-size: 5rem;
   }
 
-  .mButton{
+  .mButton {
     font-size: 1.5rem;
     padding: 0.2rem;
   }
-  .factscontainerh, .factscontainerf, .factscontainerfj{
+
+  .factscontainerh,
+  .factscontainerf,
+  .factscontainerfj {
     font-size: 2rem;
     display: grid;
     align-items: center;
@@ -144,14 +162,17 @@
     margin-bottom: 10px;
   }
 }
-#fButton, #hButton{
+
+#fButton,
+#hButton {
   position: absolute;
 }
-.body {
-  font-family: "elevon";
-#maindiv{
-  text-align: left;
-  background: black;
-}
 
+.body {
+  font-family: "Poppins";
+
+  #maindivAZ {
+    text-align: left;
+    background: black;
+  }
 }

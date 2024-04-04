@@ -1,11 +1,15 @@
 {
 	"asset":{
-		"generator":"Khronos glTF Blender I/O v3.6.27",
+		"generator":"Khronos glTF Blender I/O v4.0.44",
 		"version":"2.0"
 	},
 	"extensionsUsed":[
+		"KHR_draco_mesh_compression",
 		"KHR_materials_specular",
 		"KHR_materials_ior"
+	],
+	"extensionsRequired":[
+		"KHR_draco_mesh_compression"
 	],
 	"scene":0,
 	"scenes":[
@@ -19,7 +23,7 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"Cylinder",
+			"name":"Cylinder.001",
 			"scale":[
 				0.603797972202301,
 				0.05785499885678291,
@@ -35,7 +39,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.001",
+			"name":"Material.009",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
@@ -51,9 +55,9 @@
 			"extensions":{
 				"KHR_materials_specular":{
 					"specularColorFactor":[
-						0,
-						0,
-						0
+						0.0,
+						0.0,
+						0.0
 					]
 				},
 				"KHR_materials_ior":{
@@ -71,7 +75,7 @@
 	],
 	"meshes":[
 		{
-			"name":"Cylinder",
+			"name":"Cylinder.005",
 			"primitives":[
 				{
 					"attributes":{
@@ -79,8 +83,19 @@
 						"NORMAL":1,
 						"TEXCOORD_0":2
 					},
+					"extensions":{
+						"KHR_draco_mesh_compression":{
+							"bufferView":0,
+							"attributes":{
+								"POSITION":0,
+								"NORMAL":1,
+								"TEXCOORD_0":2
+							}
+						}
+					},
 					"indices":3,
-					"material":0
+					"material":0,
+					"mode":4
 				},
 				{
 					"attributes":{
@@ -88,8 +103,19 @@
 						"NORMAL":5,
 						"TEXCOORD_0":6
 					},
+					"extensions":{
+						"KHR_draco_mesh_compression":{
+							"bufferView":1,
+							"attributes":{
+								"POSITION":0,
+								"NORMAL":1,
+								"TEXCOORD_0":2
+							}
+						}
+					},
 					"indices":7,
-					"material":1
+					"material":1,
+					"mode":4
 				}
 			]
 		}
@@ -112,22 +138,21 @@
 		{
 			"mimeType":"image/jpeg",
 			"name":"Gravel023_8K-PNG_Color",
-			"uri":"Gravel023_8K-PNG_Color.jpg"
+			"uri":"Textures/Gravel023_8K-PNG_Color.jpg"
 		},
 		{
 			"mimeType":"image/jpeg",
 			"name":"Gravel023_8K-PNG_Roughness",
-			"uri":"Gravel023_8K-PNG_Roughness.jpg"
+			"uri":"Textures/Gravel023_8K-PNG_Roughness.jpg"
 		},
 		{
 			"mimeType":"image/jpeg",
 			"name":"09E",
-			"uri":"09E.jpg"
+			"uri":"Textures/09E.jpg"
 		}
 	],
 	"accessors":[
 		{
-			"bufferView":0,
 			"componentType":5126,
 			"count":606,
 			"max":[
@@ -143,106 +168,61 @@
 			"type":"VEC3"
 		},
 		{
-			"bufferView":1,
 			"componentType":5126,
 			"count":606,
 			"type":"VEC3"
 		},
 		{
-			"bufferView":2,
 			"componentType":5126,
 			"count":606,
 			"type":"VEC2"
 		},
 		{
-			"bufferView":3,
 			"componentType":5123,
 			"count":1140,
 			"type":"SCALAR"
 		},
 		{
-			"bufferView":4,
 			"componentType":5126,
-			"count":158728,
+			"count":81057,
 			"max":[
-				0.4089429974555969,
-				7.369150161743164,
+				0.40879344940185547,
+				7.368954181671143,
 				0.3702971339225769
 			],
 			"min":[
-				-0.46763190627098083,
+				-0.46752116084098816,
 				3.366236925125122,
-				-0.31989166140556335
+				-0.31978708505630493
 			],
 			"type":"VEC3"
 		},
 		{
-			"bufferView":5,
 			"componentType":5126,
-			"count":158728,
+			"count":81057,
 			"type":"VEC3"
 		},
 		{
-			"bufferView":6,
 			"componentType":5126,
-			"count":158728,
+			"count":81057,
 			"type":"VEC2"
 		},
 		{
-			"bufferView":7,
 			"componentType":5125,
-			"count":158802,
+			"count":81099,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":7272,
-			"byteOffset":0,
-			"target":34962
+			"byteLength":3973,
+			"byteOffset":0
 		},
 		{
 			"buffer":0,
-			"byteLength":7272,
-			"byteOffset":7272,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":4848,
-			"byteOffset":14544,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":2280,
-			"byteOffset":19392,
-			"target":34963
-		},
-		{
-			"buffer":0,
-			"byteLength":1904736,
-			"byteOffset":21672,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":1904736,
-			"byteOffset":1926408,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":1269824,
-			"byteOffset":3831144,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":635208,
-			"byteOffset":5100968,
-			"target":34963
+			"byteLength":487993,
+			"byteOffset":3976
 		}
 	],
 	"samplers":[
@@ -253,7 +233,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":5736176,
+			"byteLength":491972,
 			"uri":"ESS01.bin"
 		}
 	]

@@ -4,6 +4,7 @@ import { db } from "../../firebase.js";
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import Spinner from "../Spinner/Spinner.js";
 import CryptoJS from 'crypto-js';
 
 const dataTable = (table) => {
@@ -94,49 +95,54 @@ const dataTable = (table) => {
     if (getVerification() !== "true") {
         return <Navigate replace to="/Login" />;
     } else {
+
         return (
             <div className="maindiv">
                 <input className="nameFilter" id="nameFilter" type="text" placeholder="Buscá acá" onInput={handleChange} value={searchInput}></input>
                 <div className="adminuseredit">
-                    <div className="table-responsive">
-                        <table className="table table-bordered">
-                            <thead>
-                                {table.table === "users" ? <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Correo</th>
-                                    <th>Role</th>
-                                    <th>Acciones</th>
-                                </tr> :
-                                    <tr>
+                    {data ? (
+                        <div className="table-responsive">
+                            <table className="table table-bordered">
+                                <thead>
+                                    {table.table === "users" ? <tr>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Correo</th>
                                         <th>Role</th>
                                         <th>Acciones</th>
-                                    </tr>}
-                            </thead>
-                            <tbody>
-                                {table.table === "users" ? fdata.map((data) => (
-                                    <tr key={data.id}>
-                                        <td>{data.fname}</td>
-                                        <td>{data.lname}</td>
-                                        <td>{data.email}</td>
-                                        <td>{data.role}</td>
-                                        <td>
-                                            <button id="btnl" type="button" className="btn btn-primary" onClick={() => { handleClickEU(data) }}>Editar</button>
-                                            <button onClick={() => { if (window.confirm('Confirmar eliminacion de: ' + data.fname + ' ' + data.lname)) delData(data) }} id="btnr" type="button" className="btn btn-primary">Borrar</button>
-                                        </td>
-                                    </tr>
-                                )) : fdata.map((data) => (
-                                    <tr key={data.id}>
-                                        <td>{data.name}</td>
-                                        <td>
-                                            <button id="btnl" type="button" className="btn btn-primary" onClick={() => { handleClickER(data) }}>Editar</button>
-                                            <button onClick={() => { if (window.confirm('Confirmar eliminacion de: ' + data.name)) delData(data) }} id="btnr" type="button" className="btn btn-primary">Borrar</button>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                                    </tr> :
+                                        <tr>
+                                            <th>Role</th>
+                                            <th>Acciones</th>
+                                        </tr>}
+                                </thead>
+                                <tbody>
+                                    {table.table === "users" ? fdata.map((data) => (
+                                        <tr key={data.id}>
+                                            <td>{data.fname}</td>
+                                            <td>{data.lname}</td>
+                                            <td>{data.email}</td>
+                                            <td>{data.role}</td>
+                                            <td>
+                                                <button id="btnl" type="button" className="btn btn-primary" onClick={() => { handleClickEU(data) }}>Editar</button>
+                                                <button onClick={() => { if (window.confirm('Confirmar eliminacion de: ' + data.fname + ' ' + data.lname)) delData(data) }} id="btnr" type="button" className="btn btn-primary">Borrar</button>
+                                            </td>
+                                        </tr>
+                                    )) : fdata.map((data) => (
+                                        <tr key={data.id}>
+                                            <td>{data.name}</td>
+                                            <td>
+                                                <button id="btnl" type="button" className="btn btn-primary" onClick={() => { handleClickER(data) }}>Editar</button>
+                                                <button onClick={() => { if (window.confirm('Confirmar eliminacion de: ' + data.name)) delData(data) }} id="btnr" type="button" className="btn btn-primary">Borrar</button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    ) : (
+                        <Spinner> </Spinner>
+                    )}
                 </div>
             </div>
         );
