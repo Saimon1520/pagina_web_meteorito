@@ -10,7 +10,7 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('objects/ABR02/ABR02.gltf')
   return (
     <group {...props} dispose={null}>
-      <group rotation={[Math.PI / 2, 0, 0]}>
+      <group rotation={[Math.PI / 2, 0, 0]} position={[0, -0.44, 0]}>
         <mesh geometry={nodes.Cylinder_1.geometry} material={materials['Material.002']} />
         <mesh geometry={nodes.Cylinder_2.geometry} material={materials['Material.001']} />
       </group>
