@@ -10,8 +10,9 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('objects/DAA01/DAA01.gltf')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Cylinder.geometry} material={materials['Material.001']} position={[0.009, 0.291, -0.057]} scale={[0.604, 0.058, 0.604]} />
-      <mesh geometry={nodes.DAA01.geometry} material={materials['Material.002']} position={[0.042, 0.641, -0.061]} rotation={[1.386, 0, 0]} scale={0.705} />
+
+      <mesh geometry={nodes.Cylinder.geometry} material={materials['Material.003']} position={[0.009, 0.291, -0.057]} scale={[0.604, 0.058, 0.604]} />
+      <mesh geometry={nodes.DAA01.geometry} material={materials['Material.004']} position={[0.042, 0.641, -0.061]} rotation={[1.386, 0, 0]} scale={0.705} />
     </group>
   )
 }

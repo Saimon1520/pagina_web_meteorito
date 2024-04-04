@@ -1,8 +1,16 @@
 {
 	"asset":{
-		"generator":"Khronos glTF Blender I/O v3.6.27",
+		"generator":"Khronos glTF Blender I/O v4.0.44",
 		"version":"2.0"
 	},
+	"extensionsUsed":[
+		"KHR_draco_mesh_compression",
+		"EXT_texture_webp"
+	],
+	"extensionsRequired":[
+		"KHR_draco_mesh_compression",
+		"EXT_texture_webp"
+	],
 	"scene":0,
 	"scenes":[
 		{
@@ -52,7 +60,7 @@
 	"materials":[
 		{
 			"doubleSided":true,
-			"name":"Material.001",
+			"name":"Material.003",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":0
@@ -65,7 +73,7 @@
 		},
 		{
 			"doubleSided":true,
-			"name":"Material.002",
+			"name":"Material.004",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
 					"index":2
@@ -77,7 +85,7 @@
 	],
 	"meshes":[
 		{
-			"name":"Cylinder",
+			"name":"Cylinder.001",
 			"primitives":[
 				{
 					"attributes":{
@@ -85,8 +93,19 @@
 						"NORMAL":1,
 						"TEXCOORD_0":2
 					},
+					"extensions":{
+						"KHR_draco_mesh_compression":{
+							"bufferView":0,
+							"attributes":{
+								"POSITION":0,
+								"NORMAL":1,
+								"TEXCOORD_0":2
+							}
+						}
+					},
 					"indices":3,
-					"material":0
+					"material":0,
+					"mode":4
 				}
 			]
 		},
@@ -100,48 +119,71 @@
 						"NORMAL":6,
 						"TEXCOORD_0":7
 					},
+					"extensions":{
+						"KHR_draco_mesh_compression":{
+							"bufferView":1,
+							"attributes":{
+								"COLOR_0":0,
+								"POSITION":1,
+								"NORMAL":2,
+								"TEXCOORD_0":3
+							}
+						}
+					},
 					"indices":8,
-					"material":1
+					"material":1,
+					"mode":4
 				}
 			]
 		}
 	],
 	"textures":[
 		{
-			"sampler":0,
-			"source":0
+			"extensions":{
+				"EXT_texture_webp":{
+					"source":0
+				}
+			},
+			"sampler":0
 		},
 		{
-			"sampler":0,
-			"source":1
+			"extensions":{
+				"EXT_texture_webp":{
+					"source":1
+				}
+			},
+			"sampler":0
 		},
 		{
-			"sampler":0,
-			"source":2
+			"extensions":{
+				"EXT_texture_webp":{
+					"source":2
+				}
+			},
+			"sampler":0
 		}
 	],
 	"images":[
 		{
-			"mimeType":"image/jpeg",
+			"mimeType":"image/webp",
 			"name":"Gravel023_8K-PNG_Color",
-			"uri":"Gravel023_8K-PNG_Color.jpg"
+			"uri":"Gravel023_8K-PNG_Color.webp"
 		},
 		{
-			"mimeType":"image/jpeg",
+			"mimeType":"image/webp",
 			"name":"Gravel023_8K-PNG_Roughness",
-			"uri":"Gravel023_8K-PNG_Roughness.jpg"
+			"uri":"Gravel023_8K-PNG_Roughness.webp"
 		},
 		{
-			"mimeType":"image/jpeg",
+			"mimeType":"image/webp",
 			"name":"DAA01",
-			"uri":"DAA01.jpg"
+			"uri":"DAA01.webp"
 		}
 	],
 	"accessors":[
 		{
-			"bufferView":0,
 			"componentType":5126,
-			"count":618,
+			"count":460,
 			"max":[
 				0.9990812540054321,
 				4.391461372375488,
@@ -155,34 +197,29 @@
 			"type":"VEC3"
 		},
 		{
-			"bufferView":1,
 			"componentType":5126,
-			"count":618,
+			"count":460,
 			"type":"VEC3"
 		},
 		{
-			"bufferView":2,
 			"componentType":5126,
-			"count":618,
+			"count":460,
 			"type":"VEC2"
 		},
 		{
-			"bufferView":3,
 			"componentType":5123,
-			"count":1140,
+			"count":1026,
 			"type":"SCALAR"
 		},
 		{
-			"bufferView":4,
 			"componentType":5123,
-			"count":37025,
+			"count":6182,
 			"normalized":true,
 			"type":"VEC4"
 		},
 		{
-			"bufferView":5,
 			"componentType":5126,
-			"count":37025,
+			"count":6182,
 			"max":[
 				0.3128282427787781,
 				0.33005720376968384,
@@ -196,78 +233,31 @@
 			"type":"VEC3"
 		},
 		{
-			"bufferView":6,
 			"componentType":5126,
-			"count":37025,
+			"count":6182,
 			"type":"VEC3"
 		},
 		{
-			"bufferView":7,
 			"componentType":5126,
-			"count":37025,
+			"count":6182,
 			"type":"VEC2"
 		},
 		{
-			"bufferView":8,
 			"componentType":5123,
-			"count":37035,
+			"count":33327,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":7416,
-			"byteOffset":0,
-			"target":34962
+			"byteLength":3735,
+			"byteOffset":0
 		},
 		{
 			"buffer":0,
-			"byteLength":7416,
-			"byteOffset":7416,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":4944,
-			"byteOffset":14832,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":2280,
-			"byteOffset":19776,
-			"target":34963
-		},
-		{
-			"buffer":0,
-			"byteLength":296200,
-			"byteOffset":22056,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":444300,
-			"byteOffset":318256,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":444300,
-			"byteOffset":762556,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":296200,
-			"byteOffset":1206856,
-			"target":34962
-		},
-		{
-			"buffer":0,
-			"byteLength":74070,
-			"byteOffset":1503056,
-			"target":34963
+			"byteLength":85644,
+			"byteOffset":3736
 		}
 	],
 	"samplers":[
@@ -278,7 +268,7 @@
 	],
 	"buffers":[
 		{
-			"byteLength":1577128,
+			"byteLength":89380,
 			"uri":"DAA01.bin"
 		}
 	]
