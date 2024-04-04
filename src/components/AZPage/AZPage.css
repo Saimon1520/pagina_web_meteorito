@@ -7,7 +7,9 @@
 .modal-body {
   font-family: "Poppins";
 }
-
+.MTitle{
+  padding-bottom: 8px;
+}
 .factscontainerh {
   display: grid;
   grid-template-columns: auto auto auto;

@@ -1,53 +1,100 @@
 .footer-container {
-    background-color: var(--Azul_updated);    
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  @font-face {
-    font-family: 'Poppins';
-    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
-  }
+  background-color: var(--Azul_updated);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  flex-direction: column;
+}
 
-  .footer-content p {
-    font-size: 14px;
-    margin: 0;
-    font-family: 'Poppins';
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
-  }
-  
-  li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 14px;
-  }
-  
-  li a:hover {
-    text-decoration: underline;
-  }
-  
+.socialMediasContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
-  @media (max-width: 768px) {
-    .footer-content{
-      flex-direction: row;
+.socialMedias {
+
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+}
+
+.footer-content p {
+  font-size: 14px;
+  margin: 0;
+  font-family: 'Poppins';
+
+}
+
+
+
+li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+
+.sponsorContent {
+  background-color: var(--Azul_updated);
+  overflow: hidden;
+  margin: 0%;
+  width: 100%;
+}
+
+.iconContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.imgIcon {
+  height: 75px;
+  width: 75px;
+  position: relative;
+}
+
+
+.sponsorTitle {
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  font-family: 'Poppins';
+
+}
+
+.sponsorTitle:hover {
+  color: #007bff;
+}
+
+@media (max-width: 480px) {
+
+    .iconContent{
+      display: none;
     }
-    .footer-content div{
-      width: 50%;
-      height: auto;
-    }
-  }
+
+}
